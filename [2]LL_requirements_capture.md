@@ -1,8 +1,8 @@
 # [2]Low Level Requirements Capture Form - [Project Title]
 
 _This form is intended to assist in deriving low level hardware & software requirements from the ***Validated***  
-High Level Requirements Capture[[1]HL_requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5DHL_requirements_capture.md) Form <br>
-Its scope can be adapted to suit projects of varying complexity_
+High Level Requirements Capture[[1]HL_requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5DHL_requirements_capture.md) Form.
+Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
 ## [2.1]Validated High Level Requirements
 
