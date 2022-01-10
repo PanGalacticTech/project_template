@@ -73,9 +73,7 @@ it also provides the information required to undertake successful **Verification
 > 
 
 When to review? 
-*High level requirements should undertake a review process, ***Validation***, to ensure they meet the clients needs, before any further development takes place. <br>
-After review, please see the next document in the design process* [[2]Low Level Requirements Capture](https://github.com/PanGalacticTech/project_template/blob/main/%5B2%5DLL_requirements_capture.md)
-
+*High level requirements should undertake a review process,* ***Validation***, *to ensure they meet the clients needs, before any further development takes place.<br> After review, please see the next document in the design process* [[2]Low Level Requirements Capture](https://github.com/PanGalacticTech/project_template/blob/main/%5B2%5DLL_requirements_capture.md)
 
 
 _______________________________________________________________________________________________________________________________________________________
