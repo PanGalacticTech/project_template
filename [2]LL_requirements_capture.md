@@ -91,12 +91,11 @@ _What parameters of the design should be minimised/maximised?_
 
 _______________________________________________________________________________________________________________________________________________________
 
-_______________________________________________________________________________________________________________________________________________________
-
 ### [2.4]Requirement Matrix
 
+_Info On Requirements Matrix & Link to: [Requirements Matrix Document](https://broken_link.com)_
 
-
+_______________________________________________________________________________________________________________________________________________________
 #### References
 
 - [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
