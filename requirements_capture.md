@@ -17,9 +17,9 @@ ________________________________________________________________________________
 
 _This section should contain a numbered list of all the specific requirements that can be gathered from the project brief, or from the client directly.
 
-_Requirements should be:
--Simple & Specific - document a single feature or function at a time                                           <br>
--Precise & Quantifyable - Provide limits or quantifyable parameters, rather than open ended specifications      <br>
+Requirements should be:
+- Simple & Specific - document a single feature or function at a time                                           <br>
+- Precise & Quantifyable - Provide limits or quantifyable parameters, rather than open ended specifications      <br>
     (e.g. "Device must consume less than 20 mA of current from Client USB", rather than "Device must operate efficiently")      <br>
     - It is better to be specific early then revise this requirement as the design progresses, than leave options totally open <- NOTE: This is my personal experience, but <br> alternative paradigms are well worth discussion<br>
 - Preface requirements with qualifiers "Must" or "Should" to indicate whether requirements are hard or soft requirements <- Tired friday night wording, this can be improved.<br>
