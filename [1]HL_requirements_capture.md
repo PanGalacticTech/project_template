@@ -1,7 +1,7 @@
 # [1]High Level Requirements Capture Form - [Project Title]
 
-_This form is intended to assist in capturing the requirements for new embedded systems projects, br>
-its implementation can be adapted to suit projects of differing complexity._
+_This form is intended to assist in capturing the requirements for new Open Source Embedded Systems Projects, <br>
+its scope & implementation can be adapted to suit projects of varying complexity._
 
 _______________________________________________________________________________________________________________________________________________________
 ## Project Brief Description
