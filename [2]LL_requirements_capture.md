@@ -64,7 +64,7 @@ it also provides the information required to undertake successful **Verification
 
 #### Hardware Requirements
 >
-> HW.1. 500mA resettable fuse in series with USB 5v pin, to limit current draw in case of short circuit[^1] - Trace to: (HL.1, HL.2)   <br>
+> HW.1. 500mA resettable fuse in series with USB 5v pin, to limit current draw in case of short circuit[^2] - Trace to: (HL.1, HL.2)   <br>
 > HW.2. 5.1v Zener diodes reverse biased between GND and VCC, GND and USB Data+, and GND& USB Data-     - Trace to: (HL.3)         <br>
 > 
 > HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
@@ -104,11 +104,10 @@ ________________________________________________________________________________
 #### Footnotes
 
 
-[^1]: Ruggeduino >5v cutoff circuit
-          - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
-
-
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
         - Validation   - _"Are the requirements correct"_
+        
+[^2]: Ruggeduino >5v cutoff circuit
+          - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
