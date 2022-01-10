@@ -14,8 +14,7 @@ _This section documents the final validated High Level Requirements_
 HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
 HL.2. Device must protect Client USB from current draw >0.5A, as common for older devices.                               <br>
 HL.3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                     <br>
-HL.4. Device should prevent voltages >1v being applied to the client USB GND pin.                                        <br>
-HL.5. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
+HL.4. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
  
 
 _______________________________________________________________________________________________________________________________________________________
@@ -64,25 +63,22 @@ it also provides the information required to undertake successful **Verification
 
 #### [2.3.1]Hardware Requirements
 >
-> HW.1. 500mA resettable fuse in series with USB 5v pin, to limit current draw in case of short circuit[^2] - Trace to: (HL.1, HL.2)   <br>
-> HW.2. 5.1v Zener diodes reverse biased between GND and VCC, GND and USB Data+, and GND& USB Data-     - Trace to: (HL.3)         <br>
+> HW.1. 500mA resettable fuse in series with USB 5v pin, to limit current draw in case of short circuit                      - Trace to: (HL.1, HL.2)   <br>
+> HW.2. 5.1v Zener diodes reverse biased between GND and USB Data+, and GND & USB Data, shunts (V > 5.1v) to GND             - Trace to: (HL.3)         <br>
+> HW.3. P-Channel MOSFET & voltage sensing circuit on USB Vcc, to disconnect if (V > 5.5v)[^2].                              - Trace to: (HL.3)         <br>
+> HW.4. Voltage Divider in voltage sensing circuit current consumption estimated at ~0.3mA[^3].                              - Trace to: (HL.4)         <br>                     
 > 
-> HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
-> HL.2. Device must protect Client USB from current draw >0.5A, as common for older devices.                               <br>
-> HL.3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                     <br>
-> HL.4. Device should prevent voltages >1v being applied to the client USB GND pin.                                        <br>
-> HL.5. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
+
 
 #### [2.3.2]Software Requirements
 
 > SW.1. - *Example ID Number this project does not have any software requirements*
 
-*At the end of this process every High Level requirement should be traceable to at least one low level requirement, and every low level requirement should
+*At the end of this process most High Level requirements should be traceable to at least one low level requirement, and every low level requirement should
 be traceable to at least one High Level requirement. At this point, both high level & low level requirements can be placed in a requirement matrix*
 
 When to review? 
-*Low level requirements should undertake a review process, ***Validation***, to ensure they meet the clients needs and, before any further development takes place. <br>
-*
+*Low level requirements should undertake a review process,* ***Validation***, *to ensure they meet the clients needs and, before any further development takes place. <br>*
 
 _______________________________________________________________________________________________________________________________________________________
 ## Design Optimisation?
