@@ -4,7 +4,7 @@ _This form is intended to assist in deriving low level hardware & software requi
 High Level Requirements Capture[[1]HL_requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5DHL_requirements_capture.md) Form <br>
 Its scope can be adapted to suit projects of varying complexity_
 _______________________________________________________________________________________________________________________________________________________
-## Validated High Level Requirements
+## [2.0]Validated High Level Requirements
 
 _This section simply documents the final validated High Level Requirements_
 
@@ -19,7 +19,7 @@ _This section simply documents the final validated High Level Requirements_
 > 
 
 _______________________________________________________________________________________________________________________________________________________
-## Low Level Requirements Description
+## [2.1]Low Level Requirements Description
 
 *Low Level Requirements are derived from the High lev Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design*
 
@@ -32,7 +32,7 @@ ________________________________________________________________________________
 
 
 #### Requirements should be:
-- Specific           - Document a single feature or function requirement at a time.                                                 <br>
+- Specific           - Document a single feature or function implementation at a time.                                                 <br>
 - Quantifyable       - Provide quantifyable parameters, boundary limits of operation and/or design tolerences, rather than open ended specifications where possible.                <br>
 - Self Contained     - Do not rely on assumptions to deliver information, as different engineers will make different assumptions, which may cause conflicts <-NOTE: Find better wording <br>
 - Traceable          - Assign each Low Level requirement an ID number, this will be used to trace any design decisions through the development process. <br>
@@ -60,7 +60,7 @@ _Good requirements are the foundation for successful development of a project, a
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
 
 
-### Example Low Level Requirements Capture - [USB Saver Tool]
+## [2.2]Example Low Level Requirements Capture - [USB Saver Tool]
 
 #### Hardware Requirements
 >
@@ -93,7 +93,7 @@ ________________________________________________________________________________
 
 _______________________________________________________________________________________________________________________________________________________
 
-### Requirement Matrix
+### [2.3]Requirement Matrix
 
 
 
