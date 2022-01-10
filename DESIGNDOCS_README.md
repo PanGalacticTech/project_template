@@ -13,9 +13,13 @@ _Design documents will follow this template during development process_
 
 [0] - Client requests development of open source Embedded Systems project.
 [[1]High Level Requirements Capture](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5DHL_requirements_capture.md)
-- Requirements Review? Validation? Sign Off?
+
+Requirements Review? Validation? Sign Off?
+
 [[2]Low Level Requirements Capture](https://github.com/PanGalacticTech/project_template/blob/main/%5B2%5DLL_requirements_capture.md)
-- Requirements Review? Validation? Sign Off?
+
+Requirements Review? Validation? Sign Off?
+
 [[3]Detailed Design Documents](https://broken_link.com)
     - Includes:
       - Hardware Specification
