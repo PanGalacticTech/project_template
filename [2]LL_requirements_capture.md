@@ -103,8 +103,9 @@ ________________________________________________________________________________
 
 #### Footnotes
 
-[^1][^2]![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
-Ruggeduino >5v cutoff circuit
+[^1][^2]: Ruggeduino >5v cutoff circuit
+          - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
+
 
 
 [^V&V]: Verification & Validation - What is it? <br>
