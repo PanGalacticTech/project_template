@@ -15,7 +15,7 @@ _The project brief should contain an outline of the proposed project, with enoug
 _______________________________________________________________________________________________________________________________________________________
 ## Requirements Capture
 
-_This section should contain a numbered list of all the specific requirements that can be gathered from the project brief, or from the client directly.
+**This section should contain a numbered list of all the specific requirements that can be gathered from the project brief, or from the client directly.**
 
 Requirements should be:
 - Simple & Specific - document a single feature or function at a time                                           <br>
