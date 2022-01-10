@@ -21,8 +21,8 @@ _Design documents will follow this template during development process_
     * [2.1] Validated High Level Requirements                                                                                                               <br>
     * [2.2] Low Level Requirements Description                                                                                          <br>
     * [2.3] Low Level Requirements Capture      <br>
-            * [2.3.1] Hardware Requirements <br>
-            * [2.3.1] Software Requirements <br>
+      * [2.3.1] Hardware Requirements <br>
+      * [2.3.1] Software Requirements <br>
     * Requirements Review? Validation? Sign Off? <br>     
     * [2.4] Requirements Matrix <- NOTE: here or in seperate document? <br>
 
