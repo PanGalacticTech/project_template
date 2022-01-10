@@ -88,12 +88,16 @@ _What parameters of the design should be minimised/maximised?_
 
 _______________________________________________________________________________________________________________________________________________________
 
+
+
+
+
+#### References
+
+- [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
+
 #### Footnotes
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
         - Validation   - _"Are the requirements correct"_
-
-#### References
-
-- [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
