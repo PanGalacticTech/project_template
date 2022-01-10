@@ -6,10 +6,11 @@ _The project brief should contain an outline of the proposed project, with enoug
 
 ### Example Project Brief
 ## USB Saver Tool
-```
-The client requires a PCB to protect laptops and personal devices from damage during use <br>
-while programming or powering of USB enabled embedded systems projects in development.
-```
+
+>
+> The client requires a PCB to protect laptops and personal devices from damage during use <br>
+> while programming or powering of USB enabled embedded systems projects in development.
+>
 
 ## Requirements Capture
 
@@ -25,13 +26,14 @@ _Requirements should be:
 
 
 ### Example Requirements Capture
-```
-1. Device must protect Client USB from direct short between VCC & GND pins                                          <br>
-2. Device must protect Client USB from current draw >0.5A, as common for older devices.                             <br>
-3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                   <br>
-4. Device should prevent voltages >1v being applied to the client USB GND pin.                                      <br>
-5. Device should operate with <0.2A quiessent current, in order to maximise current available for embedded project. <br>
-6. 
+
+>
+> 1. Device must protect Client USB from direct short between VCC & GND pins                                          <br>
+> 2. Device must protect Client USB from current draw >0.5A, as common for older devices.                             <br>
+> 3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                   <br>
+> 4. Device should prevent voltages >1v being applied to the client USB GND pin.                                      <br>
+> 5. Device should operate with <0.2A quiessent current, in order to maximise current available for embedded project. <br>
+> 6. 
 
 ```
 
