@@ -16,15 +16,28 @@ Common sections might include:
 - Circuit Design & Schematic
 - Electronic Components Identification
 - PCB Design Layout
+- PCB Design Validation?
 - PCB Fabrication notes
 
 ### Example Hardware Specification - [USB Saver Tool]
 
+#### [3.1.1] Circuit Design
+*Insert Schematic Here*
 
-HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
-HL.2. Device must protect Client USB from current draw >0.5A, as common for older devices.                               <br>
-HL.3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                     <br>
-HL.4. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
+#### [3.1.2] Components Specification
+*Insert Table of Selected Components*
+
+#### [3.1.3] PCB Design
+*Insert PCB Design, 3D model*
+*Identify potential issues with design*
+***Verification & Validation Step Required Here ... Must be validated against HL requirements document***
+
+#### [3.1.4] PCB Fabrication
+
+*Prototype PCB will be fabricated in house to avoid shipping fees*
+
+*Insert link to finished fabrication files folder*?
+
  
 
 _______________________________________________________________________________________________________________________________________________________
