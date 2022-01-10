@@ -62,7 +62,7 @@ it also provides the information required to undertake successful **Verification
 
 ## [2.3]Example Low Level Requirements Capture - [USB Saver Tool]
 
-#### Hardware Requirements
+#### [2.3.1]Hardware Requirements
 >
 > HW.1. 500mA resettable fuse in series with USB 5v pin, to limit current draw in case of short circuit[^2] - Trace to: (HL.1, HL.2)   <br>
 > HW.2. 5.1v Zener diodes reverse biased between GND and VCC, GND and USB Data+, and GND& USB Data-     - Trace to: (HL.3)         <br>
@@ -73,7 +73,7 @@ it also provides the information required to undertake successful **Verification
 > HL.4. Device should prevent voltages >1v being applied to the client USB GND pin.                                        <br>
 > HL.5. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
 
-#### Software Requirements
+#### [2.3.2]Software Requirements
 
 > SW.1. - *Example ID Number this project does not have any software requirements*
 
