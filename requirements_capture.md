@@ -1,6 +1,6 @@
 # Requirements Capture Form - [Project Title]
 
-
+_______________________________________________________________________________________________________________________________________________________
 ## Project Brief
 _The project brief should contain an outline of the proposed project, with enough detail to derive a comprehensive list of requirements._
 
@@ -12,6 +12,7 @@ _The project brief should contain an outline of the proposed project, with enoug
 > while programming or powering USB enabled embedded systems projects during development & prototyping
 >
 
+_______________________________________________________________________________________________________________________________________________________
 ## Requirements Capture
 
 _This section should contain a numbered list of all the specific requirements that can be gathered from the project brief, or from the client directly.
@@ -35,9 +36,9 @@ _Requirements should be:
 > 5. Device should operate with <0.2A quiessent current, in order to maximise current available for embedded project. <br>
 > 6. 
 
-```
 
-## Design Optimiseation?
+_______________________________________________________________________________________________________________________________________________________
+## Design Optimisation?
 
 _This section should probably go later, not sure. Should it be included in requirements?
 What parameters of the design should be minimised/maximised?
