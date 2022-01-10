@@ -40,12 +40,12 @@ ________________________________________________________________________________
 
 --------------------------------------------------------------------------------------
 #### Example Low Level Requirements
-Examples of Good and Poor requirements given below
+Examples of Good and Poor requirements given below <- NOTE: Need better examples or are they even eissary at this point?
 
 Good Requirement:
 > Device must consume less than 20 mA of current from Client USB
 
-Poor Requirement:
+weak Requirement:
 > Device must operate efficiently
  
 _It is better to be specific early then revise this requirement as the design progresses, than leave options totally open_ <- NOTE: This is my personal experience, but alternative paradigms are well worth discussion<br>
