@@ -19,19 +19,20 @@ Requirements Review? Validation? Sign Off? <br>
 Requirements Review? Validation? Sign Off? <br>
 
 [[3]Detailed Design Documents](https://broken_link.com) <br>
-    - Includes:
-      - Hardware Specification
-      - Software Specification
-      - PCB Design Documents
-      - Code
+    - Includes:                                                                                                              <br>
+      - Hardware Specification <br>
+      - Software Specification <br>
+      - PCB Design Documents <br>
+      - Code <br>
 [[4]Verification Documents](https://broken_link.com) <br>
-    - Verification Testing Procedures
-    - Test Results
-    - Evaluation of test results against requirements documents
+    - Verification Testing Procedures  <br>
+        - Tested against requirements <br>
+    - Test Results <br>
+    - Evaluation of test results against requirements documents <br>
 [[5]System Commission Documents](https://broken_link.com) <br>
-    - Handover/Signoff
-    - User End Documentation
-      - User Guides
-      - Safety Information
+    - Handover/Signoff    <br>
+    - User End Documentation   <br>
+      - User Guides      <br>
+      - Safety Information    <br>
 [[6]Decommissioning & End of Life Documents](https://broken_link.com) <br>
 
