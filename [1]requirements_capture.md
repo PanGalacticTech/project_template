@@ -29,11 +29,13 @@ Examples of Good and Poor requirements given below
 
 Good Requirement:
 > Device must consume less than 20 mA of current from Client USB
-
+ <br>
 Poor Requirement
 > Device must operate efficiently
-
+ <br>
+ 
 _It is better to be specific early then revise this requirement as the design progresses, than leave options totally open_ <- NOTE: This is my personal experience, but alternative paradigms are well worth discussion<br>
+
 --------------------------------------------------------------------------------------
 
 More Advice on Requirements:
