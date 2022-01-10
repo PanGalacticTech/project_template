@@ -4,7 +4,7 @@ _This form is intended to assist in capturing the requirements for new Open Sour
 its scope & implementation can be adapted to suit projects of varying complexity._
 
 _______________________________________________________________________________________________________________________________________________________
-## Project Brief Description
+## [1.1]Project Brief Description
 _The project brief should contain an outline of the proposed project, with enough detail to derive a comprehensive list of requirements._
 
 ### Example Project Brief - [USB Saver Tool]
@@ -17,7 +17,7 @@ _The project brief should contain an outline of the proposed project, with enoug
 _The project brief may also contain information on currently available similar products, and a brief description of the features they lack_ <- NOTE: Would this be too much info for this kind of doc? Should a seperate process be carried out on receipt of the requirements to look for existing COTS (Consumer Off The Shelf) options?
 
 _______________________________________________________________________________________________________________________________________________________
-## High Level Requirements Capture Description
+## [1.2]High Level Requirements Capture Description
 
 *This section should contain a numbered list of all the specific high level requirements that can be gathered from the project brief, or from the client directly. <br>
 High Level Requirements capture the intent and function of a system, without going into specifics of how these will be achieved or any specific implementations. I.E. They take a Black Box approach*
@@ -62,7 +62,7 @@ _Good requirements are the foundation for successful development of a project, a
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
 
 
-### Example Requirements Capture - [USB Saver Tool]
+## [1.3]Example Requirements Capture - [USB Saver Tool]
 
 >
 > HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
