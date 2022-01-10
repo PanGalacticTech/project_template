@@ -8,8 +8,8 @@ _The project brief should contain an outline of the proposed project, with enoug
 ## USB Saver Tool
 
 >
-> The client requires a PCB to protect laptops and personal devices from damage during use <br>
-> while programming or powering of USB enabled embedded systems projects in development.
+> The client requires a PCB to protect laptops and personal devices from damage
+> while programming or powering USB enabled embedded systems projects during development & prototyping
 >
 
 ## Requirements Capture
