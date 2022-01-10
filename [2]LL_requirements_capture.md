@@ -2,7 +2,7 @@
 
 _This form is intended to assist in deriving low level hardware & software requirements from the ***Validated***  
 High Level Requirements Capture[[1]HL_requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5DHL_requirements_capture.md) Form <br>
-
+Its scope can be adapted to suit projects of varying complexity_
 _______________________________________________________________________________________________________________________________________________________
 ## Validated High Level Requirements
 
@@ -64,7 +64,8 @@ it also provides the information required to undertake successful **Verification
 
 #### Hardware Requirements
 >
-> HW.1. 
+> HW.1. 500mA resettable fuse in series with USB 5v pin, to limit current draw in case of short circuit[^1] - Trace to: (HL.1, HL.2)
+> HW.2. 5.1v Zener diodes reverse biased between GND and VCC, GND and USB Data+, and GND& USB Data-[^1]     - Trace to: (HL.3)
 > 
 > HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
 > HL.2. Device must protect Client USB from current draw >0.5A, as common for older devices.                               <br>
@@ -73,13 +74,15 @@ it also provides the information required to undertake successful **Verification
 > HL.5. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
 
 #### Software Requirements
-> SW.1. 
+
+> SW.1. - *Example ID Number this project does not have any software requirements*
+
+*At the end of this process every High Level requirement should be traceable to at least one low level requirement, and every low level requirement should
+be traceable to at least one High Level requirement. At this point, both high level & low level requirements can be placed in a requirement matrix*
 
 When to review? 
-*Low level requirements should undertake a review process, ***Validation***, to ensure they meet the clients needs, before any further development takes place. <br>
+*Low level requirements should undertake a review process, ***Validation***, to ensure they meet the clients needs and, before any further development takes place. <br>
 *
-
-
 
 _______________________________________________________________________________________________________________________________________________________
 ## Design Optimisation?
@@ -88,7 +91,9 @@ _What parameters of the design should be minimised/maximised?_
 
 _______________________________________________________________________________________________________________________________________________________
 
+_______________________________________________________________________________________________________________________________________________________
 
+### Requirement Matrix
 
 
 
@@ -97,6 +102,10 @@ ________________________________________________________________________________
 - [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
 
 #### Footnotes
+
+[^1]![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
+Ruggeduino >5v cutoff circuit
+
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
