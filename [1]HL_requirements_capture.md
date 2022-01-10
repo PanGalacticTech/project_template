@@ -20,13 +20,17 @@ ________________________________________________________________________________
 ## High Level Requirements Capture Description
 
 *This section should contain a numbered list of all the specific high level requirements that can be gathered from the project brief, or from the client directly. <br>
-High Level Requirements capture the intent and function of a system, without going into specifics of how these will be achieved or any specific implementations*
+High Level Requirements capture the intent and function of a system, without going into specifics of how these will be achieved or any specific implementations. I.E. They take a Black Box approach*
 
-#### High Level Requirements should cover:
+#### High Level Requirements should address:
 - Client Needs
-- Features
+- Features & Functionality
+- Interfaces
+- Performance
+- Quality Attributes
+- Design Constraints
 - Regulations
-- Safety
+- Safety & Security
 - System
 
 #### Requirements should be:
@@ -37,12 +41,12 @@ High Level Requirements capture the intent and function of a system, without goi
 
 --------------------------------------------------------------------------------------
 #### Example High Level Requirements
-Examples of Good and Poor requirements given below
+Examples of Good and Weak requirements given below
 
 Good Requirement:
 > Device must consume less than 20 mA of current from Client USB
 
-Poor Requirement:
+Weak Requirement:
 > Device must operate efficiently
  
 _It is better to be specific early then revise this requirement as the design progresses, than leave options totally open_ <- NOTE: This is my personal experience, but alternative paradigms are well worth discussion<br>
