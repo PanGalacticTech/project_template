@@ -1,15 +1,14 @@
 # Requirements Capture Form - [Project Title]
 
 _______________________________________________________________________________________________________________________________________________________
-## Project Brief
+## Project Brief Description
 _The project brief should contain an outline of the proposed project, with enough detail to derive a comprehensive list of requirements._
 
-### Example Project Brief
-## USB Saver Tool
-
+## Example Project Brief - [USB Saver Tool]
 >
 > The client requires a PCB to protect laptops and personal devices from damage
-> while programming or powering USB enabled embedded systems projects during development & prototyping
+> while programming or powering USB enabled embedded systems projects during
+> development & prototyping
 >
 
 _______________________________________________________________________________________________________________________________________________________
@@ -34,7 +33,7 @@ Requirements should be:
 > 3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                   <br>
 > 4. Device should prevent voltages >1v being applied to the client USB GND pin.                                      <br>
 > 5. Device should operate with <0.2A quiessent current, in order to maximise current available for embedded project. <br>
-> 6. 
+> 
 
 
 _______________________________________________________________________________________________________________________________________________________
