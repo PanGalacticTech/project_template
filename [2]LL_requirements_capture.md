@@ -107,6 +107,6 @@ ________________________________________________________________________________
 [^2]: Ruggeduino >5v cutoff circuit
       - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
           
-[^3] Estimated current consumption of cutoff circuit
+[^3]: Estimated current consumption of cutoff circuit
      - R = 17kohm, V = 5v. (I=V/R) I=17k/5=[2.9\*10^-4]
    
