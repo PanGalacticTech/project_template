@@ -21,7 +21,7 @@ HL.5. Device should operate with <0.2A quiessent current, in order to maximise p
 _______________________________________________________________________________________________________________________________________________________
 ## [2.2]Low Level Requirements Description
 
-*Low Level Requirements are derived from the High lev Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design*
+*Low Level Requirements are derived from the High level Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design*
 
 #### Low Level Requirements should:
 - Finalise functionality before exiting design process
