@@ -58,7 +58,7 @@ _Good requirements are the foundation for successful development of a project, a
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
 
 
-### Example Requirements Capture
+### Example Requirements Capture - [USB Saver Tool]
 
 >
 > HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
