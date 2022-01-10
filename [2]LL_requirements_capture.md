@@ -21,7 +21,7 @@ _This section simply documents the final validated High Level Requirements_
 _______________________________________________________________________________________________________________________________________________________
 ## Low Level Requirements Description
 
-*Low Level Requirements are derived from the High lev Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design *
+*Low Level Requirements are derived from the High lev Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design*
 
 #### Low Level Requirements should:
 - Finalise functionality before exiting design process
