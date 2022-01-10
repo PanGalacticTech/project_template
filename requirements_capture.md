@@ -7,7 +7,8 @@ _The project brief should contain an outline of the proposed project, with enoug
 ### Example Project Brief
 ## USB Saver Tool
 ```
-The client requires a PCB to protect laptops and personal devices from damage during use while programming or powering of USB enabled embedded systems projects in development.
+The client requires a PCB to protect laptops and personal devices from damage during use <br>
+while programming or powering of USB enabled embedded systems projects in development.
 ```
 
 ## Requirements Capture
@@ -15,21 +16,21 @@ The client requires a PCB to protect laptops and personal devices from damage du
 _This section should contain a numbered list of all the specific requirements that can be gathered from the project brief, or from the client directly.
 
 _Requirements should be:
--Simple & Specific - document a single feature or function at a time
--Precise & Quantifyable - Provide limits or quantifyable parameters, rather than open ended specifications 
-    (e.g. "Device must consume less than 20 mA of current from Client USB", rather than "Device must operate efficiently") 
-    - It is better to be specific early then revise this requirement as the design progresses, than leave options totally open <- NOTE: This is my personal experience, but alternative paradigms are well worth discussion
-- Preface requirements with qualifiers "Must" or "Should" to indicate whether requirements are hard or soft requirements <- Tired friday night wording, this can be improved.
-- Provide reasoning behind requirements if otherwise unclear, this provides a record of why early design decisions were made.
+-Simple & Specific - document a single feature or function at a time                                           <br>
+-Precise & Quantifyable - Provide limits or quantifyable parameters, rather than open ended specifications      <br>
+    (e.g. "Device must consume less than 20 mA of current from Client USB", rather than "Device must operate efficiently")      <br>
+    - It is better to be specific early then revise this requirement as the design progresses, than leave options totally open <- NOTE: This is my personal experience, but <br> alternative paradigms are well worth discussion<br>
+- Preface requirements with qualifiers "Must" or "Should" to indicate whether requirements are hard or soft requirements <- Tired friday night wording, this can be improved.<br>
+- Provide reasoning behind requirements if otherwise unclear, this provides a record of why early design decisions were made.<br>
 
 
 ### Example Requirements Capture
 ```
-1. Device must protect Client USB from direct short between VCC & GND pins 
-2. Device must protect Client USB from current draw >0.5A, as common for older devices.
-3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.
-4. Device should prevent voltages >1v being applied to the client USB GND pin.
-5. Device should operate with <0.2A quiessent current, in order to maximise current available for embedded project. 
+1. Device must protect Client USB from direct short between VCC & GND pins                                          <br>
+2. Device must protect Client USB from current draw >0.5A, as common for older devices.                             <br>
+3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                   <br>
+4. Device should prevent voltages >1v being applied to the client USB GND pin.                                      <br>
+5. Device should operate with <0.2A quiessent current, in order to maximise current available for embedded project. <br>
 6. 
 
 ```
