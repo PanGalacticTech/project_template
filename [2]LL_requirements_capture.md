@@ -28,6 +28,7 @@ ________________________________________________________________________________
 - Be traceable to High Level Requirements
 - Address internal software interfaces
 - Define logic decisions as far as possible
+- Be devolved into low level ***Hardware Requirements*** and ***Software Requirements***
 
 
 #### Requirements should be:
@@ -38,7 +39,7 @@ ________________________________________________________________________________
 
 
 --------------------------------------------------------------------------------------
-#### Example High Level Requirements
+#### Example Low Level Requirements
 Examples of Good and Poor requirements given below
 
 Good Requirement:
@@ -52,26 +53,30 @@ _It is better to be specific early then revise this requirement as the design pr
 --------------------------------------------------------------------------------------
 
 More Advice on Requirements:
-- Preface requirements with qualifiers "Must" or "Should" to indicate whether requirements are hard or soft requirements <- NOTE: Tired friday night wording, this can be improved.<br>
-- Provide reasoning behind requirements if otherwise unclear, this provides a record of why early design decisions were made.<br>
-- Reference industrial standards where relevent. This will help define derived requirements during the next step of the development timeline. <br>
+- Provide reasoning behind requirements if otherwise unclear, this provides a record of why design decisions were made.<br>
+- Reference industrial standards where relevent.<br>
 
 _Good requirements are the foundation for successful development of a project, as it allows design decisions to be traced through the development process.
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
 
 
-### Example Requirements Capture
+### Example Low Level Requirements Capture - [USB Saver Tool]
 
+#### Hardware Requirements
 >
+> HW.1. 
+> 
 > HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
 > HL.2. Device must protect Client USB from current draw >0.5A, as common for older devices.                               <br>
 > HL.3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                     <br>
 > HL.4. Device should prevent voltages >1v being applied to the client USB GND pin.                                        <br>
 > HL.5. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
-> 
+
+#### Software Requirements
+> SW.1. 
 
 When to review? 
-*High level requirements should undertake a review process, ***Validation***, to ensure they meet the clients needs, before any further development takes place. <br>
+*Low level requirements should undertake a review process, ***Validation***, to ensure they meet the clients needs, before any further development takes place. <br>
 *
 
 
@@ -79,10 +84,16 @@ When to review?
 _______________________________________________________________________________________________________________________________________________________
 ## Design Optimisation?
 
-_This section should probably go later, not sure. Should it be included in requirements?
-What parameters of the design should be minimised/maximised?_
+_What parameters of the design should be minimised/maximised?_
 
+_______________________________________________________________________________________________________________________________________________________
+
+#### Footnotes
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
         - Validation   - _"Are the requirements correct"_
+
+#### References
+
+- [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
