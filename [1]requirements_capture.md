@@ -44,7 +44,7 @@ More Advice on Requirements:
 - Reference industrial standards where relevent. This will help define derived requirements during the next step of the development timeline. <br>
 
 _Good requirements are the foundation for successful development of a project, as it allows design decisions to be traced through the development process.
-it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]. 
+it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
 
 
 ### Example Requirements Capture
