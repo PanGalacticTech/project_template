@@ -6,7 +6,7 @@ Its scope can be adapted to suit projects of varying complexity_
 _______________________________________________________________________________________________________________________________________________________
 ## [2.1]Validated High Level Requirements
 
-_This section simply documents the final validated High Level Requirements_
+_This section documents the final validated High Level Requirements_
 
 ### Example Project Brief - [USB Saver Tool]
 
