@@ -99,19 +99,21 @@ _Hardware Specification may contain the following subsections:_
 ### Major Components
 
 #### DC/DC Converters
-##### Option 1:                 Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
-**Part Number:**                I6A4W020A033V-001-R                                                    <br>
-**Supplier:**                   RS Components                                                              <br>
-**Vin:**                        9 - 40v                                                                         <br>
-**Vout:**                       3.3 - 24v                                                                      <br>
-**Power:**                      250W                                                                          <br>
-**Price:**                      £44.66                                                                        <br>
-
-**URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
-
-**Notes:**                                                                               <br>
-
-**Meets Requirements:**         (HL.1, HL.2, HL.3)                                              <br>
+##### Option 1:
+|Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
+_______________________________________________________________________________________________________________
+|**Part Number:**              |  I6A4W020A033V-001-R                                                    <br>
+|**Supplier:**                 |  RS Components                                                              <br>
+|**Vin:**                      |  9 - 40v                                                                         <br>
+|**Vout:**                     |  3.3 - 24v                                                                      <br>
+|**Power:**                    |  250W                                                                          <br>
+|**Price:**                    |  £44.66                                                                        <br>
+|                              |
+|**URL:**                      |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
+|                              |
+|**Notes:**                    |                                                          <br>
+|                              |
+|**Meets Requirements:**       |  (HL.1, HL.2, HL.3)                                              <br>
 
 
 #### P-Channel MOSFET 
