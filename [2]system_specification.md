@@ -72,6 +72,7 @@ requests from grafana server to MCU in order to actuate power control.*
         - Reliability
         - Additional parts required to implement, diodes, drive transistors etc.  
 
+*For now design will progress assuming that High Side P-Channel MOSFET is the best solution for this feature*
 
 _______________________________________________________________________________________________________________________________________________________
 ## [2.2]System Specification Description
@@ -98,35 +99,35 @@ _Hardware Specification may contain the following subsections:
 ### Major Components
 
 #### DC/DC Converters
-##### Option 1: Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
-**Part Number:** I6A4W020A033V-001-R                                                    <br>
-**Supplier:** RS Components                                                              <br>
-**Vin:** 9 - 40v                                                                         <br>
-**Vout:** 3.3 - 24v                                                                      <br>
-**Power:** 250W                                                                          <br>
-**Price:** £44.66                                                                        <br>
+##### Option 1:                 Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
+**Part Number:**                I6A4W020A033V-001-R                                                    <br>
+**Supplier:**                   RS Components                                                              <br>
+**Vin:**                        9 - 40v                                                                         <br>
+**Vout:**                       3.3 - 24v                                                                      <br>
+**Power:**                      250W                                                                          <br>
+**Price:**                      £44.66                                                                        <br>
 
 **URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
 
 **Notes:**                                                                               <br>
 
-**Meets Requirements:**  (HL.1, HL.2, HL.3)                                              <br>
+**Meets Requirements:**         (HL.1, HL.2, HL.3)                                              <br>
 
 
-#### DC/DC Converters
-##### Option 1: Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
-**Part Number:** I6A4W020A033V-001-R                                                    <br>
-**Supplier:** RS Components                                                              <br>
-**Vin:** 9 - 40v                                                                         <br>
-**Vout:** 3.3 - 24v                                                                      <br>
-**Power:** 250W                                                                          <br>
-**Price:** £44.66                                                                        <br>
+#### P-Channel MOSFET 
+##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
+**Part Number:**              SQP100P06-9m3L                                                  <br>
+**Supplier:**                 unavailable (need to look harder & for alts)                                            <br>
+**Vin:**                                                                                               <br>
+**Vout:**                                                                                           <br>
+**Power:**                                                                                              <br>
+**Price:**                                                                                            <br>
 
 **URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
 
 **Notes:**                                                                               <br>
 
-**Meets Requirements:**  (HL.1, HL.2, HL.3)                                              <br>
+**Meets Requirements:**         (HL.1, HL.2, HL.3)                                              <br>
 
 
 
