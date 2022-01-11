@@ -28,7 +28,7 @@ _Space to work through different options before deciding on specific low level r
 
 ## Voltage & Current Sensing Reporting
 
-- CHC340 interface on Power control Board
+**CHC340 interface on Power control Board**
   - Allows MCU to communicate with additional raspberry pi placed in ISO container
     - Advantages 
       - Some
@@ -36,7 +36,7 @@ _Space to work through different options before deciding on specific low level r
       - If power is lost to box, raspi will not be active. 
       - How is data accessed on raspberry pi? webserver requiring custom development?
  
- - Wifi enabled MCU Dev Board - Arduino 33 IoT
+**Wifi enabled MCU Dev Board - Arduino 33 IoT**
    - MCU Connects to WiFi and can be accessed remotely
      - Advantages
        - No need for additional Raspberry Pi in box
@@ -47,7 +47,7 @@ _Space to work through different options before deciding on specific low level r
 
 ## Power Control
 
-- P-Channel MOSFET
+**P-Channel MOSFET**
   - Allows MCU to communicate with additional raspberry pi placed in ISO container
     - Advantages 
       - Some
@@ -55,7 +55,7 @@ _Space to work through different options before deciding on specific low level r
       - If power is lost to box, raspi will not be active. 
       - How is data accessed on raspberry pi? webserver requiring custom development?
  
- - Wifi enabled MCU Dev Board - Arduino 33 IoT
+ **Wifi enabled MCU Dev Board - Arduino 33 IoT**
    - MCU Connects to WiFi and can be accessed remotely
      - Advantages
        - No need for additional Raspberry Pi in box
