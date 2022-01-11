@@ -1,6 +1,6 @@
 # [2]Low Level Requirements Capture Form - [Project Title]
 
-_This form is intended to assist in deriving low level hardware & software requirements from the ***Validated***  
+_This form is intended to assist in optioneering to derive low level hardware & software requirements from the ***Validated***  
 High Level Requirements Capture Form [[1]HL_requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5DHL_requirements_capture.md).
 Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
@@ -8,19 +8,47 @@ ________________________________________________________________________________
 
 _This section documents the final validated High Level Requirements_
 
-### Example Project Brief - [USB Saver Tool]
+### Example Project Brief - [ISOpower]
 
 
-HL.1. Device must protect Client USB from direct short between VCC & GND pins                                            <br>
-HL.2. Device must protect Client USB from current draw >0.5A, as common for older devices.                               <br>
-HL.3. Device must protect Client USB from voltages >5v applied to VCC and Data Pins.                                     <br>
-HL.4. Device should operate with <0.2A quiessent current, in order to maximise power available from client USB for embedded project.   <br>
+> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power.                   <br>
+> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2]  <br>
+> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W).                                 <br>
+> HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
+> HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
+> HL.6. Voltage & Current sensing will be available on the 5v Bus   <br>
+> HL.7. Board must have push-fit or bayonet connectors only. <br>
+> HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
+> HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
+
+_______________________________________________________________________________________________________________________________________________________
+## Optioneering
+
+_Space to work through different options before deciding on specific low level requirements & system specification_
+
+## Optioneering for Voltage & Current Sensing & Reporting
+
+- CHC340 interface on Power control Board
+  - Allows MCU to communicate with additional raspberry pi placed in ISO container
+    - Advantages 
+      - Some
+    - Disadvantages
+      - If power is lost to box, raspi will not be active. 
+      - How is data accessed on raspberry pi? webserver requiring custom development?
  
+ - Wifi enabled MCU Dev Board - Arduino 33 IoT
+   - MCU Connects to WiFi and can be accessed remotely
+     - Advantages
+       - No need for additional Raspberry Pi in box
+     - Disadvantages
+       - Some  
 
+Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
+requests from grafana server to MCU in order to actuate power control.
 _______________________________________________________________________________________________________________________________________________________
 ## [2.2]Low Level Requirements Description
 
-*Low Level Requirements are derived from the High level Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design*
+*Low Level Requirements are derived from the High level Requirements, with regards to specific hardware & software implementation. They may preceed or accompany design & optioneering*
 
 #### Low Level Requirements should:
 - Finalise functionality before exiting design process
@@ -37,23 +65,6 @@ ________________________________________________________________________________
 - Traceable          - Assign each Low Level requirement an ID number, this will be used to trace any design decisions through the development process. <br>
 
 
---------------------------------------------------------------------------------------
-#### Example Low Level Requirements
-Examples of Good and Poor requirements given below <- NOTE: Need better examples or are they even eissary at this point?
-
-Good Requirement:
-> Device must consume less than 20 mA of current from Client USB
-
-weak Requirement:
-> Device must operate efficiently
- 
-_It is better to be specific early then revise this requirement as the design progresses, than leave options totally open_ <- NOTE: This is my personal experience, but alternative paradigms are well worth discussion<br>
-
---------------------------------------------------------------------------------------
-
-More Advice on Requirements:
-- Provide reasoning behind requirements if otherwise unclear, this provides a record of why design decisions were made.<br>
-- Reference industrial standards where relevent.<br>
 
 _Good requirements are the foundation for successful development of a project, as it allows design decisions to be traced through the development process.
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
