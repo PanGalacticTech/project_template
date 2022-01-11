@@ -43,7 +43,9 @@ _Space to work through different options before deciding on specific low level r
        - HTTP GET requests can be sent by many additional means to switch power on & off.
      - Disadvantages
        - Some  
-
+      
+*Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
+requests from grafana server to MCU in order to actuate power control.*
 
 ## Power Control
 
@@ -70,8 +72,7 @@ _Space to work through different options before deciding on specific low level r
         - Reliability
         - Additional parts required to implement, diodes, drive transistors etc.  
 
-Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
-requests from grafana server to MCU in order to actuate power control.
+
 _______________________________________________________________________________________________________________________________________________________
 ## [2.2]System Specification Description
 
