@@ -33,8 +33,8 @@ c/ 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspber
 
 #### General Specifications/Requirements
 _These specifications are going to be valid for most projects developed using this framework_
-> Circuit should be protected from reverse supply voltages.
-> Circuit should be fuse protected
+> Circuit should be protected from reverse supply voltages. <br>
+> Circuit should be fuse protected <br>
 
 
 ### Design Tradeoffs
