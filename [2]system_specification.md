@@ -100,7 +100,7 @@ _Hardware Specification may contain the following subsections:_
 
 #### DC/DC Converters
 ##### Option 1:
-**Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A**
+|**Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A**|
 | Attribute          	|  Value 	|  
 |---	                |---	    |
 | **Part Number:**   	| I6A4W020A033V-001-R      	| 
