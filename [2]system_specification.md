@@ -90,7 +90,7 @@ _Hardware specification should outline specific hardware devices, circuit design
 
 <- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too?
 
-_Hardware Specification may contain the following subsections:
+_Hardware Specification may contain the following subsections:_
 - Major Components - Can be specific or requirements set out for optioneering
 - System Archetecture
 - Circuit Design
@@ -134,7 +134,9 @@ _Hardware Specification may contain the following subsections:
 
 
 
+_____________________________________________________________________________________________________
 
+Incomplete/ Leftover from Low Level Requirements Doc
 
  
 [ ] i6A4W Series DC/DC Step down converter selected for 12v bus power
