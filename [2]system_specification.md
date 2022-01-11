@@ -63,13 +63,24 @@ _Hardware specification should outline specific hardware devices, circuit design
 <- NOTE: Spreadsheet would be better for comparason of features of components
 
 _Hardware Specification may contain the following subsections:
-- Major Components
+- Major Components - Can be specific or requirements set out for optioneering
 - System Archetecture
 - Circuit Design
 - Other
 
 ### Major Components
+
 #### DC/DC Converters
+##### Option 1: Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
+**Part Number:** I6A4W020A033V-001-R
+**Supplier:** RS Components
+**Vin:** 9 - 40v
+**Vout:** 3.3 - 24v
+**Power:** 250W
+**Price:** £44.66
+
+**URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289
+
 
 
 
