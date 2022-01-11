@@ -4,6 +4,7 @@
 - Ease communication between clients and developers
 - Open Source design principles
 - Tracing of Design decisions
+- Change Control
 - Process adaptable for projects of different sizes
 
 
