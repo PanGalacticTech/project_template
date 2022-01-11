@@ -14,6 +14,7 @@ information provided can be tailored to project complexity_
 > PCB required to host DC-DC converters, to convert 24V DC power supply into operating voltages for ISO Experimental containers. 
 > The containers house 4 experiments, each requires 12v for motor power, and 5v for Arduino via USB.
 > Additional 5v power channel is required for future proofing, additional control infrastructure etc.
+> Cooling should be provided for DC/DC Converters.
 > Power requirements set out in specification below.
 
 
@@ -29,6 +30,11 @@ _Specific requirements for subsystems should be documented at this stage_    <br
 a/ steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt) <br>
 b/ peak power usage of 69W 5.7A at 12V (when motor stalled) <br>
 c/ 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to nano iot 33 monitoring chip. <br>
+
+#### General Specifications/Requirements
+_These specifications are going to be valid for most projects developed using this framework_
+> Circuit should be protected from reverse supply voltages.
+> Circuit should be fuse protected
 
 
 ### Design Tradeoffs
@@ -75,6 +81,9 @@ ________________________________________________________________________________
 > HL.7. Board must have push-fit or bayonet connectors only. <br>
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
+> HL.10. Power board will be protected from reversed supply voltages <br>
+> HL.11. Power Board will be protected from over-current conditions by a fuse <br>
+
 
 
 
