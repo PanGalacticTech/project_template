@@ -26,7 +26,7 @@ ________________________________________________________________________________
 
 _Space to work through different options before deciding on specific low level requirements & system specification_
 
-## Optioneering for Voltage & Current Sensing & Reporting
+## Voltage & Current Sensing Reporting
 
 - CHC340 interface on Power control Board
   - Allows MCU to communicate with additional raspberry pi placed in ISO container
@@ -44,6 +44,25 @@ _Space to work through different options before deciding on specific low level r
      - Disadvantages
        - Some  
 
+
+## Power Control
+
+- P-Channel MOSFET
+  - Allows MCU to communicate with additional raspberry pi placed in ISO container
+    - Advantages 
+      - Some
+    - Disadvantages
+      - If power is lost to box, raspi will not be active. 
+      - How is data accessed on raspberry pi? webserver requiring custom development?
+ 
+ - Wifi enabled MCU Dev Board - Arduino 33 IoT
+   - MCU Connects to WiFi and can be accessed remotely
+     - Advantages
+       - No need for additional Raspberry Pi in box
+       - HTTP GET requests can be sent by many additional means to switch power on & off.
+     - Disadvantages
+       - Some 
+
 Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
 requests from grafana server to MCU in order to actuate power control.
 _______________________________________________________________________________________________________________________________________________________
@@ -60,7 +79,7 @@ think this approach was far in excess of what is required for this kind of proje
 ### [2.3.1]Hardware Specification
 _Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
 
-<- NOTE: Spreadsheet would be better for comparason of features of components
+<- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too?
 
 _Hardware Specification may contain the following subsections:
 - Major Components - Can be specific or requirements set out for optioneering
@@ -72,19 +91,34 @@ _Hardware Specification may contain the following subsections:
 
 #### DC/DC Converters
 ##### Option 1: Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
-**Part Number:** I6A4W020A033V-001-R
-**Supplier:** RS Components
-**Vin:** 9 - 40v
-**Vout:** 3.3 - 24v
-**Power:** 250W
-**Price:** £44.66
+**Part Number:** I6A4W020A033V-001-R                                                    <br>
+**Supplier:** RS Components                                                              <br>
+**Vin:** 9 - 40v                                                                         <br>
+**Vout:** 3.3 - 24v                                                                      <br>
+**Power:** 250W                                                                          <br>
+**Price:** £44.66                                                                        <br>
 
-**URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289
+**URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
+
+**Notes:**                                                                               <br>
+
+**Meets Requirements:**  (HL.1, HL.2, HL.3)                                              <br>
 
 
+#### DC/DC Converters
+##### Option 1: Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A
+**Part Number:** I6A4W020A033V-001-R                                                    <br>
+**Supplier:** RS Components                                                              <br>
+**Vin:** 9 - 40v                                                                         <br>
+**Vout:** 3.3 - 24v                                                                      <br>
+**Power:** 250W                                                                          <br>
+**Price:** £44.66                                                                        <br>
 
+**URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
 
+**Notes:**                                                                               <br>
 
+**Meets Requirements:**  (HL.1, HL.2, HL.3)                                              <br>
 
 
 
@@ -125,6 +159,7 @@ ________________________________________________________________________________
 #### References
 
 - [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
+- [High Side vs Low Side Switch](https://www.baldengineer.com/low-side-vs-high-side-transistor-switch.html)
 
 #### Footnotes
 
