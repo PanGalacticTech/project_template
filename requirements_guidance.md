@@ -35,6 +35,12 @@ _It is better to be specific early then revise this requirement as the design pr
 
 --------------------------------------------------------------------------------------
 
+
+
+
+
+
+
 More Advice on Requirements:
 - Preface requirements with qualifiers "Must" or "Should" to indicate whether requirements are hard or soft requirements <- NOTE: Tired friday night wording, this can be improved.<br>
 - Provide reasoning behind requirements if otherwise unclear, this provides a record of why early design decisions were made.<br>
