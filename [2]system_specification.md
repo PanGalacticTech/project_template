@@ -47,21 +47,28 @@ _Space to work through different options before deciding on specific low level r
 
 ## Power Control
 
-**P-Channel MOSFET**
-  - Allows MCU to communicate with additional raspberry pi placed in ISO container
-    - Advantages 
-      - Some
-    - Disadvantages
-      - If power is lost to box, raspi will not be active. 
-      - How is data accessed on raspberry pi? webserver requiring custom development?
+**Low Side N-Channel MOSFET**
+  - Advantages   
+    - Lower resistance than p-type = greater current capacity
+  - Disadvantages
+    - GND reference to switched channels will not be 0v
+      
  
- **Wifi enabled MCU Dev Board - Arduino 33 IoT**
-   - MCU Connects to WiFi and can be accessed remotely
-     - Advantages
-       - No need for additional Raspberry Pi in box
-       - HTTP GET requests can be sent by many additional means to switch power on & off.
-     - Disadvantages
-       - Some 
+**High Side P-Channel MOSFET**
+ - Advantages
+    - GND Reference to switched channels will be 0v
+    - Can boost voltage from DC/DC modules slightly to offset voltage drop across DS       
+  - Disadvantages
+     - ?
+
+**Relay**
+   - Could use NC Connection or Latching to avoid need for constant power on relay
+      - Advantages
+        - No Voltage drop issues.
+      - Disadvantages
+        - Expense
+        - Reliability
+        - Additional parts required to implement, diodes, drive transistors etc.  
 
 Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
 requests from grafana server to MCU in order to actuate power control.
