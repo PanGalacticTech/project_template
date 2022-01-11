@@ -18,21 +18,21 @@ information provided can be tailored to project complexity_
 
 
 #### Optional Featuress
-_Any features or functions that are optional should be stated here_
+_Any features or functions that are optional should be stated here_  <br>
 >  1. Report Status & current usage for sustainabilty and maintainance purposes.
 >  2. Individual remote control of channel power.
 >  3. Improve power distribution to avoid damage to barrel jack connectors.
 
 
 #### Power Specifications
-_Specific requirements for subsystems should be documented at this stage_
-a/ steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt)
-b/ peak power usage of 69W 5.7A at 12V (when motor stalled)
-c/ 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to nano iot 33 monitoring chip.
+_Specific requirements for subsystems should be documented at this stage_    <br>
+a/ steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt) <br>
+b/ peak power usage of 69W 5.7A at 12V (when motor stalled) <br>
+c/ 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to nano iot 33 monitoring chip. <br>
 
 
 ### Design Tradeoffs
-_Space for discussion and weighing up of features that may or may not be required_
+_Space for discussion and weighing up of features that may or may not be required_ <br>
 
 _The project brief may also contain information on currently available similar products, and a brief description of the features they lack_ <- NOTE: Would this be too much info for this kind of doc? Should a seperate process be carried out on receipt of the requirements to look for existing COTS (Consumer Off The Shelf) options?
 
