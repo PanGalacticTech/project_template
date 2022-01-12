@@ -143,25 +143,25 @@ _Component Requirements:_
 |Price:           |  N/A as Unavailable                              | [ ]      |       |      
 |                 |                                                  |          |       |
 |URL:             |                                                  |         |        |
-|                 |                                                  |         |       |
+|Availability     |   Not Available                                  | [ ]       |       |
 |Notes:           |                                                  |         |       |                                                                            
 |Meets Requirements: |                                               | [ ]     |       |
     
 
 
 ##### Option 2: <br>
-**SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET**
+**P-Channel MOSFET, 27 A, 60 V, 3-Pin TO-220AB onsemi FQP27P06**
 |Attribute        | Value                                            |Suitable  | Notes |
 |---              |---                                               |---       |---    |
-|Part Number:     |  SQP100P06-9m3L                                  |          |       |
-|Supplier:        |  unavailable (need to look harder & for alts)    | [ ]      |       |                 
+|Part Number:     |  FQP27P06                                        |          |       |
+|Supplier:        |  RS Online                                  )    | [x]      |       |                 
 |Vds              |  -60V                                            | [x]      |       |     
-|Id               |  -100A                                           | [x]      |       |  
-|Rds(on) @ Vgs    |  0.0133                                          | [x]      |       |      
-|Price:           |  N/A as Unavailable                              | [ ]      |       |      
+|Id               |  -19.1A  @ 100degC                               | [x]      |       |  
+|Rds(on) @ Vgs    |  0.07 @ -10v   <- Unsuitable for 5v Vcc          | [ ]      |       |      
+|Price:           |  £1.571 each (50 min order)                      | [x]      |       |      
 |                 |                                                  |          |       |
-|URL:             |                                                  |         |        |
-|                 |                                                  |         |       |
+|URL:             |   https://uk.rs-online.com/web/p/mosfets/1784752 |         |        |
+|Availability     |  Back order 09/03/22                             | [x]     |       |
 |Notes:           |                                                  |         |       |                                                                            
 |Meets Requirements: |                                               | [ ]     |       |
     
