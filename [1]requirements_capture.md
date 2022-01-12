@@ -82,7 +82,7 @@ ________________________________________________________________________________
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
-> HL.11. Power Board will be protected from over-current conditions by a fuse <br>
+> HL.11. Power Board will be protected from over-current conditions <br>
 > HL.12. Power Board must have same screwholes as version 1 to aid in assembly <br>
 
 
