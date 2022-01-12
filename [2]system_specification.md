@@ -100,7 +100,7 @@ _Hardware Specification may contain the following subsections:_
 
 #### DC/DC Converters
 ##### Option 1: <br>
-|**Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A**|
+**Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A**
 | Attribute          	|  Value 	                            |  Notes
 |---	                |---	                                |---
 | **Part Number:**   	| I6A4W020A033V-001-R               	| 
@@ -131,7 +131,8 @@ _Component Requirements:_
 
 
 
-##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
+##### Option 1: <br>
+**SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET**
 |Attribute        | Value                                            |Suitable  | Notes |
 |---              |---                                               |---       |---    |
 |Part Number:     |  SQP100P06-9m3L                                  |          |       |
@@ -147,6 +148,23 @@ _Component Requirements:_
 |Meets Requirements: |                                               | [ ]     |       |
     
 
+
+##### Option 2: <br>
+**SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET**
+|Attribute        | Value                                            |Suitable  | Notes |
+|---              |---                                               |---       |---    |
+|Part Number:     |  SQP100P06-9m3L                                  |          |       |
+|Supplier:        |  unavailable (need to look harder & for alts)    | [ ]      |       |                 
+|Vds              |  -60V                                            | [x]      |       |     
+|Id               |  -100A                                           | [x]      |       |  
+|Rds(on) @ Vgs    |  0.0133                                          | [x]      |       |      
+|Price:           |  N/A as Unavailable                              | [ ]      |       |      
+|                 |                                                  |          |       |
+|URL:             |                                                  |         |        |
+|                 |                                                  |         |       |
+|Notes:           |                                                  |         |       |                                                                            
+|Meets Requirements: |                                               | [ ]     |       |
+    
 
 
 
