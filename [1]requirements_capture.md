@@ -27,9 +27,9 @@ _Any features or functions that are optional should be stated here_  <br>
 
 #### Sub-Systems Specifications
 _Specific requirements for subsystems should be documented at this stage_    <br>
-a/ steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt) <br>
-b/ peak power usage of 69W 5.7A at 12V (when motor stalled) <br>
-c/ 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to nano iot 33 monitoring chip. <br>
+> a. steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt) <br>
+> b. peak power usage of 69W 5.7A at 12V (when motor stalled) <br>
+> c. 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to nano iot 33 monitoring chip. <br>
 
 #### General Specifications/Requirements
 _These specifications are going to be valid for most projects developed using this framework_
