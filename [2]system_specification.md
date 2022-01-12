@@ -61,7 +61,7 @@ requests from grafana server to MCU in order to actuate power control.*
     - GND Reference to switched channels will be 0v
     - Can boost voltage from DC/DC modules slightly to offset voltage drop across DS       
   - Disadvantages
-     - ?
+     - Semiconductor availability due to pandemic!
 
 **Relay**
    - Could use NC Connection or Latching to avoid need for constant power on relay
