@@ -3,7 +3,7 @@
 _This form is intended to assist in capturing the requirements for new Open Source Embedded Systems Projects, <br>
 its scope & implementation can be adapted to suit projects of varying complexity._
 
-_______________________________________________________________________________________________________________________________________________________
+***************************************************************************************************************************************************************
 ## [1.1]Project Brief
 _The project brief should contain an outline of the proposed project, with enough detail to derive a comprehensive list of requirements. The format, layout and
 information provided can be tailored to project complexity_
@@ -25,7 +25,7 @@ _Any features or functions that are optional should be stated here_  <br>
 >  3. Improve power distribution to avoid damage to barrel jack connectors.
 
 
-#### Power Specifications
+#### Sub-Systems Specifications
 _Specific requirements for subsystems should be documented at this stage_    <br>
 a/ steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt) <br>
 b/ peak power usage of 69W 5.7A at 12V (when motor stalled) <br>
@@ -40,7 +40,11 @@ _These specifications are going to be valid for most projects developed using th
 ### Design Tradeoffs
 _Space for discussion and weighing up of features that may or may not be required_ <br>
 
-_The project brief may also contain information on currently available similar products, and a brief description of the features they lack_ <- NOTE: Would this be too much info for this kind of doc? Should a seperate process be carried out on receipt of the requirements to look for existing COTS (Consumer Off The Shelf) options?
+### Existing Products & COTS (Consumer Off The Shelf)
+
+_The project brief may also contain information on currently available similar products and a brief description of the features they lack and a 
+quick review of whether they can fullfill the aims of the project._
+
 
 _______________________________________________________________________________________________________________________________________________________
 ## [1.2]High Level Requirements Description
@@ -67,6 +71,7 @@ High Level Requirements capture the intent and function of a system, without goi
 
 _Good requirements are the foundation for successful development of a project, as it allows design decisions to be traced through the development process.
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
+
 
 _______________________________________________________________________________________________________________________________________________________
 ## [1.3]Example Requirements Capture - [ISOpower]
@@ -97,8 +102,7 @@ When to review? <br>
 _______________________________________________________________________________________________________________________________________________________
 ## Design Optimisation?
 
-_This section should probably go later, not sure. Should it be included in requirements?
-What parameters of the design should be minimised/maximised?_
+_What parameters of the design should be minimised/maximised?_
 _______________________________________________________________________________________________________________________________________________________
 
 
