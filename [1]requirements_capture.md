@@ -53,15 +53,15 @@ ________________________________________________________________________________
 High Level Requirements capture the intent and function of a system, without going into specifics of how these will be achieved or any specific implementations. I.E. They take a Black Box approach*
 
 #### High Level Requirements should address:
-- Client Needs
-- Features & Functionality
-- Interfaces
-- Performance
-- Quality Attributes
-- Design Constraints
-- Regulations
-- Safety & Security
-- System
+> - Client Needs
+> - Features & Functionality
+> - Interfaces
+> - Performance
+> - Quality Attributes
+> - Design Constraints
+> - Regulations
+> - Safety & Security
+> - System
 
 #### Requirements should be:
 - Specific           - Document a single feature or function requirement at a time.                                                 <br>
