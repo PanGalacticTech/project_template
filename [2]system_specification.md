@@ -124,10 +124,11 @@ _Use: High side power switch_
 _Component Requirements:_
 | Attribute | Value | Notes |
 |---        |---    |---    |
-| Vds | >21V | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
-|Id         | 6A min    | Max Continuous Drain Current > Stall Current of Motor |
-| Vgs       | -4.5      | Gate - Source Threshold Voltage[^Vgs] |
-| Rds(on)   |       | Static Drain-to-Source-ON-Resistance[^Rds] |
+| Vds | < -21V | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
+|Id         | > -6A    | Max Continuous Drain Current > Stall Current of Motor |
+| Vgs       | ~ -4.5      | Gate - Source Threshold Voltage[^Vgs] |
+| Rds(on)   | <2 ohm     | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
+
 
 
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
@@ -136,9 +137,9 @@ _Component Requirements:_
 |**Part Number:**            |  SQP100P06-9m3L                                  |       |         
 |**Supplier:**               |  unavailable (need to look harder & for alts)    |        |                               
 |Vds                         |  -60V                                             | [x]   |                  
-|Id                          |                                                  |        |              
-|**Power:**                  |                                                  |        |                 
-|**Price:**                  |                                                  |        |                
+|Id                          |  -100A                                                 |        |              
+|Rds(on) @ Vgs               |  0.0133                                                |        |                 
+|**Price:**                  |  N/A as Unavailable                                                |        |                
 |                            |                                                  |         |
 |**URL:** |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |        |   
 |     |    |    |
