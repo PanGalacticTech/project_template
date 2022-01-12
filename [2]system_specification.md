@@ -74,7 +74,7 @@ requests from grafana server to MCU in order to actuate power control.*
 
 *For now design will progress assuming that High Side P-Channel MOSFET is the best solution for this feature*
 
-_______________________________________________________________________________________________________________________________________________________
+****************************************************************************************************************************
 ## [2.2]System Specification Description
 
 <- NOTE: Origionally I had this document specified as "Low Level Requirements" given past training I had on embedded systems development in aviation, however I 
@@ -88,7 +88,7 @@ think this approach was far in excess of what is required for this kind of proje
 ### [2.3.1]Hardware Specification
 _Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
 
-<- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too?
+<- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too during the optioneering stage?
 
 _Hardware Specification may contain the following subsections:_
 - Major Components - Can be specific or requirements set out for optioneering
@@ -153,25 +153,14 @@ _Component Requirements:_
 
 
 _____________________________________________________________________________________________________
-
-Incomplete/ Leftover from Low Level Requirements Doc
-
  
-[ ] i6A4W Series DC/DC Step down converter selected for 12v bus power
- 
- - Trace to: (HL.1, HL.2)   <br>
- HW.2. 5.1v Zener diodes reverse biased between GND and USB Data+, and GND & USB Data, shunts (V > 5.1v) to GND             - Trace to: (HL.3)         <br>
- HW.3. P-Channel MOSFET & voltage sensing circuit on USB Vcc, to disconnect if (V > 5.5v)[^2].                              - Trace to: (HL.3)         <br>
- HW.4. Voltage Divider in voltage sensing circuit current consumption estimated at ~0.3mA[^3].                              - Trace to: (HL.4)         <br>                     
-
-
-#### [2.3.2]Software Requirements
+#### [2.3.2]Software Specification
 
 > SW.1. - *Example ID Number this project does not have any software requirements*
 
 
 When to review? 
-*Low level requirements should undertake a review process,* ***Validation***, *to ensure they meet the clients needs and, before any further development takes place. <br>*
+*System Specification should undertake a review process, to ensure the design meets the clients needs before moving to ***Fabrication*** <br>*
 
 _______________________________________________________________________________________________________________________________________________________
 ## Design Optimisation?
