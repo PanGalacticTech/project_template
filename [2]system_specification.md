@@ -47,7 +47,11 @@ _Space to work through different options before deciding on specific low level r
 *Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
 requests from grafana server to MCU in order to actuate power control.*
 
-
+## MCU Options
+**Integrated MCU with PCB**
+  - Advantages
+  - Disadvantages
+**Complete Dev Board Arduino Nano 33 IoT
 
 _____________________________________________________________________________________________
 ## Power Control
