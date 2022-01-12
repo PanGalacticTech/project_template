@@ -64,10 +64,10 @@ High Level Requirements capture the intent and function of a system, without goi
 > - System
 
 #### Requirements should be:
-- Specific           - Document a single feature or function requirement at a time.                                                 <br>
-- Quantifyable       - Provide quantifyable parameters, boundary limits of operation and/or design tolerences, rather than open ended specifications where possible.<br>
-- Self Contained     - Do not rely on assumptions to deliver information, as different engineers will make different assumptions, which may cause conflicts 
-- Traceable          - Assign each requirement an ID number, this will be used to trace any design decisions through the development process. <br>
+> - Specific           - Document a single feature or function requirement at a time.                                                 <br>
+> - Quantifyable       - Provide quantifyable parameters, boundary limits of operation and/or design tolerences, rather than open ended specifications where possible.<br>
+> - Self Contained     - Do not rely on assumptions to deliver information, as different engineers will make different assumptions, which may cause conflicts 
+> - Traceable          - Assign each requirement an ID number, this will be used to trace any design decisions through the development process. <br>
 
 _Good requirements are the foundation for successful development of a project, as it allows design decisions to be traced through the development process.
 it also provides the information required to undertake successful **Verification** & **Validation**[^V&V]._ 
