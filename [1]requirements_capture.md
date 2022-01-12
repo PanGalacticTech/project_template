@@ -18,7 +18,7 @@ information provided can be tailored to project complexity_
 > Power requirements set out in specification below.
 
 
-#### Optional Featuress
+#### Optional Features
 _Any features or functions that are optional should be stated here_  <br>
 >  1. Report Status & current usage for sustainabilty and maintainance purposes.
 >  2. Individual remote control of channel power.
