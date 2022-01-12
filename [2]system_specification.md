@@ -116,16 +116,18 @@ _Hardware Specification may contain the following subsections:_
 
 
 #### P-Channel MOSFET 
-_Use:_
-- Switching of 5v USB power from bus to individual outputs
-- Switching of 12v power from bus to individual outputs (optional feature)
+_Use: High side power switch_
+1. Switching of 5v USB power from bus to individual outputs
+2. Switching of 12v power from bus to individual outputs (optional feature)
+3. MOSFET is ON when gate is @ 0v, OFF when gate is driven to VDD
+
 _Component Requirements:_
 | Attribute | Value | Notes |
 |---        |---    |---    |
 | Vds | >21V | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
-|Id         | 6A    | Max Continuous Drain Current > Stall Current of Motor |
-| Vgs       |       | Gate - Source Threshold Voltage[^Vgs] |
-| Rds(on)   |       | Static Drain-to-Source-ON-Resistance |
+|Id         | 6A min    | Max Continuous Drain Current > Stall Current of Motor |
+| Vgs       | -4.5      | Gate - Source Threshold Voltage[^Vgs] |
+| Rds(on)   |       | Static Drain-to-Source-ON-Resistance[^Rds] |
 
 
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
@@ -203,7 +205,15 @@ _Assuming That_
 
 #### Footnotes
 
+[^Rds]: Drain-to-Source On-Resistance <br>
+        - If current required is 2.5A, then R=5/2.5: R=2ohm absolute max Rds during operation (in practice must be much lower)
+        - If Vcc = 5v, and gate is pulled to 0v GND, then Vgs ~-5v
+        - Datasheet shows Rds(on) @ Vgs -4.5 will be ~ 0.0133 ohm
+        - If Vcc = 12v & Gate is pulled to 0v GND, then Vgs ~ -10v therefore Rds(on) ~ 0.0093 ohm
+        - HOWEVER, controller can only provide 5v so will need drivers to fully turn off MOSFET, see[^Vgs(th)]
 
+[^Vgs(th)]: Gate Threshold Voltage <br>
+            - if
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
