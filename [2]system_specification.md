@@ -187,15 +187,22 @@ ________________________________________________________________________________
 - [High Side vs Low Side Switch](https://www.baldengineer.com/low-side-vs-high-side-transistor-switch.html)
 - [Important Stuff: MOSFET Specs You Need to Know](https://www.embeddedrelated.com/showarticle/809.php)
 
-#### Footnotes
+*******************************************************************************************************************************************************
 
-[^Vgs]: Gate-Source Voltage - Explanation <br>
-        - Assuming that
+#### Notes
+**VGS & Rds Explanation**
+
+- Assuming that
         |Attribute | Value | Current Flow
         |---|---|---|
         | Source Voltage | 5v |
         |Rds(on) @ Vgs -4.5v | 0.0133 ohm      | 5/0.0133 = 376A ??? This doesn't make sense to me |
         Rds(on) @ Vgs -10v   | 0.0083 ohm      | 5/0.0093 = 537A ??? |
+
+
+#### Footnotes
+
+
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
