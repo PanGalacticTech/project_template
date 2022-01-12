@@ -99,16 +99,16 @@ _Hardware Specification may contain the following subsections:_
 ### Major Components
 
 #### DC/DC Converters
-##### Option 1:
+##### Option 1: <br>
 |**Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A**|
-| Attribute          	|  Value 	|  
-|---	                |---	    |
-| **Part Number:**   	| I6A4W020A033V-001-R      	| 
-| **Supplier:**     	| RS Components    	|   
-| **Vin:**          	| 9 - 40v    	|   	
-| **Vout:**           |  3.3 - 24v     |   
-|**Power:**            |    250W       |     
-| **Price:**           |  £44.66       |   
+| Attribute          	|  Value 	                            |  Notes
+|---	                |---	                                |---
+| **Part Number:**   	| I6A4W020A033V-001-R               	| 
+| **Supplier:**     	| RS Components                      	|   
+| **Vin:**          	| 9 - 40v                            	|   	
+| **Vout:**           |  3.3 - 24v                          |   
+|**Power:**            |    250W                            |     
+| **Price:**           |  £44.66                            |   
 | **URL:**              | https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289    |     
 | **Notes:**           | -     |    
 |**Requirements Met:**  |  (HL.1, HL.2, HL.3)        |
@@ -122,29 +122,30 @@ _Use: High side power switch_
 3. MOSFET is ON when gate is @ 0v, OFF when gate is driven to VDD
 
 _Component Requirements:_
-| Attribute | Value | Notes |
-|---        |---    |---    |
-| Vds | < -21V | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
-|Id         | > -6A    | Max Continuous Drain Current > Stall Current of Motor |
-| Vgs       | ~ -4.5      | Gate - Source Threshold Voltage[^Vgs] |
-| Rds(on)   | <2 ohm     | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
+| Attribute | Value        | Notes |
+|---        |---           |---    |
+| Vds        | < -21V      | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
+|Id         | > -6A        | Max Continuous Drain Current > Stall Current of Motor |
+| Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
+| Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
 
 
 
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
-|Attribute | Value |Meets Requirement| Notes |
-|---|---|---|---|
-|**Part Number:**            |  SQP100P06-9m3L                                  |       |         
-|**Supplier:**               |  unavailable (need to look harder & for alts)    |        |                               
-|Vds                         |  -60V                                             | [x]   |                  
-|Id                          |  -100A                                                 |        |              
-|Rds(on) @ Vgs               |  0.0133                                                |        |                 
-|**Price:**                  |  N/A as Unavailable                                                |        |                
-|                            |                                                  |         |
-|**URL:** |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |        |   
-|     |    |    |
-|**Notes:**| |  |                                                                            
-|**Meets Requirements:**     |    (HL.1, HL.2, HL.3)                              |      |         
+|Attribute        | Value                                            |Suitable  | Notes |
+|---              |---                                               |---       |---    |
+|Part Number:     |  SQP100P06-9m3L                                  |          |       |
+|Supplier:        |  unavailable (need to look harder & for alts)    | [ ]      |       |                 
+|Vds              |  -60V                                            | [x]      |       |     
+|Id               |  -100A                                           | [x]      |       |  
+|Rds(on) @ Vgs    |  0.0133                                          | [x]      |       |      
+|Price:           |  N/A as Unavailable                              | [ ]      |       |      
+|                 |                                                  |          |       |
+|URL: |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |   |       |
+|                 |                                                  |         |       |
+|Notes:           |                                                  |         |       |                                                                            
+|Meets Requirements: |                                               | [ ]     |       |
+    
 
 
 
