@@ -116,27 +116,29 @@ _Hardware Specification may contain the following subsections:_
 
 
 #### P-Channel MOSFET 
-_Requirements:_
+_Component Requirements:_
 | Attribute | Value | Notes |
 |---        |---    |---    |
 | Drain/Source Breakdown Voltage| >21V | Operating Voltage + 70% |
 | Max Current| 30A  |
-|
+| Rds(on)   |       | Static Drain-to-Source-ON-Resistance |
+| Vgs       |       | Gate Threshold Voltage |
 
 
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
-**Part Number:**              SQP100P06-9m3L                                                  <br>
-**Supplier:**                 unavailable (need to look harder & for alts)                                            <br>
-**Vin:**                                                                                               <br>
-**Vout:**                                                                                           <br>
-**Power:**                                                                                              <br>
-**Price:**                                                                                            <br>
-
-**URL:** https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289            <br>
-
-**Notes:**                                                                               <br>
-
-**Meets Requirements:**         (HL.1, HL.2, HL.3)                                              <br>
+|Attribute | Value | Notes Z
+|---|---|---|
+|**Part Number:**            |  SQP100P06-9m3L                                  |                
+|**Supplier:**               |  unavailable (need to look harder & for alts)    |                                       
+|**Vin:**                    |                                                  |                      
+|**Vout:**                   |                                                  |                      
+|**Power:**                  |                                                  |                         
+|**Price:**                  |                                                  |                        
+| `                          |                                                  |
+|**URL:** |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |           
+|     |    |
+|**Notes:**| |                                                                              
+|**Meets Requirements:**     |    (HL.1, HL.2, HL.3)                              |               
 
 
 
