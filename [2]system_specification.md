@@ -116,29 +116,32 @@ _Hardware Specification may contain the following subsections:_
 
 
 #### P-Channel MOSFET 
+_Use:_
+- Switching of 5v USB power from bus to individual outputs
+- Switching of 12v power from bus to individual outputs (optional feature)
 _Component Requirements:_
 | Attribute | Value | Notes |
 |---        |---    |---    |
-| Drain/Source Breakdown Voltage| >21V | Operating Voltage + 70% |
-| Max Current| 30A  |
+| Vds | >21V | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
+|Id         | 6A    | Max Continuous Drain Current > Stall Current of Motor |
 | Rds(on)   |       | Static Drain-to-Source-ON-Resistance |
 | Vgs       |       | Gate Threshold Voltage |
 
 
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
-|Attribute | Value | Notes Z
-|---|---|---|
-|**Part Number:**            |  SQP100P06-9m3L                                  |                
-|**Supplier:**               |  unavailable (need to look harder & for alts)    |                                       
-|**Vin:**                    |                                                  |                      
-|**Vout:**                   |                                                  |                      
-|**Power:**                  |                                                  |                         
-|**Price:**                  |                                                  |                        
-| `                          |                                                  |
-|**URL:** |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |           
-|     |    |
-|**Notes:**| |                                                                              
-|**Meets Requirements:**     |    (HL.1, HL.2, HL.3)                              |               
+|Attribute | Value |Meets Requirement| Notes |
+|---|---|---|---|
+|**Part Number:**            |  SQP100P06-9m3L                                  |       |         
+|**Supplier:**               |  unavailable (need to look harder & for alts)    |        |                               
+|Vds                         |  -60V                                             | [x]   |                  
+|Id                          |                                                  |        |              
+|**Power:**                  |                                                  |        |                 
+|**Price:**                  |                                                  |        |                
+|                            |                                                  |         |
+|**URL:** |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |        |   
+|     |    |    |
+|**Notes:**| |  |                                                                            
+|**Meets Requirements:**     |    (HL.1, HL.2, HL.3)                              |      |         
 
 
 
