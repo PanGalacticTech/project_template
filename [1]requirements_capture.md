@@ -1,4 +1,4 @@
-# [1]High Level Requirements Capture Form - [Project Title]
+# [1]Requirements Capture Form - [Project Title]
 
 _This form is intended to assist in capturing the requirements for new Open Source Embedded Systems Projects, <br>
 its scope & implementation can be adapted to suit projects of varying complexity._
