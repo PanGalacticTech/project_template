@@ -213,7 +213,8 @@ _Assuming That_
         - HOWEVER, controller can only provide 5v so will need drivers to fully turn off MOSFET, see[^Vgs(th)]                              <br>
 
 [^Vgs(th)]: Gate-Source Threshold Voltage <br>
-            - Datasheet shows that Vgs must be >-2.0V to turn off device i.e. Id = -250 uA @ Vds (Maximum Drain - Source voltage differential)
+            - Datasheet shows that Vgs must be >-2.0V to turn off device  <br>
+            - i.e. Id = -250 uA @ Vds (Maximum Drain - Source voltage differential) <br>
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
