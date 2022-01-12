@@ -43,7 +43,7 @@ _Space for discussion and weighing up of features that may or may not be require
 _The project brief may also contain information on currently available similar products, and a brief description of the features they lack_ <- NOTE: Would this be too much info for this kind of doc? Should a seperate process be carried out on receipt of the requirements to look for existing COTS (Consumer Off The Shelf) options?
 
 _______________________________________________________________________________________________________________________________________________________
-## [1.2]High Level Requirements Capture Description
+## [1.2]High Level Requirements Description
 
 *This section should contain a numbered list of all the specific high level requirements that can be gathered from the project brief, or from the client directly. <br>
 High Level Requirements capture the intent and function of a system, without going into specifics of how these will be achieved or any specific implementations. I.E. They take a Black Box approach*
