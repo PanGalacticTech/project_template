@@ -124,8 +124,8 @@ _Component Requirements:_
 |---        |---    |---    |
 | Vds | >21V | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
 |Id         | 6A    | Max Continuous Drain Current > Stall Current of Motor |
+| Vgs       |       | Gate - Source Threshold Voltage[^Vgs] |
 | Rds(on)   |       | Static Drain-to-Source-ON-Resistance |
-| Vgs       |       | Gate Threshold Voltage |
 
 
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
@@ -189,7 +189,13 @@ ________________________________________________________________________________
 
 #### Footnotes
 
-
+[^Vgs]: Gate-Source Voltage - Explanation <br>
+        - Assuming that
+        |Attribute | Value | Current Flow
+        |---|---|---|
+        | Source Voltage | 5v |
+        |Rds(on) @ Vgs -4.5v | 0.0133 ohm      | 5/0.0133 = 376A ??? This doesn't make sense to me |
+        Rds(on) @ Vgs -10v   | 0.0083 ohm      | 5/0.0093 = 537A ??? |
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
