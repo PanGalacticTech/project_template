@@ -47,6 +47,9 @@ _Space to work through different options before deciding on specific low level r
 *Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
 requests from grafana server to MCU in order to actuate power control.*
 
+
+
+_____________________________________________________________________________________________
 ## Power Control
 
 **Low Side N-Channel MOSFET**
@@ -73,6 +76,9 @@ requests from grafana server to MCU in order to actuate power control.*
         - Additional parts required to implement, diodes, drive transistors etc.  
 
 *For now design will progress assuming that High Side P-Channel MOSFET is the best solution for this feature*
+
+
+
 
 ****************************************************************************************************************************
 ## [2.2]System Specification Description
@@ -166,6 +172,7 @@ _Component Requirements:_
 |Meets Requirements: |                                               | [ ]     |       |
     
 
+#### Arduino Nano 33 IoT Development Board
 
 
 
@@ -174,7 +181,23 @@ ________________________________________________________________________________
  
 #### [2.3.2]Software Specification
 
-> SW.1. - *Example ID Number this project does not have any software requirements*
+_Specify the software requirements, functions, frameworks and tools required to meet the high level requirements_
+
+#### Tools:
+
+- Arduino IDE
+- Graphana
+- C++
+
+#### 
+
+
+### Software Structure
+
+
+
+
+
 
 
 When to review? 
