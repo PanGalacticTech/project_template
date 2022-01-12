@@ -116,6 +116,14 @@ _Hardware Specification may contain the following subsections:_
 
 
 #### P-Channel MOSFET 
+_Requirements:_
+| Attribute | Value | Notes |
+|---        |---    |---    |
+| Drain/Source Breakdown Voltage| >21V | Operating Voltage + 70% |
+| Max Current| 30A  |
+|
+
+
 ##### Option 1:               SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET
 **Part Number:**              SQP100P06-9m3L                                                  <br>
 **Supplier:**                 unavailable (need to look harder & for alts)                                            <br>
@@ -172,6 +180,7 @@ ________________________________________________________________________________
 
 - [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
 - [High Side vs Low Side Switch](https://www.baldengineer.com/low-side-vs-high-side-transistor-switch.html)
+- [Important Stuff: MOSFET Specs You Need to Know](https://www.embeddedrelated.com/showarticle/809.php)
 
 #### Footnotes
 
