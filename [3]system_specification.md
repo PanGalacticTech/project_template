@@ -141,7 +141,7 @@ _Component Requirements:_
 |Rds(on) @ Vgs    |  0.0133                                          | [x]      |       |      
 |Price:           |  N/A as Unavailable                              | [ ]      |       |      
 |                 |                                                  |          |       |
-|URL: |https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289 |   |       |
+|URL:             |                                                  |         |        |
 |                 |                                                  |         |       |
 |Notes:           |                                                  |         |       |                                                                            
 |Meets Requirements: |                                               | [ ]     |       |
