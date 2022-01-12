@@ -206,14 +206,14 @@ _Assuming That_
 #### Footnotes
 
 [^Rds]: Drain-to-Source On-Resistance <br>
-        - If current required is 2.5A, then R=5/2.5: R=2ohm absolute max Rds during operation (in practice must be much lower)
-        - If Vcc = 5v, and gate is pulled to 0v GND, then Vgs ~-5v
-        - Datasheet shows Rds(on) @ Vgs -4.5 will be ~ 0.0133 ohm
-        - If Vcc = 12v & Gate is pulled to 0v GND, then Vgs ~ -10v therefore Rds(on) ~ 0.0093 ohm
-        - HOWEVER, controller can only provide 5v so will need drivers to fully turn off MOSFET, see[^Vgs(th)]
+        - If current required is 2.5A, then R=5/2.5: R=2ohm absolute max Rds during operation (in practice must be much lower)   <br>
+        - If Vcc = 5v, and gate is pulled to 0v GND, then Vgs ~-5v                                                                <br>
+        - Datasheet shows Rds(on) @ Vgs -4.5 will be ~ 0.0133 ohm                                                                     <br>
+        - If Vcc = 12v & Gate is pulled to 0v GND, then Vgs ~ -10v therefore Rds(on) ~ 0.0093 ohm                                                       <br>
+        - HOWEVER, controller can only provide 5v so will need drivers to fully turn off MOSFET, see[^Vgs(th)]                              <br>
 
-[^Vgs(th)]: Gate Threshold Voltage <br>
-            - if
+[^Vgs(th)]: Gate-Source Threshold Voltage <br>
+            - Datasheet shows that Vgs must be >-2.0V to turn off device i.e. Id = -250 uA @ Vds (Maximum Drain - Source voltage differential)
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
