@@ -4,27 +4,7 @@ _This form is intended to assist in optioneering to derive low level hardware & 
 High Level Requirements Capture Form [[1]requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5Drequirements_capture.md).
 Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
-## [2.1] Validated High Level Requirements
-
-_This section documents the final validated High Level Requirements, these form the basis against which the final system will be compared to determine the 
-success of the project_
-
-### Validated High Level Requirements - [ISOpower]
-> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power, from supplied 24v input.                   <br>
-> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W) for motor power, from supplied 24v input, in case of stall condition.    <br>
-> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W), from supplied 24v input.                                  <br>
-> HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
-> HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
-> HL.6. Current sensing will be available on the 5v Bus   <br>
-> HL.7. Board must have push-fit or bayonet connectors for offboard hardware. <br>
-> HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
-> HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
-> HL.10. Power board will be protected from reversed supply voltages <br>
-> HL.11. Power Board will be protected from over-current conditions<br>
-> HL.12. PCB must have same footprint & mounting screwholes as V1, to aid in assembly <br>
-
-_______________________________________________________________________________________________________________________________________________________
-## [2.2] Design Tradeoffs & Optioneering
+## [2.1] Design Tradeoffs & Optioneering
 
 _Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
@@ -59,7 +39,7 @@ that are more suitable_
 
 
 ****************************************************************************************************************************
-## [2.3] System Specification Description
+## [2.2] System Specification Description
 
 _System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements. At this stage optioneering should be
 complete, and the design direction finalised._
@@ -68,9 +48,9 @@ complete, and the design direction finalised._
 think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step -->
 
 
-## [2.4]Example System Specification - [ISOpower]
+## [2.3]Example System Specification - [ISOpower]
 
-### [2.4.1]Hardware Specification
+### [2.3.1]Hardware Specification
 _Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
 
 <!-- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too? -->
@@ -156,7 +136,7 @@ _In the case the requirements for a component are known, however the specific pa
 
 _____________________________________________________________________________________________________
  
-#### [2.4.2]Software Specification
+#### [2.3.2]Software Specification
 
 _Specify the software requirements, functions, frameworks and tools required to meet the high level requirements_
 
@@ -203,7 +183,7 @@ When to review?
 
 _______________________________________________________________________________________________________________________________________________________
 
-### [2.5] Requirement Matrix
+### [2.4] Requirement Matrix
 
 _Info On Requirements Matrix & Link to: [Requirements Matrix Document](https://broken_link.com)_
 
