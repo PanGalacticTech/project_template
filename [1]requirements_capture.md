@@ -1,4 +1,4 @@
-# [1]Requirements Capture Form - [Project Title]
+# [1]   Requirements Capture Form - [Project Title]
 
 _This form is intended to assist in capturing the requirements for new Open Source Embedded Systems Projects, <br>
 its scope & implementation can be adapted to suit projects of varying complexity._
@@ -81,18 +81,18 @@ ________________________________________________________________________________
 ## [1.3]Example Requirements Capture - [ISOpower]
 
 
-> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power.                   <br>
-> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2]  <br>
-> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W).                                 <br>
+> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power, from supplied 24v input.                   <br>
+> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W) for motor power, from supplied 24v input, in case of stall condition.    <br>
+> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W), from supplied 24v input.                                  <br>
 > HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
 > HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
-> HL.6. Voltage & Current sensing will be available on the 5v Bus   <br>
+> HL.6. Current sensing will be available on the 5v Bus   <br>
 > HL.7. Board must have push-fit or bayonet connectors only. <br>
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
-> HL.11. Power Board will be protected from over-current conditions <br>
-> HL.12. Power Board must have same screwholes as version 1 to aid in assembly <br>
+> HL.11. Power Board will be protected from over-current conditions<br>
+> HL.12. PCB must have same footprint & mounting screwholes as V1, to aid in assembly <br>
 
 
 
