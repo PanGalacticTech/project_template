@@ -187,22 +187,24 @@ ________________________________________________________________________________
 _Specify the software requirements, functions, frameworks and tools required to meet the high level requirements_
 
 #### Tools:
-
-- Arduino IDE
-- Grafana
-- C++
-
-#### 
+| Tool | Purpose | Justification |
+|---   |---      |---            |
+|Arduino IDE| Software Development | Speed & ease of development for Arduino IoT functions |
+|C++ | Programming Language | Native to Arduino environment |
+|InfluxDB | Remote storage of power consumption data | Ease of setup & ease of posting data from remote devices |
+|Grafana  | Graphic display of power consumption via web interface | off the shelf solution that can integrate control methods for sending HTTP requests back to controller |
 
 
 ### Software Structure Optioneering
+
+#### Option A
 
 - Arduino running state machine framework
 - websocket server responds to HTTP GET requests for control of power channels
 - concurrently taking analogRead() of 2 ADC inputs, and sending to external database with HTTP POST requests over wifi
 - Data is pulled from database using graphing tool, like Grafana, which is built around a web accessable user interface.
 
-OR
+#### Option B
 
 - Arduino running state machine framework
 - websocket server responds to HTTP GET requests 
@@ -213,6 +215,8 @@ OR
 ### Software Specification
 
 - ADC Samples of current sensor will be taken every 250mS
+- Power Channel MOSFETS are "Active Low" Therefore channels will be turned off driven by a HIGH pulse from microcontroller.
+- Seperate API for power channel "on", "off" and "restart"
 - 
 
 
@@ -221,10 +225,6 @@ OR
 When to review? 
 *System Specification should undertake a review process, to ensure the design meets the clients needs before moving to ***Fabrication*** <br>*
 
-_______________________________________________________________________________________________________________________________________________________
-## Design Optimisation?
-
-_What parameters of the design should be minimised/maximised?_
 
 _______________________________________________________________________________________________________________________________________________________
 
