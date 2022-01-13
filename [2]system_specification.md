@@ -32,7 +32,7 @@ _Not good at writing narritives Should something go here?_ <br>
 
 
 | Product Function              | Options                       | Sub-Options                                | Hirarchy  | Notes  |
-|: ---------------------------  :| --------------------------- | ----------------------------------------- | ------- |----  |
+| ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
 | Current Sensing for power bus | Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |        |
 |           "                   |           "                   | ublox Wifi module & remote database server |    1      |        |
 |           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |        | 
