@@ -246,11 +246,11 @@ ________________________________________________________________________________
 
 _Assuming That_
 
-|Attribute | Value | Current Flow
+|Attribute | Value | Max Current Flow
 |---|---|---|
 | Source Voltage | 5v |
-|Rds(on) @ Vgs -4.5v | 0.0133 ohm      | 5/0.0133 = 376A ??? This doesn't make sense to me |
-|Rds(on) @ Vgs -10v   | 0.0083 ohm      | 5/0.0093 = 537A ??? |
+|Rds(on) @ Vgs -4.5v | 0.0133 ohm      | 5/0.0133 = 376A |
+|Rds(on) @ Vgs -10v   | 0.0083 ohm      | 5/0.0093 = 537A  |
 
 
 #### Footnotes
