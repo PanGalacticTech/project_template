@@ -50,8 +50,8 @@ _Not good at writing narritives Should something go here?_ <br>
 |         "                     | XT60 - 60A  Connector         |       |    1       | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
 | 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |    4       | Hard to find with range of options, easy to damage|
 |           "                   | XT30 - 30A Connector          |       |    1       | Easy to source, many differnt options, well defined specifications|
-| Voltage Sensing
-
+| Voltage Sensing               | Voltage Divider on 12 bus     | | 1 | Can't be used for 5v bus as MCU would share Vcc ref, Must protect MCU from voltage spikes|
+|     "                         | Voltage sense IC              | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus' |
 
 
 ****************************************************************************************************************************
