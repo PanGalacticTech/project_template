@@ -79,17 +79,17 @@ _Hardware Specification may contain the following subsections:_
 
 ### Hardware Architecture & Description
 
-The hardware will comprise of a single PCB to home the 2 DC/DCc converter modules. These require local fan cooling for which power and mounting holes will be provided.
-24v Power input will be via XT60 Connector mounted directly on PCB.
-
-MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
-the other between the 2nd DC/DC module and the 5v bus. Additionally a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. The input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
-
-The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
-12v bus power will be distributed to 5 XT30 connectors mounted directly on the PCB.
-
-_Optional:_
-The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
+> The hardware will comprise of a single PCB to home the 2 DC/DCc converter modules. These require local fan cooling for which power and mounting holes will be provided.
+> 24v Power input will be via XT60 Connector mounted directly on PCB.
+> 
+> MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
+> the other between the 2nd DC/DC module and the 5v bus. Additionally a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. The > > > input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
+>
+> The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. Solder > > bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
+> 12v bus power will be distributed to 5 XT30 connectors mounted directly on the PCB.
+>
+> _Optional:_
+> The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
 
 
 ### Major Components
