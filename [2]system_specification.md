@@ -39,17 +39,17 @@ _Not good at writing narritives Should something go here?_ <br>
 |           "                   |           "                   | Remote Raspberry Pi                        |    3      |        |
 |                               |                               |                                            |           |        |
 | Power Switching               |N-Channel Low Side MOSFET      |                                            |    3      |        |  
-|           "                   |P-Channel High Side MOSFET     |                                            |    1      |        |  
-|           "                   |Relay                          | Normally Closed                            |    2      |        |    
-|           "                   |           "                   | Latching                                   |    4      |        |      
+|           "                   |P-Channel High Side MOSFET     |                                            |    1      | Difficult to source suitable MOSFET       |  
+|           "                   |Relay                          | Normally Closed                            |    2      | Expense       |    
+|           "                   |           "                   | Latching                                   |    4      | Expense, Reliability       |      
 |                               |                               |                                            |           |        |  
 | Power Supply DC/DC Conversion | COTS Modules                  |                                            |     1     |        |    
 |           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
 |                               |                               |                                            |           |        |
-| Power Input Connector         | Screw Terminals               |                                            |           |        |
-|         "                     | XT60 - 60A  Connector         |       |           | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
-| 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |           | Hard to find with range of options, easy to damage|
-|           "                   | XT30 - 30A Connector          |       |           | Easy to source, many differnt options, well defined specifications|
+| Power Input Connector         | Screw Terminals               |       |    4       |                                             |
+|         "                     | XT60 - 60A  Connector         |       |    1       | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
+| 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |    4       | Hard to find with range of options, easy to damage|
+|           "                   | XT30 - 30A Connector          |       |    1       | Easy to source, many differnt options, well defined specifications|
 
 
 
