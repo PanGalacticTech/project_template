@@ -28,23 +28,23 @@ ________________________________________________________________________________
 _Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
 #### Preamble
-_Not good at writing narritives Should something go here_?
+_Not good at writing narritives Should something go here?_
 
-| Product Function              | Options                       | Sub-Options                                | Hirarchy  | Notes
-|:---                          :|:---                          :|:---                                        |:---      :|:---
-| Current Sensing for power bus | Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |
-|           "                   |           "                   | ublox Wifi module & remote database server |    1      |
-|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |
-|           "                   |           "                   | Remote Raspberry Pi                        |    3      |
-|||||
-| Power Switching               |N-Channel Low Side MOSFET      |                                            |           |
-|           "                   |P-Channel High Side MOSFET     |                                            |           | 
-|           "                   |Relay                          | Normally Closed                            |           |
-|           "                   |           "                   | Latching                                   |           | 
-|||||
-| Power Supply DC/DC Conversion | COTS Modules                  |                                            |           |
-|           "                   | ReEngineer & Integrate w/ PCB |                                            |           |
-|||||
+| Product Function              | Options                       | Sub-Options                                | Hirarchy  | Notes  |
+|:---                          :|:---                          :|:---                                        |:---      :|:---    |
+| Current Sensing for power bus | Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |        |
+|           "                   |           "                   | ublox Wifi module & remote database server |    1      |        |
+|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |        | 
+|           "                   |           "                   | Remote Raspberry Pi                        |    3      |        |
+|                               |                               |                                            |           |        |
+| Power Switching               |N-Channel Low Side MOSFET      |                                            |    3      |        |  
+|           "                   |P-Channel High Side MOSFET     |                                            |    1      |        |  
+|           "                   |Relay                          | Normally Closed                            |    2      |        |    
+|           "                   |           "                   | Latching                                   |    4      |        |      
+|                               |                               |                                            |           |        |  
+| Power Supply DC/DC Conversion | COTS Modules                  |                                            |     1     |        |    
+|           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
+|                               |                               |                                            |           |        |
 
 ## Voltage & Current Sensing Reporting
 
