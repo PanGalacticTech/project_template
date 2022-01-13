@@ -9,8 +9,6 @@ ________________________________________________________________________________
 _This section documents the final validated High Level Requirements, these form the basis against which the final system will be compared to determine the 
 success of the project_
 
-
-
 ### Example Project Brief - [ISOpower]
 > HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power.                   <br>
 > HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2]  <br>
@@ -27,7 +25,26 @@ success of the project_
 _______________________________________________________________________________________________________________________________________________________
 ## Design Tradeoffs & Optioneering
 
-_Space to work through different options before deciding on specific low level requirements & system specification_
+_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
+
+#### Preamble
+_Not good at writing narritives Should something go here_?
+
+| Product Function              | Options                       | Sub-Options                                | Hirarchy  | Notes
+|:---                          :|:---                          :|:---                                        |:---      :|:---
+| Current Sensing for power bus | Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |
+|           "                   |           "                   | ublox Wifi module & remote database server |    1      |
+|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |
+|           "                   |           "                   | Remote Raspberry Pi                        |    3      |
+|||||
+| Power Switching               |N-Channel Low Side MOSFET      |                                            |           |
+|           "                   |P-Channel High Side MOSFET     |                                            |           | 
+|           "                   |Relay                          | Normally Closed                            |           |
+|           "                   |           "                   | Latching                                   |           | 
+|||||
+| Power Supply DC/DC Conversion | COTS Modules                  |                                            |           |
+|           "                   | ReEngineer & Integrate w/ PCB |                                            |           |
+|||||
 
 ## Voltage & Current Sensing Reporting
 
