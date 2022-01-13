@@ -122,6 +122,22 @@ _Component Requirements:_
 
 _In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a spreadsheet to weigh up alternative options._
 
+##### Option 1: <br>
+**IRF5305PBF P Channel MOSFET**
+|Attribute        | Value                                            |Suitable  | Notes |
+|---              |---                                               |---       |---    |
+|Part Number:     |  IRF5305PBF                                      |          |       |
+|Supplier:        | Farnell                                          | [x]      |       |                 
+|Vds              |  -55V                                            | [x]      |       |     
+|Id               |  -31A                                            | [x]      |       |  
+|Rds(on) @ -10v   |  0.06                                            | [x]      |       |      
+|Price:           |  £2.088                                          | [x]      |       |      
+|                 |                                                  |          |       |
+|URL:             |  [IRF5305PBF - Farnell](https://uk.farnell.com/infineon/irf5305pbf/mosfet-p-55v-31a-to-220/dp/8648255) |         |        |
+|Availability     |   In Stock                                       | [x]       |       |
+|Notes:           |                                                  |         |       |                                                                            
+|Meets Requirements: |                                               | [x]     |       |
+    
 
 
 #### AtMega328P MCU
