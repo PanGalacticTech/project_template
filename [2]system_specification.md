@@ -85,7 +85,7 @@ _Hardware Specification may contain the following subsections:_
 > _Optional:_
 > The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
 
-
+-----------------------------------------------------------------------------------------------------
 ### Major Components
 
 #### DC/DC Converters
@@ -145,7 +145,7 @@ _In the case the requirements for a component are known, however the specific pa
 #### Allego ACS712
 
 #### 
-
+-----------------------------------------------------------------------------------------------------
 
 ### Circuit Design & Schematic
 
