@@ -4,7 +4,7 @@ _This form is intended to assist in optioneering to derive low level hardware & 
 High Level Requirements Capture Form [[1]requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5Drequirements_capture.md).
 Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
-## [2.1]Validated High Level Requirements
+## [2.1] Validated High Level Requirements
 
 _This section documents the final validated High Level Requirements, these form the basis against which the final system will be compared to determine the 
 success of the project_
@@ -24,7 +24,7 @@ success of the project_
 > HL.12. PCB must have same footprint & mounting screwholes as V1, to aid in assembly <br>
 
 _______________________________________________________________________________________________________________________________________________________
-## Design Tradeoffs & Optioneering
+## [2.2] Design Tradeoffs & Optioneering
 
 _Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
@@ -59,7 +59,7 @@ that are more suitable_
 
 
 ****************************************************************************************************************************
-## [2.2]System Specification Description
+## [2.3] System Specification Description
 
 _System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements. At this stage optioneering should be
 complete, and the design direction finalised._
@@ -68,9 +68,9 @@ complete, and the design direction finalised._
 think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step -->
 
 
-## [2.3]Example System Specification - [ISOpower]
+## [2.4]Example System Specification - [ISOpower]
 
-### [2.3.1]Hardware Specification
+### [2.4.1]Hardware Specification
 _Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
 
 <!-- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too? -->
@@ -83,17 +83,18 @@ _Hardware Specification may contain the following subsections:_
 
 ### Hardware Architecture & Description
 
-> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. These require local fan cooling for which +12v power and mounting holes will be provided.
-> 24v Power input will be via XT60 Connector mounted directly on PCB.
+> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. [HL.1, HL.2, HL.3] These require local fan cooling for which +12v power and mounting holes
+> will be  provided. 24v Power input will be via XT60 Connector mounted directly on PCB. [HL.7]
 > 
 > MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
-> the other between the 2nd DC/DC module and the 5v bus. Additionally, a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. 
-> Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
+> the other between the 2nd DC/DC module and the 5v bus. Additionally, a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus.[HL.5, HL.6] Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
 >
-> The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. Solder > bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
-> 12v bus power will be distributed to 5 XT30 connectors mounted directly on the PCB.
+> The 5v Bus will be distributed to 5 USB outputs [HL.9] via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. [HL.4] Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
+> 12v bus power will be distributed to 5 XT30 connectors mounted directly on the PCB. [HL.8]
 >
-> Reverse voltage protection will be acheived via a P channel MOSFET at +Vcc in. [^RevVolt]
+> Reverse voltage protection will be acheived via a P channel MOSFET at +Vcc in,[HL.10] [^RevVolt] and the system will be protected from overcurrent conditions by a 20A fuse on
+> Vcc in+.
+> PCB dimensions will be 100x120mm [HL.12]
 
 > _Optional:_
 > The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
@@ -149,7 +150,7 @@ _In the case the requirements for a component are known, however the specific pa
 
 _____________________________________________________________________________________________________
  
-#### [2.3.2]Software Specification
+#### [2.4.2]Software Specification
 
 _Specify the software requirements, functions, frameworks and tools required to meet the high level requirements_
 
@@ -196,7 +197,7 @@ When to review?
 
 _______________________________________________________________________________________________________________________________________________________
 
-### [2.4]Requirement Matrix
+### [2.5] Requirement Matrix
 
 _Info On Requirements Matrix & Link to: [Requirements Matrix Document](https://broken_link.com)_
 
