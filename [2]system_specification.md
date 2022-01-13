@@ -16,7 +16,7 @@ success of the project_
 > HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
 > HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
 > HL.6. Current sensing will be available on the 5v Bus   <br>
-> HL.7. Board must have push-fit or bayonet connectors only. <br>
+> HL.7. Board must have push-fit or bayonet connectors for offboard hardware. <br>
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
