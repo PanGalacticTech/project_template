@@ -265,6 +265,7 @@ _Assuming That_
 [^Vgs(th)]: Gate-Source Threshold Voltage <br>
             - Datasheet shows that Vgs must be >-2.0V to turn off device  <br>
             - i.e. Id = -250 uA @ Vds (Maximum Drain - Source voltage differential) <br>
+            - Therefore if VCC is 12v, Gate Voltage must be driven to >10v to turn off MOSFET <br>
 
 [^V&V]: Verification & Validation - What is it? <br>
         - Verification - _"Does the implementation meet the requirements?"_ <br>
