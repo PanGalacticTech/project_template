@@ -6,7 +6,10 @@ Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
 ## [2.1]Validated High Level Requirements
 
-_This section documents the final validated High Level Requirements_
+_This section documents the final validated High Level Requirements, these form the basis against which the final system will be compared to determine the 
+success of the project_
+
+
 
 ### Example Project Brief - [ISOpower]
 > HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power.                   <br>
@@ -19,10 +22,10 @@ _This section documents the final validated High Level Requirements_
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
-> HL.11. Power Board will be protected from over-current conditions by a fuse <br>
+> HL.11. Power Board will be protected from over-current conditions<br>
 
 _______________________________________________________________________________________________________________________________________________________
-## Optioneering
+## Design Tradeoffs & Optioneering
 
 _Space to work through different options before deciding on specific low level requirements & system specification_
 
