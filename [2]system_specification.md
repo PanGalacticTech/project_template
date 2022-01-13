@@ -120,7 +120,7 @@ _Component Requirements:_
 | Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
 | Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
 
-_In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a spreadsheet to weigh up alternative options._
+_In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a [spreadsheet](https://github.com/PanGalacticTech/project_template/blob/main/%5B2A%5Dcomponent_compare.xlsx) to weigh up alternative options._
 
 ##### Option 1: <br>
 **IRF5305PBF P Channel MOSFET**
@@ -188,7 +188,7 @@ _Specify the software requirements, functions, frameworks and tools required to 
 - ADC samples of 12v bus voltage will be taken every 250mS <!-- Let me know if these timings are suitable  -->
 - Power Channel MOSFETS are "Active Low" Therefore channels will be turned off driven by a HIGH pulse from microcontroller.
 - Seperate API for each power channel "on", "off" and "restart",
-- 
+
 
 
 
