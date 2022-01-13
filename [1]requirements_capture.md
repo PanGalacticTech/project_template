@@ -41,7 +41,7 @@ _These specifications are going to be valid for most projects developed using th
 _Space for discussion and weighing up of features that may or may not be required_ <br>
 
 ### Quality 
-_What quality assurances, if any, need to be established?__
+_What quality assurances, if any, need to be established?_
 
 ### Existing Products & COTS (Consumer Off The Shelf)
 
