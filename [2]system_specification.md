@@ -9,9 +9,9 @@ ________________________________________________________________________________
 _This section documents the final validated High Level Requirements, these form the basis against which the final system will be compared to determine the 
 success of the project_
 
-### Example Project Brief - [ISOpower]
+### Validated High Level Requirements - [ISOpower]
 > HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power, from supplied 24v input.                   <br>
-> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2], from supplied 24v input.   <br>
+> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W) for motor power, from supplied 24v input, in case of stall condition.    <br>
 > HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W), from supplied 24v input.                                  <br>
 > HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
 > HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
@@ -21,6 +21,7 @@ success of the project_
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
 > HL.11. Power Board will be protected from over-current conditions<br>
+> HL.12. PCB must have same footprint & mounting screwholes as V1, to aid in assembly <br>
 
 _______________________________________________________________________________________________________________________________________________________
 ## Design Tradeoffs & Optioneering
@@ -235,13 +236,13 @@ _Assuming That_
         - Verification - _"Does the implementation meet the requirements?"_ <br>
         - Validation   - _"Are the requirements correct"_
         
-[^2]: Ruggeduino >5v cutoff circuit
+<!--[^2]: Ruggeduino >5v cutoff circuit -->
       <!-- - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png) -->
           
-[^3]: Estimated current consumption of cutoff circuit
+<!-- [^3]: Estimated current consumption of cutoff circuit
       - R = 17kohm, V = 5v. 
       - I=V/R
-      - I = (17k / 5) = [2.9\*10^-4] A
+      - I = (17k / 5) = [2.9\*10^-4] A -->
       
 [1v1]: [Arduino: Analog Reference](https://www.arduino.cc/reference/en/language/functions/analog-io/analogreference/)
 
