@@ -15,7 +15,7 @@ information provided can be tailored to project complexity_
 > The containers house 4 experiments, each requires 12v for motor power, and 5v for Arduino via USB.
 > Additional 5v power channel is required for future proofing, additional control infrastructure etc.
 > Cooling should be provided for DC/DC Converters.
-> Power requirements set out in specification below.
+> Power requirements set out in sub-system specification below.
 
 
 #### Optional Features
