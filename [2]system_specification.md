@@ -72,14 +72,14 @@ _Hardware specification should outline specific hardware devices, circuit design
 <!-- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too? -->
 
 _Hardware Specification may contain the following subsections:_
-> - Hardware Architecture
-> - Major Components - Can be specific or requirements set out for comparason of specific components
-> - Circuit Design
-> - Other
+- Hardware Architecture
+- Major Components - Can be specific or requirements set out for comparason of specific components
+- Circuit Design
+- Other
 
 ### Hardware Architecture & Description
 
-> The hardware will comprise of a single PCB to home the 2 DC/DCc converter modules. These require local fan cooling for which power and mounting holes will be provided.
+> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. These require local fan cooling for which power and mounting holes will be provided.
 > 24v Power input will be via XT60 Connector mounted directly on PCB.
 > 
 > MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
