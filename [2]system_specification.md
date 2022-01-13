@@ -33,7 +33,7 @@ _Not good at writing narritives Should something go here?_ <br>
 
 | Product Function              | Options                       | Sub-Options                                | Hirarchy  | Notes  |
 | ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
-| Current Sensing for power bus | Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |        |
+| Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |        |
 |           "                   |           "                   | ublox Wifi module & remote database server |    1      |        |
 |           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |        | 
 |           "                   |           "                   | Remote Raspberry Pi                        |    3      |        |
@@ -47,90 +47,6 @@ _Not good at writing narritives Should something go here?_ <br>
 |           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
 |                               |                               |                                            |           |        |
 
-## Voltage & Current Sensing Reporting
-
-**CHC340 interface on Power control Board**
-  - Allows MCU to communicate with additional raspberry pi placed in ISO container
-    - Advantages 
-      - Some
-    - Disadvantages
-      - If power is lost to box, raspi will not be active. 
-      - How is data accessed on raspberry pi? webserver requiring custom development?
- 
-**Wifi enabled MCU Dev Board - Arduino 33 IoT**
-   - MCU Connects to WiFi and can be accessed remotely
-     - Advantages
-       - No need for additional Raspberry Pi in box
-       - HTTP GET requests can be sent by many additional means to switch power on & off.
-     - Disadvantages
-       - Some  
-      
-*Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
-requests from grafana server to MCU in order to actuate power control.*
-
-## MCU Options
-**Integrated MCU with PCB**
-  - Advantages
-    - Less soldering
-    - Lower Cost
-    - Lower Form Factor - less space
-    - More reliable
-  - Disadvantages
-    - More work needed for PCB development 
-    - Need to source additional components - Ublox, Xtal, CH340/USB driver, etc
-    
-**Complete Dev Board Arduino Nano 33 IoT**
-  - Advantages
-    - Speed of development
-  - Disadvantages
-    - Cost
-    - Size
-
-_____________________________________________________________________________________________
-## Power Control
-
-**Low Side N-Channel MOSFET**
-  - Advantages   
-    - Lower resistance than p-type = greater current capacity
-  - Disadvantages
-    - GND reference to switched channels will not be 0v
-      
- 
-**High Side P-Channel MOSFET**
- - Advantages
-    - GND Reference to switched channels will be 0v
-    - Can boost voltage from DC/DC modules slightly to offset voltage drop across DS       
-  - Disadvantages
-     - Semiconductor availability due to pandemic!
-
-**Relay**
-   - Could use NC Connection or Latching to avoid need for constant power on relay
-      - Advantages
-        - No Voltage drop issues.
-      - Disadvantages
-        - Expense
-        - Reliability
-        - Additional parts required to implement, diodes, drive transistors etc.  
-
-*For now design will progress assuming that High Side P-Channel MOSFET is the best solution for this feature*
-
-_____________________________________________________________________________________________
-## Power Supply
-
-**COTS Switch Mode Power Supply Modules**
-  - Advantages   
-    - Already in use and work
-    - Speed of development
-  - Disadvantages
-    - Cost
-
-**Integrated PSU on PCB**
-  - Advantages
-    - Cost
-  - Disadvantages
-    - Everything else
-    - In house SMPSU design will not be as efficient or safe as COTS option
-    - Not quantified/tested/backed by manufacturers guarentee/years of expertise in PSU design and manufacture
 
 
 ****************************************************************************************************************************
