@@ -1,127 +1,51 @@
-# [2]System Specification - [Project Title]
+# [2]  System Specification - [Project Title]
 
 _This form is intended to assist in optioneering to derive low level hardware & software specification from the ***Validated***  
 High Level Requirements Capture Form [[1]requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5Drequirements_capture.md).
 Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
-## [2.1]Validated High Level Requirements
+## [2.1] Design Tradeoffs & Optioneering
 
-_This section documents the final validated High Level Requirements, these form the basis against which the final system will be compared to determine the 
-success of the project_
+_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
+### Preamble
+_Not good at writing narritives Should something go here?_ <br>
 
+### Optioneering Table
+_This is an example of the options that may wish to be explored for this project, however there may be alternative ways of displaying this information
+that are more suitable_
 
-### Example Project Brief - [ISOpower]
-> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power.                   <br>
-> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2]  <br>
-> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W).                                 <br>
-> HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
-> HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
-> HL.6. Voltage & Current sensing will be available on the 5v Bus   <br>
-> HL.7. Board must have push-fit or bayonet connectors only. <br>
-> HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
-> HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
-> HL.10. Power board will be protected from reversed supply voltages <br>
-> HL.11. Power Board will be protected from over-current conditions<br>
-
-_______________________________________________________________________________________________________________________________________________________
-## Design Tradeoffs & Optioneering
-
-_Space to work through different options before deciding on specific low level requirements & system specification_
-
-## Voltage & Current Sensing Reporting
-
-**CHC340 interface on Power control Board**
-  - Allows MCU to communicate with additional raspberry pi placed in ISO container
-    - Advantages 
-      - Some
-    - Disadvantages
-      - If power is lost to box, raspi will not be active. 
-      - How is data accessed on raspberry pi? webserver requiring custom development?
- 
-**Wifi enabled MCU Dev Board - Arduino 33 IoT**
-   - MCU Connects to WiFi and can be accessed remotely
-     - Advantages
-       - No need for additional Raspberry Pi in box
-       - HTTP GET requests can be sent by many additional means to switch power on & off.
-     - Disadvantages
-       - Some  
-      
-*Either option would allow use of software such as grafana for displaying current & voltage of each power bus, however the 2nd option would make it easier to send HTTP GET
-requests from grafana server to MCU in order to actuate power control.*
-
-## MCU Options
-**Integrated MCU with PCB**
-  - Advantages
-    - Less soldering
-    - Lower Cost
-    - Lower Form Factor - less space
-    - More reliable
-  - Disadvantages
-    - More work needed for PCB development 
-    - Need to source additional components - Ublox, Xtal, CH340/USB driver, etc
-    
-**Complete Dev Board Arduino Nano 33 IoT**
-  - Advantages
-    - Speed of development
-  - Disadvantages
-    - Cost
-    - Size
-
-_____________________________________________________________________________________________
-## Power Control
-
-**Low Side N-Channel MOSFET**
-  - Advantages   
-    - Lower resistance than p-type = greater current capacity
-  - Disadvantages
-    - GND reference to switched channels will not be 0v
-      
- 
-**High Side P-Channel MOSFET**
- - Advantages
-    - GND Reference to switched channels will be 0v
-    - Can boost voltage from DC/DC modules slightly to offset voltage drop across DS       
-  - Disadvantages
-     - Semiconductor availability due to pandemic!
-
-**Relay**
-   - Could use NC Connection or Latching to avoid need for constant power on relay
-      - Advantages
-        - No Voltage drop issues.
-      - Disadvantages
-        - Expense
-        - Reliability
-        - Additional parts required to implement, diodes, drive transistors etc.  
-
-*For now design will progress assuming that High Side P-Channel MOSFET is the best solution for this feature*
-
-_____________________________________________________________________________________________
-## Power Supply
-
-**COTS Switch Mode Power Supply Modules**
-  - Advantages   
-    - Already in use and work
-    - Speed of development
-  - Disadvantages
-    - Cost
-
-**Integrated PSU on PCB**
-  - Advantages
-    - Cost
-  - Disadvantages
-    - Everything else
-    - In house SMPSU design will not be as efficient or safe as COTS option
-    - Not quantified/tested/backed by manufacturers guarentee/years of expertise in PSU design and manufacture
+| Function                      | Options                       | Sub-Options                                | Hirarchy  | Notes  |
+| ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
+| Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |        |
+|           "                   |           "                   | ublox Wifi module & remote database server |    1      |        |
+|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |        | 
+|           "                   |           "                   | Remote Raspberry Pi                        |    3      |        |
+|                               |                               |                                            |           |        |
+| Power Switching               |N-Channel Low Side MOSFET      |                                            |    3      |        |  
+|           "                   |P-Channel High Side MOSFET     |                                            |    1      | Difficult to source suitable MOSFET       |  
+|           "                   |Relay                          | Normally Closed                            |    2      | Expense       |    
+|           "                   |           "                   | Latching                                   |    4      | Expense, Reliability       |      
+|                               |                               |                                            |           |        |  
+| Power Supply DC/DC Conversion | COTS Modules                  |                                            |     1     |        |    
+|           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
+|                               |                               |                                            |           |        |
+| Power Input Connector         | Screw Terminals               |       |    4       |                                             |
+|         "                     | XT60 - 60A  Connector         |       |    1       | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
+| 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |    4       | Hard to find with range of options, easy to damage|
+|           "                   | XT30 - 30A Connector          |       |    1       | Easy to source, many differnt options, well defined specifications|
+| Voltage Sensing               | Voltage Divider on 12 bus     | | 1 | Can't be used for 5v bus as MCU would share Vcc ref, Must protect MCU from voltage spikes|
+|     "                         | Voltage sense IC              | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus' |
 
 
 ****************************************************************************************************************************
-## [2.2]System Specification Description
+## [2.2] System Specification Description
 
-<- NOTE: Origionally I had this document specified as "Low Level Requirements" given past training I had on embedded systems development in aviation, however I 
-think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step
+_System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements. At this stage optioneering should be
+complete, and the design direction finalised._
 
-*System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements*
+<!-- NOTE: Origionally I had this document specified as "Low Level Requirements" given past training I had on embedded systems development in aviation, however I 
+think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step -->
 
 
 ## [2.3]Example System Specification - [ISOpower]
@@ -129,13 +53,38 @@ think this approach was far in excess of what is required for this kind of proje
 ### [2.3.1]Hardware Specification
 _Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
 
-<- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too during the optioneering stage?
+<!-- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too? -->
 
 _Hardware Specification may contain the following subsections:_
-- Major Components - Can be specific or requirements set out for optioneering
-- System Archetecture
+- Hardware Architecture
+- Major Components - Can be specific or requirements set out for comparason of specific components
 - Circuit Design
 - Other
+
+### Hardware Architecture & Description
+
+> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. **[HL.1, HL.2, HL.3]**
+> These require local fan cooling for which +12v power and mounting holes will be provided.
+>  
+> 24v Power input will be via XT60 Connector mounted directly on PCB. **[HL.7]**
+> 
+> MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
+> the other between the 2nd DC/DC module and the 5v bus. **[HL.5]**
+> 
+> Additionally, a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus.**[HL.5, HL.6]** 
+> Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
+>
+> The 5v Bus will be distributed to 5 USB outputs **[HL.9]** via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. **[HL.4]**
+> Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
+> 12v bus power will be distributed to 5 XT30 connectors **[HL.7]** mounted directly on the PCB. **[HL.8]**
+>
+> Reverse voltage protection will be acheived via a P channel MOSFET[^RevVolt] at +Vcc in **[HL.10]**.
+> The system will be protected from overcurrent conditions by a 20A fuse between Vcc in+ and 24v bus **[HL.11]**
+> PCB dimensions will be 100x120mm **[HL.12]**
+
+> _Optional:_
+> The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
+
 
 ### Major Components
 
@@ -166,8 +115,8 @@ _Use: High side power switch_
 _Component Requirements:_
 | Attribute | Value        | Notes |
 |---        |---           |---    |
-| Vds        | < -21V      | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
-|Id         | > -6A        | Max Continuous Drain Current > Stall Current of Motor |
+| Vds        | > (-)21V      | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
+|Id         | > (-)6A        | Max Continuous Drain Current > Stall Current of Motor |
 | Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
 | Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
 
@@ -175,9 +124,14 @@ _In the case the requirements for a component are known, however the specific pa
 
 
 
-#### Arduino Nano 33 IoT Development Board
+#### AtMega328P MCU
+
+#### Allego ACS712
+
+#### 
 
 
+### Circuit Design & Schematic
 
 
 _____________________________________________________________________________________________________
@@ -214,9 +168,10 @@ _Specify the software requirements, functions, frameworks and tools required to 
 
 ### Software Specification
 
-- ADC Samples of current sensor will be taken every 250mS
+- ADC Samples of current sensor will be taken every 250mS  <!-- Let me know if these timings are suitable  -->
+- ADC samples of 12v bus voltage will be taken every 250mS <!-- Let me know if these timings are suitable  -->
 - Power Channel MOSFETS are "Active Low" Therefore channels will be turned off driven by a HIGH pulse from microcontroller.
-- Seperate API for power channel "on", "off" and "restart"
+- Seperate API for each power channel "on", "off" and "restart",
 - 
 
 
@@ -228,7 +183,7 @@ When to review?
 
 _______________________________________________________________________________________________________________________________________________________
 
-### [2.4]Requirement Matrix
+### [2.4] Requirement Matrix
 
 _Info On Requirements Matrix & Link to: [Requirements Matrix Document](https://broken_link.com)_
 
@@ -271,11 +226,17 @@ _Assuming That_
         - Verification - _"Does the implementation meet the requirements?"_ <br>
         - Validation   - _"Are the requirements correct"_
         
-[^2]: Ruggeduino >5v cutoff circuit
-      - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
+<!--[^2]: Ruggeduino >5v cutoff circuit -->
+      <!-- - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png) -->
           
-[^3]: Estimated current consumption of cutoff circuit
+<!-- [^3]: Estimated current consumption of cutoff circuit
       - R = 17kohm, V = 5v. 
       - I=V/R
-      - I = (17k / 5) = [2.9\*10^-4] A
+      - I = (17k / 5) = [2.9\*10^-4] A -->
+      
+[1v1]: [Arduino: Analog Reference](https://www.arduino.cc/reference/en/language/functions/analog-io/analogreference/)
+
+[^RevVolt]: [Infineon Reverse Voltage Protection Methods](https://www.infineon.com/dgdl/Reverse-Batery-Protection-Rev2.pdf?fileId=db3a304412b407950112b41887722615) <br>
+             ![image](https://user-images.githubusercontent.com/53580358/149346402-d48d8c97-2ba4-4139-989e-2c378938aefb.png)
+
    
