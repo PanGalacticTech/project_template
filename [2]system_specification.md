@@ -83,9 +83,10 @@ _Hardware Specification may contain the following subsections:_
 > 24v Power input will be via XT60 Connector mounted directly on PCB.
 > 
 > MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
-> the other between the 2nd DC/DC module and the 5v bus. Additionally a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. The > > > input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
+> the other between the 2nd DC/DC module and the 5v bus. Additionally a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. 
+> Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
 >
-> The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. Solder > > bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
+> The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. Solder > bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
 > 12v bus power will be distributed to 5 XT30 connectors mounted directly on the PCB.
 >
 > _Optional:_
@@ -130,7 +131,11 @@ _In the case the requirements for a component are known, however the specific pa
 
 
 
-#### Arduino Nano 33 IoT Development Board
+#### AtMega328P MCU
+
+#### Allego ACS712
+
+#### 
 
 
 
