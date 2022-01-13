@@ -58,7 +58,7 @@ requests from grafana server to MCU in order to actuate power control.*
     - More work needed for PCB development 
     - Need to source additional components - Ublox, Xtal, CH340/USB driver, etc
     
-**Complete Dev Board Arduino Nano 33 IoT
+**Complete Dev Board Arduino Nano 33 IoT**
   - Advantages
     - Speed of development
   - Disadvantages
@@ -103,7 +103,7 @@ ________________________________________________________________________________
   - Disadvantages
     - Cost
 
-**Integrated PSU on PCB*
+**Integrated PSU on PCB**
   - Advantages
     - Cost
   - Disadvantages
