@@ -235,7 +235,7 @@ _Assuming That_
         - Validation   - _"Are the requirements correct"_
         
 [^2]: Ruggeduino >5v cutoff circuit
-      - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png)
+      <!-- - ![image](https://user-images.githubusercontent.com/53580358/148758688-282c6b19-230f-4211-98ce-a5ba380fc2d2.png) -->
           
 [^3]: Estimated current consumption of cutoff circuit
       - R = 17kohm, V = 5v. 
@@ -244,5 +244,7 @@ _Assuming That_
       
 [1v1]: [Arduino: Analog Reference](https://www.arduino.cc/reference/en/language/functions/analog-io/analogreference/)
 
-[^RevVolt]: [Infineon Reverse Voltage Protection Methods](https://www.infineon.com/dgdl/Reverse-Batery-Protection-Rev2.pdf?fileId=db3a304412b407950112b41887722615)
+[^RevVolt]: [Infineon Reverse Voltage Protection Methods](https://www.infineon.com/dgdl/Reverse-Batery-Protection-Rev2.pdf?fileId=db3a304412b407950112b41887722615) <br>
+             - ![image](https://user-images.githubusercontent.com/53580358/149346402-d48d8c97-2ba4-4139-989e-2c378938aefb.png)
+
    
