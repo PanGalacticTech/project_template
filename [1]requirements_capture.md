@@ -39,11 +39,11 @@ _These specifications are going to be valid for most projects developed using th
 #### Design Optimisation
 _What parameters of the design should be minimised/maximised?_
 
-### Design Tradeoffs
+#### Design Tradeoffs
 _Space for discussion and weighing up of features that may or may not be required_ <br>
 
-### Quality 
-_What quality assurances, if any, need to be established?_
+#### Quality Assurance 
+_What quality assurances or requirements, if any, need to be established?_
 
 ### Existing Products & COTS (Consumer Off The Shelf)
 _The project brief may also contain information on currently available similar products and a brief description of the features they lack and a 
