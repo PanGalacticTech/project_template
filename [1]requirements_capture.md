@@ -33,9 +33,11 @@ _Specific requirements for subsystems should be documented at this stage_    <br
 
 #### General Specifications/Requirements
 _These specifications are going to be valid for most projects developed using this framework_
-> Circuit should be protected from reverse supply voltages. <br>
-> Circuit should be fuse protected <br>
+> 4. Circuit should be protected from reverse supply voltages. <br>
+> 5. Circuit should be fuse protected <br>
 
+#### Design Optimisation
+_What parameters of the design should be minimised/maximised?_
 
 ### Design Tradeoffs
 _Space for discussion and weighing up of features that may or may not be required_ <br>
@@ -44,7 +46,6 @@ _Space for discussion and weighing up of features that may or may not be require
 _What quality assurances, if any, need to be established?_
 
 ### Existing Products & COTS (Consumer Off The Shelf)
-
 _The project brief may also contain information on currently available similar products and a brief description of the features they lack and a 
 quick review of whether they can fullfill the aims of the project._
 
@@ -103,10 +104,7 @@ When to review? <br>
 
 
 _______________________________________________________________________________________________________________________________________________________
-## Design Optimisation?
 
-_What parameters of the design should be minimised/maximised?_
-_______________________________________________________________________________________________________________________________________________________
 
 
 [^V&V]: Verification & Validation - What is it? <br>
