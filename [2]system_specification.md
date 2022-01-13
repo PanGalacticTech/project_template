@@ -28,9 +28,12 @@ ________________________________________________________________________________
 
 _Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
-#### Preamble
+### Preamble
 _Not good at writing narritives Should something go here?_ <br>
 
+### Optioneering Table
+_This is an example of the options that may wish to be explored for this project, however there may be alternative ways of displaying this information
+that are more suitable_
 
 | Function                      | Options                       | Sub-Options                                | Hirarchy  | Notes  |
 | ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
