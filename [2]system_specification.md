@@ -10,9 +10,9 @@ _This section documents the final validated High Level Requirements, these form 
 success of the project_
 
 ### Example Project Brief - [ISOpower]
-> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power.                   <br>
-> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2]  <br>
-> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W).                                 <br>
+> HL.1. DC/DC converters must be able to provide continuous current draw of 6.7A at 12V ~(80W) for motor power, from supplied 24v input.                   <br>
+> HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W)? for motor power in case of stall condition.[^2], from supplied 24v input.   <br>
+> HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W), from supplied 24v input.                                  <br>
 > HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
 > HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
 > HL.6. Voltage & Current sensing will be available on the 5v Bus   <br>
@@ -46,16 +46,21 @@ _Not good at writing narritives Should something go here?_ <br>
 | Power Supply DC/DC Conversion | COTS Modules                  |                                            |     1     |        |    
 |           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
 |                               |                               |                                            |           |        |
+| Power Input Connector         | Screw Terminals               |                                            |           |        |
+|         "                     | XT60 - 60A  Connector         |       |           | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
+| 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |           | Hard to find with range of options, easy to damage|
+|           "                   | XT30 - 30A Connector          |       |           | Easy to source, many differnt options, well defined specifications|
 
 
 
 ****************************************************************************************************************************
 ## [2.2]System Specification Description
 
-<- NOTE: Origionally I had this document specified as "Low Level Requirements" given past training I had on embedded systems development in aviation, however I 
-think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step
+_System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements. At this stage optioneering should be
+complete, and the design direction finalised._
 
-*System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements*
+<!-- NOTE: Origionally I had this document specified as "Low Level Requirements" given past training I had on embedded systems development in aviation, however I 
+think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step -->
 
 
 ## [2.3]Example System Specification - [ISOpower]
@@ -63,13 +68,17 @@ think this approach was far in excess of what is required for this kind of proje
 ### [2.3.1]Hardware Specification
 _Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
 
-<- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too during the optioneering stage?
+<!-- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too? -->
 
 _Hardware Specification may contain the following subsections:_
-- Major Components - Can be specific or requirements set out for optioneering
-- System Archetecture
-- Circuit Design
-- Other
+> - System Archetecture
+> - Major Components - Can be specific or requirements set out for comparason of specific components
+> - Circuit Design
+> - Other
+
+### System Archetecture
+
+The hardware will comprise of a single PCB to home the 2 dc/dc converter modules. These require local fan cooling. Power input will be via
 
 ### Major Components
 
