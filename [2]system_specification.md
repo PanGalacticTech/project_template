@@ -50,8 +50,20 @@ requests from grafana server to MCU in order to actuate power control.*
 ## MCU Options
 **Integrated MCU with PCB**
   - Advantages
+    - Less soldering
+    - Lower Cost
+    - Lower Form Factor - less space
+    - More reliable
   - Disadvantages
+    - More work needed for PCB development 
+    - Need to source additional components - Ublox, Xtal, CH340/USB driver, etc
+    
 **Complete Dev Board Arduino Nano 33 IoT
+  - Advantages
+    - Speed of development
+  - Disadvantages
+    - Cost
+    - Size
 
 _____________________________________________________________________________________________
 ## Power Control
@@ -81,7 +93,23 @@ ________________________________________________________________________________
 
 *For now design will progress assuming that High Side P-Channel MOSFET is the best solution for this feature*
 
+_____________________________________________________________________________________________
+## Power Supply
 
+**COTS Switch Mode Power Supply Modules**
+  - Advantages   
+    - Already in use and work
+    - Speed of development
+  - Disadvantages
+    - Cost
+
+**Integrated PSU on PCB*
+  - Advantages
+    - Cost
+  - Disadvantages
+    - Everything else
+    - In house SMPSU design will not be as efficient or safe as COTS option
+    - Not quantified/tested/backed by manufacturers guarentee/years of expertise in PSU design and manufacture
 
 
 ****************************************************************************************************************************
@@ -125,6 +153,7 @@ _Hardware Specification may contain the following subsections:_
 
 
 
+
 #### P-Channel MOSFET 
 _Use: High side power switch_
 1. Switching of 5v USB power from bus to individual outputs
@@ -139,42 +168,9 @@ _Component Requirements:_
 | Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
 | Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
 
+_In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a spreadsheet to weigh up alternative options._
 
 
-##### Option 1: <br>
-**SQP100P06-9m3L Automotive P-Channel 60 V (D-S) 175 °C MOSFET**
-|Attribute        | Value                                            |Suitable  | Notes |
-|---              |---                                               |---       |---    |
-|Part Number:     |  SQP100P06-9m3L                                  |          |       |
-|Supplier:        |  unavailable (need to look harder & for alts)    | [ ]      |       |                 
-|Vds              |  -60V                                            | [x]      |       |     
-|Id               |  -100A                                           | [x]      |       |  
-|Rds(on) @ Vgs    |  0.0133                                          | [x]      |       |      
-|Price:           |  N/A as Unavailable                              | [ ]      |       |      
-|                 |                                                  |          |       |
-|URL:             |                                                  |         |        |
-|Availability     |   Not Available                                  | [ ]       |       |
-|Notes:           |                                                  |         |       |                                                                            
-|Meets Requirements: |                                               | [ ]     |       |
-    
-
-
-##### Option 2: <br>
-**P-Channel MOSFET, 27 A, 60 V, 3-Pin TO-220AB onsemi FQP27P06**
-|Attribute        | Value                                            |Suitable  | Notes |
-|---              |---                                               |---       |---    |
-|Part Number:     |  FQP27P06                                        |          |       |
-|Supplier:        |  RS Online                                  )    | [x]      |       |                 
-|Vds              |  -60V                                            | [x]      |       |     
-|Id               |  -19.1A  @ 100degC                               | [x]      |       |  
-|Rds(on) @ Vgs    |  0.07 @ -10v   <- Unsuitable for 5v Vcc          | [ ]      |       |      
-|Price:           |  £1.571 each (50 min order)                      | [x]      |       |      
-|                 |                                                  |          |       |
-|URL:             |   https://uk.rs-online.com/web/p/mosfets/1784752 |         |        |
-|Availability     |  Back order 09/03/22                             | [x]     |       |
-|Notes:           |                                                  |         |       |                                                                            
-|Meets Requirements: |                                               | [ ]     |       |
-    
 
 #### Arduino Nano 33 IoT Development Board
 
@@ -190,16 +186,31 @@ _Specify the software requirements, functions, frameworks and tools required to 
 #### Tools:
 
 - Arduino IDE
-- Graphana
+- Grafana
 - C++
 
 #### 
 
 
-### Software Structure
+### Software Structure Optioneering
+
+- Arduino running state machine framework
+- websocket server responds to HTTP GET requests for control of power channels
+- concurrently taking analogRead() of 2 ADC inputs, and sending to external database with HTTP POST requests over wifi
+- Data is pulled from database using graphing tool, like Grafana, which is built around a web accessable user interface.
+
+OR
+
+- Arduino running state machine framework
+- websocket server responds to HTTP GET requests 
+- concurrently taking analogRead() of 2 ADC inputs, and sending to Raspberry Pi over USB communication.
+- Raspberry pi requires script to place data received over COM port into web accessable format. 
 
 
+### Software Specification
 
+- ADC Samples of current sensor will be taken every 250mS
+- 
 
 
 
