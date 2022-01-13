@@ -74,13 +74,13 @@ _Hardware Specification may contain the following subsections:_
 > Additionally, a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus.**[HL.5, HL.6]** 
 > Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
 >
-> The 5v Bus will be distributed to 5 USB outputs **[HL.9]** via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. **[HL.4]**
+> The 5v Bus will be distributed to 5 USB outputs **[HL.9]** via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. The Gate pin will be pulled down to GND via pull-down resistor. value to be determined. **[HL.4]**
 > Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
 > 12v bus power will be distributed to 5 XT30 connectors **[HL.7]** mounted directly on the PCB. **[HL.8]**
 >
 > Reverse voltage protection will be acheived via a P channel MOSFET[^RevVolt] at +Vcc in **[HL.10]**.
-> The system will be protected from overcurrent conditions by a 20A fuse between Vcc in+ and 24v bus **[HL.11]**
-> PCB dimensions will be 100x120mm **[HL.12]**
+> The system will be protected from overcurrent conditions by a 20A fuse between Vcc in+ and 24v bus. **[HL.11]**
+> PCB dimensions will be 100x120mm. **[HL.12]**
 
 > _Optional:_
 > The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
