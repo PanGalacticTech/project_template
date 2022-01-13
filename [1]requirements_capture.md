@@ -85,9 +85,9 @@ ________________________________________________________________________________
 > HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W) for motor power, from supplied 24v input, in case of stall condition.[^2]    <br>
 > HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W), from supplied 24v input.                                  <br>
 > HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
-> HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>
-> HL.6. Current sensing will be available on the 5v Bus   <br>
-> HL.7. Board must have push-fit or bayonet connectors only. <br>
+> HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>   <!-- This is a weak requirement, how often should data be sampled is a nessissary component of this requirement -->
+> HL.6. Current sensing will be available on the 5v Bus   <br>    <!-- This is a weak requirement, how often should data be sampled is a nessissary component of this requirement -->
+> HL.7. Board must have push-fit or bayonet connectors for motors & offboard hardware. <br>
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
