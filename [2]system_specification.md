@@ -24,10 +24,11 @@ that are more suitable_
 
 | Function                      | Options                       | Sub-Options                                | Hirarchy  | Notes  |
 | ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
-| Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    2      |        |
-|           "                   |           "                   | ublox Wifi module & remote database server |    1      |        |
-|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi                         |    4      |        | 
-|           "                   |           "                   | Remote Raspberry Pi                        |    3      |        |
+| Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    3      |        |
+|           "                   |           "                   | ublox Wifi module & remote database server |    2      |        |
+|           "                   |           "                   | ESP32 performs as MCU controller & Wifi Module|    1   |        |
+|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi |    4      | will require 8 port switch to accomidate extra RasPi in ISO Container | 
+|           "                   |           "                   | Remote Raspberry Pi  |    3    | Will Require external WiFi Antenna to ensure robust Connection|
 |                               |                               |                                            |           |        |
 | Power Switching               |N-Channel Low Side MOSFET      |                                            |    3      |        |  
 |           "                   |P-Channel High Side MOSFET     |                                            |    1      | Difficult to source suitable MOSFET       |  
