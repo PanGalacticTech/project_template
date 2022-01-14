@@ -80,6 +80,9 @@ and causing damage. Several possible approaches will be discussed below_
 > Voltage Supivisor/detection ICs
 >  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
 >  Looking for examples & use case.
+> [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
+
+
 
 ##### Proposal
 
@@ -344,3 +347,5 @@ _Assuming That_
 
 [^vu]: [Single Transistor LED VU meter](https://electronicsarea.com/6-led-vu-meter-using-one-transistor/) <br>
        - 
+
+[^uvov]: ![image](https://user-images.githubusercontent.com/53580358/149549094-5a31fedb-78fb-4ca3-9df5-5213b09f50f0.png)
