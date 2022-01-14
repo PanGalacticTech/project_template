@@ -21,67 +21,69 @@ will affect the other available options._
 _This is an example of the options that may wish to be explored for this project, however there may be alternative ways of displaying this information
 that are more suitable_
 
-| Function                      | Options                       | Sub-Options                                | Hirarchy  | Notes  |
-| ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
-| Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    3      |        |
-|           "                   |           "                   | ublox Wifi module & remote database server |    2      |        |
-|           "                   |           "                   | ESP32 performs as MCU controller & Wifi Module|    1   |        |
-|           "                   | Arduino Nano 33 IoT           | Local Raspberry Pi |    4      | will require 8 port switch to accomidate extra RasPi in ISO Container | 
-|           "                   |           "                   | Remote Raspberry Pi  |    3    | Will Require external WiFi Antenna to ensure robust Connection|
-|                               |                               |                                            |           |        |
-| Power Switching               |N-Channel Low Side MOSFET      |                                            |    3      |        |  
-|           "                   |P-Channel High Side MOSFET     |                                            |    1      | Difficult to source suitable MOSFET       |  
-|           "                   |Relay                          | Normally Closed                            |    2      | Expense       |    
-|           "                   |           "                   | Latching                                   |    4      | Expense, Reliability       |      
-|                               |                               |                                            |           |        |  
-| Power Supply DC/DC Conversion | COTS Modules                  |                                            |     1     |        |    
-|           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
-|                               |                               |                                            |           |        |
-| Power Input Connector         | Screw Terminals               |       |    4       |                                             |
-|         "                     | XT60 - 60A  Connector         |       |    1       | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
-| 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |    4       | Hard to find with range of options, easy to damage|
-|           "                   | XT30 - 30A Connector          |       |    1       | Easy to source, many differnt options, well defined specifications|
-| Voltage Sensing               | Voltage Divider on 12 bus     | | 1 | Can't be used for 5v bus as MCU would share Vcc ref, Must protect MCU from voltage spikes|
-|     "                         | Voltage sense IC              | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus' |
+|Requirement| Function                      | Options                       | Sub-Options                                | Hirarchy  | Notes  |
+|---        | ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
+|HL:(4,5,6) | Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    3      |        |
+|"          |           "                   |           "                   | ublox Wifi module & remote database server |    2      |        |
+|"          |           "                   |           "                   | ESP32 performs as MCU controller & Wifi Module|    1   |        |
+|"          |           "                   | Arduino Nano 33 IoT| Local Raspberry Pi |    4    | will require 8 port switch to accomidate extra RasPi in ISO Container | 
+|"          |           "                   |    "             | Remote Raspberry Pi  |    3    | Will Require external WiFi Antenna to ensure robust Connection|
+|           |                               |                               |                                            |           |        |
+|HL:(4)     | Power Switching               |N-Channel Low Side MOSFET      |                                            |    3      |        |  
+|"          |           "                   |P-Channel High Side MOSFET     |                                            |    1      | Difficult to source suitable MOSFET|  
+|"          |           "                   |Relay                          | Normally Closed                            |    2      | Expense       |    
+|"          |           "                   |           "                   | Latching                                   |    4      | Expense, Reliability       |      
+|           |                               |                               |                                            |           |        |  
+|HL:(1,2,3) | Power Supply DC/DC Conversion | COTS Modules                  |                                            |     1     |        |    
+|"          |           "                   | ReEngineer & Integrate w/ PCB |                                            |     4     |        |  
+|"          |                               |                               |                                            |           |        |
+|HL:(7)     | Power Input Connector         | Screw Terminals               |       |  4  |                                             |
+|"          |         "                     | XT60 - 60A  Connector         |       |  1  | Quick Disconnect Compared to screw terminals, easy to solder, easier PCB mounting|
+|           |                               |                               |                                            |           |        |  
+|HL:(7)     | 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |  4  | Hard to find with range of options, easy to damage|
+|"          |           "                   | XT30 - 30A Connector          |       |  1  | Easy to source, many differnt options, well defined specifications|
+|           |                               |                               |                                            |           |        |  
+|HL:(5)     | Voltage Sensing               | Voltage Divider on 12 bus   | | 1 | Can't be used for 5v bus as MCU would share Vcc ref, Must protect MCU from voltage spikes|
+|"          |     "                         | Voltage sense IC            | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus|
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Circuit Design Optioneering
 _Exploration of circuit elements that might be used to meet design objectives_
 
 
-#### Overvoltage Protection of 5v USB Bus [HL.13]
+#### Overvoltage Protection of 5v USB Bus ***[HL.13]***
 _The aim of overvoltage protection for the 5v bus, is to protect the raspberry pis in the event +12v power is accidently applied to this bus, pulling all the outputs to 12v
 and causing damage. Several possible approaches will be discussed below_
 
 #### Approach 1 - Zener Diode
 
-5.1v zener diode reverse biased between the USB outputs 5v rail, and GND. A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
+    5.1v zener diode reverse biased between the USB outputs 5v rail, and GND. A 100ohm resistor must be between the potential source of over voltage and the zener diode.   [^zener]
 
 **Problems with this approach**
 
-If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem, as the current will flow unimpeded through the zener diode, causing overheating and component failure. If it fails open circuit (likely) then the protection is no longer active and the 5v bus will be pulled to 12v.
+    If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem, as the current will flow unimpeded through the zener diode, causing  overheating and component failure. If it fails open circuit (likely) then the protection is no longer active and the 5v bus will be pulled to 12v.
 
 As the likely source of the overvoltage would be the other USB inputs, each V+ rail would need a 100ohm resistor, with a zener diode on the supply side of the resistor.
 
 #### Approach 2 - Using the MOSFET That is Already There
 
-This may be pie in the sky, however as the USB channel is already designed to be switched off via a logic high signal (+5v) from a microcontroller, could that same 
-MOSTFET also be triggered with logic high if a fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
-would delay response and would not stop damage from occuring.
+    This may be pie in the sky, however as the USB channel is already designed to be switched off via a logic high signal (+5v) from a microcontroller, could that same 
+    MOSTFET also be triggered with logic high if a fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
+    would delay response and would not stop damage from occuring.
 
 #### Proposal
 
-Comparator circuit 
+    Comparator circuit?
 
 
-### Power Bus Visual Fault Indications [HL.14]
+### Power Bus Visual Fault Indications ***[HL.14]***
 
-I much prefer the idea of independent indication for each bus, rather than a traffic light with "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I 
-believe this is 1, less useful than say "A Okay" "B Okay" "C Okay" indications, but it may also be harder to design if we take a passive approach, i.e: This system should
-work independently of any microcontrollers.
+    I much prefer the idea of independent indication for each bus, rather than a traffic light with "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I 
+    believe this is 1, less useful than say "A Okay" "B Okay" "C Okay" indications, but it may also be harder to design if we take a passive approach, i.e: This system should
+    work independently of any microcontrollers.
 
-A window comparator circuit could be used to display whether each bus is falling within a predefined "nominal" window, however this circuit would be reliant on stable Vcc, so
-is not useful for detecting if Vcc is off nominal. An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but increase in cost & comple
+    A window comparator circuit could be used to display whether each bus is falling within a predefined "nominal" window, however this circuit would be reliant on stable Vcc, so
+    is not useful for detecting if Vcc is off nominal. An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but increase in cost & comple
 
 
 
