@@ -13,7 +13,7 @@ _Not good at writing narritives Should something go here?_ <br>
 
 ### Optioneering Diagram
 _Flowcharts can be used to explore the relationships between different options, and display graphically how making specific design decisions
-will have effects on the other available options._
+will affect the other available options._
 
 ![image](https://user-images.githubusercontent.com/53580358/149507075-3be11e9f-9cd9-4e3a-bcb2-2ddf4bbdd5c4.png)
 
