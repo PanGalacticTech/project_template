@@ -82,16 +82,16 @@ As the likely source of the overvoltage would be the other USB inputs, each V+ r
 
 ### Power Bus Visual Fault Indications ***[HL.14]***
 
-    I much prefer the idea of independent indication for each bus, rather than a traffic light with 
-    "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is,
-    1: less useful than say "A Okay" "B Okay" "C Okay" indications and
-    2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
-    of any microcontrollers.
+   I much prefer the idea of independent indication for each bus, rather than a traffic light with 
+   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is,
+   1: less useful than say "A Okay" "B Okay" "C Okay" indications and
+   2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
+   of any microcontrollers.
 
-    A window comparator circuit[comp^] could be used to display whether each bus is falling within a predefined "nominal" window,
-    however this circuit would be reliant on stable Vcc, so is not useful for detecting if Vcc is off nominal.
-    An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
-    increase in cost & complexity.
+   A window comparator circuit[comp^] could be used to display whether each bus is falling within a predefined "nominal" window,
+   however this circuit would be reliant on stable Vcc, so is not useful for detecting if Vcc is off nominal.
+   An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
+   increase in cost & complexity.
 
 
 
