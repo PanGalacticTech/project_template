@@ -348,4 +348,4 @@ _Assuming That_
 [^vu]: [Single Transistor LED VU meter](https://electronicsarea.com/6-led-vu-meter-using-one-transistor/) <br>
        - 
 
-[^uvov]: ![image](https://user-images.githubusercontent.com/53580358/149549094-5a31fedb-78fb-4ca3-9df5-5213b09f50f0.png)
+[^uvov]: <br> ![image](https://user-images.githubusercontent.com/53580358/149549094-5a31fedb-78fb-4ca3-9df5-5213b09f50f0.png)
