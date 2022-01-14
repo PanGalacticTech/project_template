@@ -5,7 +5,6 @@ High Level Requirements Capture Form [[1]requirements_capture.md](https://github
 Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
 ## [2.1] Design Tradeoffs & Optioneering
-
 _Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
 ### Preamble
@@ -44,6 +43,24 @@ that are more suitable_
 |           "                   | XT30 - 30A Connector          |       |    1       | Easy to source, many differnt options, well defined specifications|
 | Voltage Sensing               | Voltage Divider on 12 bus     | | 1 | Can't be used for 5v bus as MCU would share Vcc ref, Must protect MCU from voltage spikes|
 |     "                         | Voltage sense IC              | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus' |
+
+### Circuit Design Optioneering
+_Exploration of circuit elements that might be used to meet design objectives_
+
+
+##### >5v Protection of 5v USB Bus
+_The aim of overvoltage protection for the 5v bus, is to protect the raspberry pis in the event +12v power is accidently applied to this bus, pulling all the outputs to 12v
+and causing damage. Several possible approaches will be discussed below_
+
+###### Approach 1 - Zener Diode
+
+5.1v zener diode reverse biased between the USB outputs 5v rail, and GND. A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
+
+**Problems with this approach**
+
+If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem, as the current will flow unimpeded through the zener diode, causing overheating and component failure. If it fails open circuit (likely) then the protection is no longer active and the 5v bus will be pulled to 12v.
+
+
 
 
 ****************************************************************************************************************************
@@ -157,18 +174,7 @@ _In the case the requirements for a component are known, however the specific pa
 -----------------------------------------------------------------------------------------------------
 
 ### Circuit Design & Schematic
-
-##### >5v Protection of 5v USB Bus
-_The aim of overvoltage protection for the 5v bus, is to protect the raspberry pis in the event +12v power is accidently applied to this bus, pulling all the outputs to 12v
-and causing damage. Several possible approaches will be discussed below_
-
-###### Approach 1 - Zener Diode
-
-5.1v zener diode reverse biased between the USB outputs 5v rail, and GND. A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
-
-**Problems with this approach**
-
-If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem, as the current will flow unimpeded through the zener diode, causing overheating and component failure. If it fails open circuit (likely) then the protection is no longer active and the 5v bus will be pulled to 12v.
+_Final Circuit Design, Schematics & Justifications for design_
 
 
 
