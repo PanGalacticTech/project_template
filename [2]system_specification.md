@@ -346,7 +346,7 @@ _Assuming That_
 [^comp]: [op-amp comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html)
 
 [^vu]: [Single Transistor LED VU meter](https://electronicsarea.com/6-led-vu-meter-using-one-transistor/) <br>
-       - 
+       
 
 [^uvov]: <br> ![image](https://user-images.githubusercontent.com/53580358/149549094-5a31fedb-78fb-4ca3-9df5-5213b09f50f0.png) <br>
 ![image](https://user-images.githubusercontent.com/53580358/149550148-76459666-dd3e-4661-bf27-dfcf147a4180.png) <br>
