@@ -75,6 +75,12 @@ and causing damage. Several possible approaches will be discussed below_
 >    fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
 >    would delay response and would not stop damage from occuring.
 
+##### Option 2
+
+> Voltage Supivisor/detection ICs
+>  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
+>  Looking for examples & use case.
+
 ##### Proposal
 
 > Comparator circuit, & OR gate with microcontroller output?
@@ -95,15 +101,19 @@ and causing damage. Several possible approaches will be discussed below_
 >   An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
 >   increase in cost & complexity.
 
+
+
 ##### Option 2
 
-> Voltage Supivisor/detection ICs
->  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
->  Looking for examples & use case.
+> Led VU Meter, Options detailed [^vu]  [LM3916 Dot/Bar Display Driver](https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf) Monitors 
+> analog voltage level and lights up to 10 LEDs sequentially
+> Supply Voltage from 3v to 25v - Suggest it runs directly from 24v rail for each use case? Input can handle from 0 to 35v 
 
-##### Option 3
-
-> Led VU Meter, Options detailed [^vu]
+ 
+> "The LM3916 is extremely easy to apply. A 1.2V fullscale meter requires only one resistor in addition to
+> the ten LEDs. One more resistor programs the fullscale anywhere from 1.2V to 12V independent of
+> supply voltage. LED brightness is easily controlled
+> with a single pot."
 
 
 ****************************************************************************************************************************
