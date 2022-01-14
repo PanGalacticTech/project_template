@@ -12,29 +12,36 @@ information provided can be tailored to project complexity_
 ### Example Project Brief - [ISOpower]
 
 > PCB required to host DC-DC converters, to convert 24V DC power supply into operating voltages for ISO Experimental containers. 
-> The containers house 4 experiments, each requires 12v for motor power, and 5v for Arduino via USB.
-> Additional 5v power channel is required for future proofing, additional control infrastructure etc.
+> The containers house 4 experiments, each requires 12v for motor power, and 5v for raspberry pi via USB.
+> Each USB 5v channel requires a power switch that can be actuated remotely.
+> 
+> Total current draw for 12v & 5v bus should be monitored via a microcontroller, with a interface allowing control
+> over power switches on the board.
+> Additional 5v & 12v power channel is required for future proofing, additional control infrastructure etc.
+> 
+> LED indication of correct voltage for 24v, 12v & 5v bus.
 > Cooling should be provided for DC/DC Converters.
-> Power requirements set out in sub-system specification below.
+> Estimated power requirements set out in sub-system specification below.
 
 
 #### Optional Features
 _Any features or functions that are optional should be stated here_  <br>
 >  1. Report Status & current usage for sustainabilty and maintainance purposes.
 >  2. Individual remote control of channel power.
->  3. Improve power distribution to avoid damage to barrel jack connectors.
+>  3. Use only connection types that can be operated with one hand. i.e. avoid screw terminals.
 
 
 #### Sub-Systems Specifications
 _Specific requirements for subsystems should be documented at this stage_    <br>
-> a. steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668	Graphite brushes, 20 Watt) <br>
-> b. peak power usage of 69W 5.7A at 12V (when motor stalled) <br>
-> c. 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to nano iot 33 monitoring chip. <br>
+> a. steady power usage of 20W 1.7A at 12V (Maxxon AMax 32 236668 Graphite brushes, 20 Watt)[Estimated value, may change in future iterations] <br>
+> b. peak power usage of 69W 5.7A at 12V (when motor stalled)  [Estimated value, may change in future iterations] <br>
+> c. 5V power for the Raspberry pis, typically 2.5A per Raspberry Pi; four raspberry pi connections, 1 connection for power to microcontroller monitoring chip. <br>
 
 #### General Specifications/Requirements
 _These specifications are going to be valid for most projects developed using this framework_
 > 4. Circuit should be protected from reverse supply voltages. <br>
 > 5. Circuit should be fuse protected <br>
+> 6. 5v bus should be protected from over voltage conditions.
 
 #### Design Optimisation
 _What parameters of the design should be minimised/maximised?_
@@ -85,15 +92,23 @@ ________________________________________________________________________________
 > HL.2. DC/DC converters must be able to provide peak current draw of 12A at 12V ~(144W) for motor power, from supplied 24v input, in case of stall condition.[^2]    <br>
 > HL.3. USB power must be able to provide total of 12.5A @ 5v ~(62.5W), from supplied 24v input.                                  <br>
 > HL.4. Each USB channel will have the ability to remotely disable and re-enable power.                                      <br>
-> HL.5. Voltage & Current sensing will be available on the 12v Bus   <br>   <!-- This is a weak requirement, how often should data be sampled is a nessissary component of this requirement -->
-> HL.6. Current sensing will be available on the 5v Bus   <br>    <!-- This is a weak requirement, how often should data be sampled is a nessissary component of this requirement -->
+> HL.5. Voltage & Current monitoring of 12v bus, accessable remotely.   <br>   <!-- This is a weak requirement, how often should data be sampled is a nessissary component of this requirement -->
+> HL.6. Current monitoring of 5v bus, accessable remotely  <br>    <!-- This is a weak requirement, how often should data be sampled is a nessissary component of this requirement -->
 > HL.7. Board must have push-fit or bayonet connectors for motors & offboard hardware. <br>
 > HL.8. Power Board will have 5 * 12v outputs from 12v Bus. <br>
 > HL.9. Power Board will have 5 * 5v outputs from 5v Bus. <br>
 > HL.10. Power board will be protected from reversed supply voltages <br>
 > HL.11. Power Board will be protected from over-current conditions<br>
 > HL.12. PCB must have same footprint & mounting screwholes as V1, to aid in assembly <br>
+> HL.13. 5v bus will be protected from over-voltage condition
+> HL.14. Each power bus will display visual (LED) indication of correct operation or fault conditions (over/under voltage) <br>
 
+
+<!-- NOTE: 
+High level
+Include a microcontroller which communicates over USB, with a JSON-based interface allowing control over any power switches on board, and can report any measurements made.
+It is my understanding this is not a high level requirement, as it is a specific low level hardware & software requirement. I have modified some of the other requirements
+ to make it clear that the data & power channel actuation should be accessable remotly, but have not gone into specifics of how that would be achieved-->
 
 
 
