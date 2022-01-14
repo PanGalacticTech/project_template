@@ -80,7 +80,7 @@ and causing damage. Several possible approaches will be discussed below_
 > Comparator circuit?
 
 
-### Power Bus Visual Fault Indications ***[HL.14]***
+#### Power Bus Visual Fault Indications ***[HL.14]***
 
 >   I much prefer the idea of independent indication for each bus, rather than a traffic light with 
 >   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is,
