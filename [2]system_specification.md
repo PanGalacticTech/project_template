@@ -88,7 +88,7 @@ As the likely source of the overvoltage would be the other USB inputs, each V+ r
    2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
    of any microcontrollers.
 
-   A window comparator circuit[comp^] could be used to display whether each bus is falling within a predefined "nominal" window,
+   A window comparator circuit[^comp] could be used to display whether each bus is falling within a predefined "nominal" window,
    however this circuit would be reliant on stable Vcc, so is not useful for detecting if Vcc is off nominal.
    An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
    increase in cost & complexity.
