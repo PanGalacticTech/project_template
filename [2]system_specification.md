@@ -100,6 +100,10 @@ and causing damage. Several possible approaches will be discussed below_
 > Diode network, a diode network would light an LED at the correct voltage, to show V >~ Vtarget but wouldnt indicate overvoltage conditions.
 > Would need careful balance between diode voltage drop over network.
 
+##### Option 3
+
+> Led VU Meter, Options detailed [^vu]
+
 
 ****************************************************************************************************************************
 ## [2.2] System Specification Description
@@ -326,3 +330,6 @@ _Assuming That_
 [^zener]: [Designing overvoltage protection using zener diodes](https://components101.com/articles/designing-an-overvoltage-protection-circuit-using-zener-diodes)
 
 [^comp]: [op-amp comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html)
+
+[^vu]: [Single Transistor LED VU meter](https://electronicsarea.com/6-led-vu-meter-using-one-transistor/) <br>
+       - 
