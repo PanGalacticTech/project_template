@@ -88,11 +88,17 @@ and causing damage. Several possible approaches will be discussed below_
 >   2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
 >   of any microcontrollers.
 
+##### Option 1
+
 >   A window comparator circuit[^comp] could be used to display whether each bus is falling within a predefined "nominal" window,
 >   however this circuit would be reliant on stable Vcc, so is not useful for detecting if Vcc is off nominal.
 >   An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
 >   increase in cost & complexity.
 
+##### Option 2
+
+> Diode network, a diode network would light an LED at the correct voltage, to show V >~ Vtarget but wouldnt indicate overvoltage conditions.
+> Would need careful balance between diode voltage drop over network.
 
 
 ****************************************************************************************************************************
