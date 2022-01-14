@@ -55,7 +55,7 @@ _Exploration of circuit elements that might be used to meet design objectives_
 _The aim of overvoltage protection for the 5v bus, is to protect the raspberry pis in the event +12v power is accidently applied to this bus, pulling all the outputs to 12v
 and causing damage. Several possible approaches will be discussed below_
 
-#### Approach 1 - Zener Diode
+##### Approach 1 - Zener Diode
 
 >    5.1v zener diode reverse biased between the USB outputs 5v rail, and GND.
 >    A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
@@ -68,14 +68,14 @@ and causing damage. Several possible approaches will be discussed below_
 
 > As the likely source of the overvoltage would be the other USB inputs, each V+ rail would need a 100ohm resistor, with a zener diode on the supply side of the resistor.
 
-#### Approach 2 - Using the MOSFET That is Already There
+##### Approach 2 - Using the MOSFET That is Already There
 
 >    This may be pie in the sky, however as the USB channel is already designed to be switched off via a logic
 >    high signal (+5v) from a microcontroller, could that same MOSTFET also be triggered with logic high if a
 >    fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
 >    would delay response and would not stop damage from occuring.
 
-#### Proposal
+##### Proposal
 
 > Comparator circuit?
 
