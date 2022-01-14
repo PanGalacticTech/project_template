@@ -100,7 +100,7 @@ ________________________________________________________________________________
 > HL.10. Power board will be protected from reversed supply voltages <br>
 > HL.11. Power Board will be protected from over-current conditions<br>
 > HL.12. PCB must have same footprint & mounting screwholes as V1, to aid in assembly <br>
-> HL.13. 5v bus will be protected from over-voltage condition
+> HL.13. 5v bus will be protected from over-voltage condition. <br>
 > HL.14. Each power bus will display visual (LED) indication of correct operation or fault conditions (over/under voltage) <br>
 
 
