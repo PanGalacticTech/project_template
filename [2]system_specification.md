@@ -57,41 +57,41 @@ and causing damage. Several possible approaches will be discussed below_
 
 #### Approach 1 - Zener Diode
 
-    5.1v zener diode reverse biased between the USB outputs 5v rail, and GND.
-    A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
+>    5.1v zener diode reverse biased between the USB outputs 5v rail, and GND.
+>    A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
 
 **Problems with this approach**
 
-    If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem,
-    as the current will flow unimpeded through the zener diode, causing overheating and component failure. 
-    If it fails open circuit (likely) then the protection is no longer active and the 5v bus will be pulled to 12v.
+>    If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem,
+>    as the current will flow unimpeded through the zener diode, causing overheating and component failure. 
+>    If it fails open circuit (likely) then the protection is no longer active and the 5v bus will be pulled to 12v.
 
-As the likely source of the overvoltage would be the other USB inputs, each V+ rail would need a 100ohm resistor, with a zener diode on the supply side of the resistor.
+> As the likely source of the overvoltage would be the other USB inputs, each V+ rail would need a 100ohm resistor, with a zener diode on the supply side of the resistor.
 
 #### Approach 2 - Using the MOSFET That is Already There
 
-    This may be pie in the sky, however as the USB channel is already designed to be switched off via a logic
-    high signal (+5v) from a microcontroller, could that same MOSTFET also be triggered with logic high if a
-    fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
-    would delay response and would not stop damage from occuring.
+>    This may be pie in the sky, however as the USB channel is already designed to be switched off via a logic
+>    high signal (+5v) from a microcontroller, could that same MOSTFET also be triggered with logic high if a
+>    fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
+>    would delay response and would not stop damage from occuring.
 
 #### Proposal
 
-    Comparator circuit?
+> Comparator circuit?
 
 
 ### Power Bus Visual Fault Indications ***[HL.14]***
 
-   I much prefer the idea of independent indication for each bus, rather than a traffic light with 
-   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is,
-   1: less useful than say "A Okay" "B Okay" "C Okay" indications and
-   2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
-   of any microcontrollers.
+>   I much prefer the idea of independent indication for each bus, rather than a traffic light with 
+>   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is,
+>   1: less useful than say "A Okay" "B Okay" "C Okay" indications and
+>   2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
+>   of any microcontrollers.
 
-   A window comparator circuit[^comp] could be used to display whether each bus is falling within a predefined "nominal" window,
-   however this circuit would be reliant on stable Vcc, so is not useful for detecting if Vcc is off nominal.
-   An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
-   increase in cost & complexity.
+>   A window comparator circuit[^comp] could be used to display whether each bus is falling within a predefined "nominal" window,
+>   however this circuit would be reliant on stable Vcc, so is not useful for detecting if Vcc is off nominal.
+>   An independent linear or LDO regulator could provide independent reference voltages to solve this problem, but 
+>   increase in cost & complexity.
 
 
 
