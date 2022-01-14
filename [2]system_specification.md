@@ -77,7 +77,7 @@ and causing damage. Several possible approaches will be discussed below_
 
 ##### Proposal
 
-> Comparator circuit?
+> Comparator circuit, & OR gate with microcontroller output?
 
 
 #### Power Bus Visual Fault Indications ***[HL.14]***
@@ -97,8 +97,9 @@ and causing damage. Several possible approaches will be discussed below_
 
 ##### Option 2
 
-> Diode network, a diode network would light an LED at the correct voltage, to show V >~ Vtarget but wouldnt indicate overvoltage conditions.
-> Would need careful balance between diode voltage drop over network.
+> Voltage Supivisor/detection ICs
+>  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
+>  Looking for examples & use case.
 
 ##### Option 3
 
