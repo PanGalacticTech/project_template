@@ -82,12 +82,24 @@ and causing damage. Several possible approaches will be discussed below_
 
 ***OverVoltage Detection***
 
-> Voltage Supivisor/detection ICs:
->  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
->  Looking for examples & use case.
+> Voltage Supivisor/detection ICs: <br>
+> [TL431 Voltage Reference, Adjustable Shunt](https://uk.farnell.com/on-semiconductor/tl431acdg/voltage-ref-shunt-2-495v-36v-soic/dp/1651199)<br>
+>  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band. <br>
+>  
+> **Use Case**
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
-> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. use NOT gate on
+> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. NOT gate required on
 > output for correction.
+
+Resistor Values Estimated:
+> R1: 470k      <br>
+> R2: 560k      <br>
+> Vhigh ~ 5.5v   <br>
+> <br>
+> R3: 560k   <br>
+> R4: 470k   <br>
+> Vlow ~ 4.6v
+
 
 ***Implementing This Solution***
 > Requires:
@@ -99,15 +111,8 @@ and causing damage. Several possible approaches will be discussed below_
 > OR <br>
 > 11 * NOR Gates. (2 req for OR gate, 1 for NOT gate) <br>
 > Suggest 
+> 3 * [MC74HC02ADG SMD Quad Input NOR Gate](https://uk.farnell.com/on-semiconductor/mc74hc02adg/ic-74hc-cmos-smd-74hc02-soic14/dp/9666893)
 
-Resistor Values Estimated:
-> R1: 470k      <br>
-> R2: 560k      <br>
-> Vhigh ~ 5.5v   <br>
-> <br>
-> R3: 560k   <br>
-> R4: 470k   <br>
-> Vlow ~ 4.6v
 
 
 
@@ -132,13 +137,16 @@ Resistor Values Estimated:
 
 > Led VU Meter, Options detailed [^vu]  [LM3916 Dot/Bar Display Driver](https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf) Monitors 
 > analog voltage level and lights up to 10 LEDs sequentially
-> Supply Voltage from 3v to 25v - Suggest it runs directly from 24v rail for each use case? Input can handle from 0 to 35v 
+> Supply Voltage from 3v to 25v - Suggest it runs from 12v rail for each use case. Input can handle from 0 to 35v 
 
  
 > "The LM3916 is extremely easy to apply. A 1.2V fullscale meter requires only one resistor in addition to
 > the ten LEDs. One more resistor programs the fullscale anywhere from 1.2V to 12V independent of
 > supply voltage. LED brightness is easily controlled
 > with a single pot."
+
+> This IC could be set such that a single mid range output lights a green LED, the bottom half of the range lights a yellow LED, and the top half of the range lights a RED led, 
+> which would provide under and over voltage indication for each voltage bus.
 
 
 ****************************************************************************************************************************
