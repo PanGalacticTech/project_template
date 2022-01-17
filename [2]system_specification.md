@@ -29,7 +29,7 @@ that are more suitable_
 |---        | ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
 |HL:(4,5,6) | Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    3      |        |
 |"          |           "                   |           "                   | ublox Wifi module & remote database server |    2      |        |
-|"          |           "                   |           "                   | ESP32 performs as MCU controller & Wifi Module|    1   |        |
+|"          |           "                   |           "                   | ESP32 performs as MCU controller And/Or Wifi Module|    1   |  requires 3.3v logic if used as MCU|
 |"          |           "                   | Arduino Nano 33 IoT| Local Raspberry Pi |    4    | will require 8 port switch to accomidate extra RasPi in ISO Container | 
 |"          |           "                   |    "             | Remote Raspberry Pi  |    3    | Will Require external WiFi Antenna to ensure robust Connection|
 |           |                               |                               |                                            |           |        |
@@ -154,6 +154,12 @@ reason it should be independent of all other systems, and simplified as much as 
 > which would provide under and over voltage indication for each voltage bus.
 > Voltage divider would be required for detection of 24v bus.
 
+#### MCU Selection
+
+The best options for MCU are either, AtMega328p combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a periferal
+device, or an ESP32, with the same USB interface and ISP header, but without the need for an additional WiFi transcever.
+
+However the selection of the external
 
 ****************************************************************************************************************************
 ## [2.2] System Specification Description
@@ -188,8 +194,8 @@ _Hardware Specification may contain the following subsections:_
 > 24v Power input will be via XT60 Connector mounted directly on PCB. 
 
 **[HL.5]**
-> MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules,
-> one between the DC/DC module and the 12v bus, the other between the 2nd DC/DC module and the 5v bus. 
+> MCU will be AtMega328p integrated to PCB with ESP32-WROOM-32UE as a WiFi tranciever. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules,
+> one between the DC/DC module and the 12v bus, the other between the 2nd DC/DC module and the 5v bus. Each MCU 
 
 **[HL.5, HL.6]** 
 > A voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. <br>
