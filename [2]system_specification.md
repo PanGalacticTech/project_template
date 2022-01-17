@@ -193,8 +193,8 @@ _Hardware Specification may contain the following subsections:_
 
 **[HL.5, HL.6]** 
 > A voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. <br>
-> - R1: 100k
-> - R2: 56k
+> - R1: 100k <br>
+> - R2: 56k <br>
 > This will allow measurements from 0v to ~14v to be measured by the microcontroller ADC, while limiting current draw to a few microamps.
 > Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
 
