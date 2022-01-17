@@ -44,7 +44,7 @@ that are more suitable_
 |HL:(7)     | 12v Power Output Connectors   | 2.1mm Barrel Jacks            |       |  4  | Hard to find with range of options, easy to damage|
 |"          |           "                   | XT30 - 30A Connector          |       |  1  | Easy to source, many differnt options, well defined specifications|
 |           |                               |                               |                                            |           |        |  
-|HL:(5)     | Voltage Sensing               | Voltage Divider on 12 bus   | | 1 | Can't be used for 5v bus as MCU would share Vcc ref, Must protect MCU from voltage spikes|
+|HL:(5)     | Voltage Sensing               | Voltage Divider on 12 bus   | | 1 | Can't be used for 5v bus as MCU would share Vcc ref. Must protect MCU from voltage spikes|
 |"          |     "                         | Voltage sense IC            | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus|
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -86,7 +86,8 @@ and causing damage. Several possible approaches will be discussed below_
 >  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
 >  Looking for examples & use case.
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
-> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431]
+> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. use NOT gate on
+> output for correction.
 
 
 
