@@ -102,7 +102,7 @@ Resistor Values Estimated:
 
 
 ***Implementing This Solution***
-> Requires:
+> Requires: <br>
 > 5 * OR Gates <br>
 > 1 * NOT Gate <br>
 > <br>
@@ -110,7 +110,7 @@ Resistor Values Estimated:
 > 16 * NAND Gates. (3 req for OR gate, 1 for NOT gate) <br>
 > OR <br>
 > 11 * NOR Gates. (2 req for OR gate, 1 for NOT gate) <br>
-> Suggest 
+> Suggest: <br> 
 > 3 * [MC74HC02ADG SMD Quad Input NOR Gate](https://uk.farnell.com/on-semiconductor/mc74hc02adg/ic-74hc-cmos-smd-74hc02-soic14/dp/9666893)
 
 
@@ -119,8 +119,8 @@ Resistor Values Estimated:
 #### Power Bus Visual Fault Indications ***[HL.14]***
 
 >   I much prefer the idea of independent indication for each bus, rather than a traffic light with 
->   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is,
->   1: less useful than say "A Okay" "B Okay" "C Okay" indications and
+>   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is, <br>
+>   1: less useful than say "A Okay" "B Okay" "C Okay" indications and <br>
 >   2: it may also be harder to design if we take a passive approach, i.e: This system should work independently
 >   of any microcontrollers.
 
@@ -147,6 +147,7 @@ Resistor Values Estimated:
 
 > This IC could be set such that a single mid range output lights a green LED, the bottom half of the range lights a yellow LED, and the top half of the range lights a RED led, 
 > which would provide under and over voltage indication for each voltage bus.
+> Voltage divider would be required for detection of 24v bus.
 
 
 ****************************************************************************************************************************
@@ -213,7 +214,10 @@ _Hardware Specification may contain the following subsections:_
 
 **[HL.14]**
 > LM3916 Dot graph drive IC will be used on each voltage bus, 5v, 12v and 24v. Some experimentation may be required to select the correct
-> circuit layout & resistor selection for each application. 
+> circuit layout & resistor selection for each application. 24v bus will require additional voltage divider,<br>
+> R1: 100k <br>
+> R2: 56k <br>
+> to scale voltage to correct input for LED driver. 24Vin =~ 8.6Vout
 
 > _Optional:_
 > The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without. [Dependent on overall size & space left after all other requirements have been met]
