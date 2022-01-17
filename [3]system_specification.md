@@ -1,4 +1,4 @@
-# [2]  System Specification - [Project Title]
+# [3]  System Specification - [Project Title]
 
 _This form is intended to assist in optioneering to derive low level hardware & software specification from the ***Validated***  
 High Level Requirements Capture Form [[1]requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5Drequirements_capture.md).
