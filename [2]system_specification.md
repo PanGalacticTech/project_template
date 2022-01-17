@@ -5,7 +5,9 @@ High Level Requirements Capture Form [[1]requirements_capture.md](https://github
 Its scope can be adapted to suit projects of varying complexity_ <br>
 _______________________________________________________________________________________________________________________________________________________
 ## [2.1] Design Tradeoffs & Optioneering
-_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
+_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software.
+It is useful to highlight situations where one design decision is dependent on other decisions, or where a design decision will have known, or forseeable impacts on
+other decisions later._
 
 ### Preamble
 _Introduction to the design approach if required_ <br>
@@ -15,7 +17,8 @@ _Flowcharts can be used to explore the relationships between different options, 
 will affect the other available options._
 
 ![image](https://user-images.githubusercontent.com/53580358/149507075-3be11e9f-9cd9-4e3a-bcb2-2ddf4bbdd5c4.png)
-_Flowchart showing the relationship between possible system components. Focused on communications standards required between the user interface and the microcontroller._
+_Flowchart showing the different communications standards and methods that could be used to connect the user interface and the microcontroller, dependent on
+low level hardware choices_
 
 
 ### Optioneering Table
