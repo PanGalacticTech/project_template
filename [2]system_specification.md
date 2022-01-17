@@ -8,13 +8,14 @@ ________________________________________________________________________________
 _Space to work through different options before deciding on specific low level requirements & system specification for hardware & software_
 
 ### Preamble
-_Not good at writing narritives Should something go here?_ <br>
+_Introduction to the design approach if required_ <br>
 
-### Optioneering Diagram
+### Optioneering Diagrams
 _Flowcharts can be used to explore the relationships between different options, and display graphically how making specific design decisions
 will affect the other available options._
 
 ![image](https://user-images.githubusercontent.com/53580358/149507075-3be11e9f-9cd9-4e3a-bcb2-2ddf4bbdd5c4.png)
+_Flowchart showing the relationship between possible system components_
 
 
 ### Optioneering Table
@@ -60,7 +61,7 @@ and causing damage. Several possible approaches will be discussed below_
 >    5.1v zener diode reverse biased between the USB outputs 5v rail, and GND.
 >    A 100ohm resistor must be between the potential source of over voltage and the zener diode.[^zener]
 
-**Problems with this approach**
+***Problems with this approach***
 
 >    If the source of the overvoltage is also on the USB bus, this does not nessissarily solve the problem,
 >    as the current will flow unimpeded through the zener diode, causing overheating and component failure. 
@@ -70,23 +71,23 @@ and causing damage. Several possible approaches will be discussed below_
 
 ##### Approach 2 - Using the MOSFET That is Already There
 
->    This may be pie in the sky, however as the USB channel is already designed to be switched off via a logic
->    high signal (+5v) from a microcontroller, could that same MOSTFET also be triggered with logic high if a
->    fault condition is detected? This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
+>    As the USB channel is already designed to be switched off via a logic high signal (+5v) from a microcontroller, 
+>    could that same MOSTFET also be triggered with logic high if afault condition is detected?
+>    This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
 >    would delay response and would not stop damage from occuring.
+>     <br>
+>     A logic OR gate could be used to provide a buffer between the logic HIGH/LOW pin on the microcontroller, and the
+>     other system for providing a logic HIGH, if the 5v bus moves out of tolerance. The output of the logic gate, feeds into
+>     the gate of the MOSFET
 
-##### Option 2
+***OverVoltage Detection***
 
-> Voltage Supivisor/detection ICs
+> Voltage Supivisor/detection ICs:
 >  Voltage is monitored on 5v rail, and IC outputs a logic high if voltage goes outside of set nominal band.
 >  Looking for examples & use case.
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
+> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431]
 
-
-
-##### Proposal
-
-> Comparator circuit, & OR gate with microcontroller output?
 
 
 #### Power Bus Visual Fault Indications ***[HL.14]***
@@ -352,3 +353,5 @@ _Assuming That_
 ![image](https://user-images.githubusercontent.com/53580358/149550148-76459666-dd3e-4661-bf27-dfcf147a4180.png) <br>
 [LM431 Datasheet](https://www.ti.com/lit/ds/symlink/lm431.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1642092638827&ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D10%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Flm431)
 
+
+[^tl431]: 
