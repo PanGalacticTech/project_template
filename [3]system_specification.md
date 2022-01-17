@@ -38,7 +38,7 @@ _Hardware Specification may contain the following subsections:_
 > 24v Power input will be via XT60 Connector mounted directly on PCB. 
 
 **[HL.5]**
-> MCU will be AtMega328p integrated to PCB with ESP32-WROOM-32UE as a WiFi tranciever. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules,
+> MCU will be AtMega328p integrated to PCB with ESP32-WROOM-32UE as a WiFi tranciever. MCU will take ADC readings from 2 [Allegro ACS712](https://www.sparkfun.com/datasheets/BreakoutBoards/0712.pdf) current sensing modules,
 > one between the DC/DC module and the 12v bus, the other between the 2nd DC/DC module and the 5v bus. Each MCU 
 
 **[HL.5, HL.6]** 
