@@ -2,7 +2,7 @@
 
 _This form is intended to derive low level hardware & software specification from the ***Validated***  
 High Level Requirements Capture Form [[1]requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5Drequirements_capture.md) and
-[[2]system_optioneering.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B2%5Dsystem_optioneering.md)
+[[2]system_optioneering.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B2%5Dsystem_optioneering.md) <br>
 Its scope can be adapted to suit projects of varying complexity_ <br>
 
 ****************************************************************************************************************************
