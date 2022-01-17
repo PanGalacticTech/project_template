@@ -156,10 +156,14 @@ reason it should be independent of all other systems, and simplified as much as 
 
 #### MCU Selection
 
-The best options for MCU are either, AtMega328p combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a periferal
-device, or an ESP32, with the same USB interface and ISP header, but without the need for an additional WiFi transcever.
+The best options for MCU seem to be either;
+[AtMega328p](https://uk.farnell.com/microchip/atmega328p-an/mcu-8bit-atmega-20mhz-tqfp-32/dp/2443178?st=ATmega328P) combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a peripheral device, or <br>
+[ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. The ESP has a number of disadvantages for use 
+as the MCU in this use case, as precice ADC is required for current and voltage monitoring.
 
-However the selection of the external
+However the selection of the peripheral WiFi adaptor throws up an ironic aside, it seems much cheaper to use ESP32
+as a WiFi device than sourcing dedicated wifi transceiver modules like the ublox nina, or. The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
+in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
 
 ****************************************************************************************************************************
 ## [2.2] System Specification Description
@@ -360,6 +364,7 @@ ________________________________________________________________________________
 - [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
 - [High Side vs Low Side Switch](https://www.baldengineer.com/low-side-vs-high-side-transistor-switch.html)
 - [Important Stuff: MOSFET Specs You Need to Know](https://www.embeddedrelated.com/showarticle/809.php)
+- [Using the Atmel ATmega328P Analog to Digital Conversion Module](https://ece-classes.usc.edu/ee459/library/documents/ADC.pdf)
 
 *******************************************************************************************************************************************************
 
