@@ -16,7 +16,7 @@ _Introduction to the design approach if required_ <br>
 _Flowcharts can be used to explore the relationships between different options, and display graphically how making specific design decisions
 will affect the other available options._
 
-![image](https://user-images.githubusercontent.com/53580358/149507075-3be11e9f-9cd9-4e3a-bcb2-2ddf4bbdd5c4.png)
+![hardware optioneering diagram](https://user-images.githubusercontent.com/53580358/149789762-3f4a02a2-bd1c-419f-8d7e-c849cabb182d.png)
 _Flowchart showing the different communications standards and methods that could be used to connect the user interface and the microcontroller, dependent on
 low level hardware choices_
 
