@@ -5,7 +5,7 @@ High Level Requirements Capture Form [[1]requirements_capture.md](https://github
 Its scope can be adapted to suit projects of varying complexity_ <br> 
 _______________________________________________________________________________________________________________________________________________________
 ## [2.1] Design Tradeoffs & Optioneering
-_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software.
+_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software
 It is useful to highlight situations where one design decision is dependent on other decisions, or where a design decision will have known, or forseeable impacts on
 other decisions later._
 
@@ -51,8 +51,8 @@ that are more suitable_
 |"          |     "                         | Voltage sense IC            | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus|
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Circuit Design Optioneering
-_Exploration of circuit elements that might be used to meet design objectives_
+### Circuit Design & Hardware Optioneering [Hardware]
+_Exploration of circuit elements & Hardware that might be used to meet design objectives_
 
 
 #### Overvoltage Protection of 5v USB Bus ***[HL.13]***
@@ -168,6 +168,32 @@ as a WiFi device than sourcing dedicated wifi transceiver modules like the ublox
 in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
 
 ****************************************************************************************************************************
+
+### Software Design & Optioneering [Software]
+_Exploration of software, firmware and development tools that might be used to meet design objectives and test system performance_
+
+
+### Software Structure Optioneering
+
+#### Option A
+
+- Arduino running state machine framework
+- websocket server responds to HTTP GET requests for control of power channels
+- concurrently taking analogRead() of 2 ADC inputs, and sending to external database with HTTP POST requests over wifi
+- Data is pulled from database using graphing tool, like Grafana, which is built around a web accessable user interface.
+
+#### Option B
+
+- Arduino running state machine framework
+- websocket server responds to HTTP GET requests 
+- concurrently taking analogRead() of 2 ADC inputs, and sending to Raspberry Pi over USB communication.
+- Raspberry pi requires script to place data received over COM port into web accessable format. 
+
+
+
+
+
+
 
 _______________________________________________________________________________________________________________________________________________________
 
