@@ -174,28 +174,49 @@ _Hardware Specification may contain the following subsections:_
 
 ### Hardware Architecture & Description
 
-> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. **[HL.1, HL.2, HL.3]**
+**[HL.1, HL.2, HL.3]**
+> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. 
 > These require local fan cooling for which +12v power and mounting holes will be provided.
->  
-> 24v Power input will be via XT60 Connector mounted directly on PCB. **[HL.7]**
-> 
-> MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules, one between the DC/DC module and the 12v bus, 
-> the other between the 2nd DC/DC module and the 5v bus. **[HL.5]**
-> 
-> Additionally, a voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus.**[HL.5, HL.6]** 
+
+**[HL.7]**
+> 24v Power input will be via XT60 Connector mounted directly on PCB. 
+
+**[HL.5]**
+> MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules,
+> one between the DC/DC module and the 12v bus, the other between the 2nd DC/DC module and the 5v bus. 
+
+**[HL.5, HL.6]** 
+> A voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. <br>
+> - R1: 100k
+> - R2: 56k
+> This will allow measurements from 0v to ~14v to be measured by the microcontroller ADC, while limiting current draw to a few microamps.
 > Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
+
+**[HL.9, HL.4, HL.13]**
+> The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel,
+> these will be connected source to 5v bus, drain to USB output, and gate to the logic circuit which distributes 
+> signals from the digital drive pins from the MCU for each channel, and the Voltage Detection IC.
 >
-> The 5v Bus will be distributed to 5 USB outputs **[HL.9]** via individual high side MOSFET switches for each channel, these will be connected to digital drive pins from the MCU. The Gate pin will be pulled down to GND via pull-down resistor. value to be determined. **[HL.4]**
 > Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
-> 12v bus power will be distributed to 5 XT30 connectors **[HL.7]** mounted directly on the PCB. **[HL.8]**
->
-> Reverse voltage protection will be acheived via a P channel MOSFET[^RevVolt] at +Vcc in **[HL.10]**.
-> The system will be protected from overcurrent conditions by a 20A fuse between Vcc in+ and 24v bus. **[HL.11]**.
-> 
-> PCB dimensions will be 100x120mm. **[HL.12]**
+
+**[HL.7, HL.8]**
+> 12v bus power will be distributed to 5 XT30 connectors, mounted directly on the PCB. 
+
+ **[HL.10]**
+> Reverse voltage protection will be acheived via a P channel MOSFET[^RevVolt] at +Vcc in.
+
+**[HL.11]**
+> The system will be protected from overcurrent conditions by a 20A fuse between Vcc in+ and 24v bus. 
+
+**[HL.12]**
+> PCB dimensions will be 100x120mm. 
+
+**[HL.14]**
+> LM3916 Dot graph drive IC will be used on each voltage bus, 5v, 12v and 24v. Some experimentation may be required to select the correct
+> circuit layout & resistor selection for each application. 
 
 > _Optional:_
-> The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without.
+> The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without. [Dependent on overall size & space left after all other requirements have been met]
 
 -----------------------------------------------------------------------------------------------------
 ### Major Components
