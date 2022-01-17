@@ -117,7 +117,7 @@ Resistor Values Estimated:
 > 3 * [MC74HC02ADG SMD Quad Input NOR Gate](https://uk.farnell.com/on-semiconductor/mc74hc02adg/ic-74hc-cmos-smd-74hc02-soic14/dp/9666893)
 
 
-
+---
 
 #### Power Bus Visual Fault Indications ***[HL.14]***
 _The aim of this requirement is to provide additional information to engineers testing, maintaining and debugging the system. For this
@@ -154,12 +154,14 @@ reason it should be independent of all other systems, and simplified as much as 
 > which would provide under and over voltage indication for each voltage bus.
 > Voltage divider would be required for detection of 24v bus.
 
+---
+
 #### MCU Selection
 
 The best options for MCU seem to be either;
 [AtMega328p](https://uk.farnell.com/microchip/atmega328p-an/mcu-8bit-atmega-20mhz-tqfp-32/dp/2443178?st=ATmega328P) combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a peripheral device, or <br>
 [ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. The ESP has a number of disadvantages for use 
-as the MCU in this use case, as precice ADC is required for current and voltage monitoring.
+as the MCU in this use case, as precise ADC is required for current and voltage monitoring.
 
 However the selection of the peripheral WiFi adaptor throws up an ironic aside, it seems much cheaper to use ESP32
 as a WiFi device than sourcing dedicated wifi transceiver modules like the ublox nina, or. The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
