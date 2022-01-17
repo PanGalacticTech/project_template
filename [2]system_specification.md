@@ -88,6 +88,16 @@ and causing damage. Several possible approaches will be discussed below_
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
 > In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. use NOT gate on
 > output for correction.
+> 
+
+Resistor Values Estimated:
+> R1: 470k      <br>
+> R2: 560k      <br>
+> Vhigh ~ 5.5v   <br>
+> <br>
+> R3: 560k   <br>
+> R4: 470k   <br>
+> Vlow ~ 4.6v
 
 
 
@@ -355,4 +365,6 @@ _Assuming That_
 [LM431 Datasheet](https://www.ti.com/lit/ds/symlink/lm431.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1642092638827&ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D10%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Flm431)
 
 
-[^tl431]: 
+[^tl431]: Voltage Window Calculations: <br>
+          - Vh=(1+(R2/R)1)*Vref   <br>
+          - Vl=(1+(R4/R3))*Vref
