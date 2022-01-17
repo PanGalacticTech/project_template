@@ -72,13 +72,13 @@ and causing damage. Several possible approaches will be discussed below_
 ##### Approach 2 - Using the MOSFET That is Already There
 
 >    As the USB channel is already designed to be switched off via a logic high signal (+5v) from a microcontroller, 
->    could that same MOSTFET also be triggered with logic high if afault condition is detected?
+>    could that same MOSTFET also be triggered with logic high if a fault condition is detected?
 >    This solution would have to be passive, i.e not be reliant on the MCU to trigger, as this
 >    would delay response and would not stop damage from occuring.
 >     <br>
->     A logic OR gate could be used to provide a buffer between the logic HIGH/LOW pin on the microcontroller, and the
->     other system for providing a logic HIGH, if the 5v bus moves out of tolerance. The output of the logic gate, feeds into
->     the gate of the MOSFET
+>     A logical OR gate could be used to provide a buffer between the logic HIGH/LOW pin on the microcontroller, and the
+>     other system for providing a logical HIGH in the case the 5v bus moves out of tolerance. 1 logical OR gate would be required for each USB output,
+>     The output of each logic gate, feeds the gate of each MOSFET
 
 ***OverVoltage Detection***
 
@@ -88,7 +88,17 @@ and causing damage. Several possible approaches will be discussed below_
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
 > In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. use NOT gate on
 > output for correction.
-> 
+
+***Implementing This Solution***
+> Requires:
+> 5 * OR Gates <br>
+> 1 * NOT Gate <br>
+> <br>
+> To make these gates from common gates, it would require: <br>
+> 16 * NAND Gates. (3 req for OR gate, 1 for NOT gate) <br>
+> OR <br>
+> 11 * NOR Gates. (2 req for OR gate, 1 for NOT gate) <br>
+> Suggest 
 
 Resistor Values Estimated:
 > R1: 470k      <br>
