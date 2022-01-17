@@ -1,11 +1,12 @@
-# [2]  System Specification - [Project Title]
+# [2]  System Optioneering - [Project Title]
 
 _This form is intended to assist in optioneering to derive low level hardware & software specification from the ***Validated***  
 High Level Requirements Capture Form [[1]requirements_capture.md](https://github.com/PanGalacticTech/project_template/blob/main/%5B1%5Drequirements_capture.md).
-Its scope can be adapted to suit projects of varying complexity_ <br>
-_______________________________________________________________________________________________________________________________________________________
+Its scope can be adapted to suit projects of varying complexity_ <br> 
+*******************************************************************************************************************************************************
+
 ## [2.1] Design Tradeoffs & Optioneering
-_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software.
+_Space to work through different options before deciding on specific low level requirements & system specification for hardware & software
 It is useful to highlight situations where one design decision is dependent on other decisions, or where a design decision will have known, or forseeable impacts on
 other decisions later._
 
@@ -16,7 +17,7 @@ _Introduction to the design approach if required_ <br>
 _Flowcharts can be used to explore the relationships between different options, and display graphically how making specific design decisions
 will affect the other available options._
 
-![image](https://user-images.githubusercontent.com/53580358/149507075-3be11e9f-9cd9-4e3a-bcb2-2ddf4bbdd5c4.png)
+![hardware optioneering diagram](https://user-images.githubusercontent.com/53580358/149789762-3f4a02a2-bd1c-419f-8d7e-c849cabb182d.png)
 _Flowchart showing the different communications standards and methods that could be used to connect the user interface and the microcontroller, dependent on
 low level hardware choices_
 
@@ -29,7 +30,7 @@ that are more suitable_
 |---        | ---------------------------   | ---------------------------   | -----------------------------------------  | -------   |----    |
 |HL:(4,5,6) | Controller for Current Sensing| Integrated MCU on PCB         | CH340 Driver for USB comms to Raspi        |    3      |        |
 |"          |           "                   |           "                   | ublox Wifi module & remote database server |    2      |        |
-|"          |           "                   |           "                   | ESP32 performs as MCU controller & Wifi Module|    1   |        |
+|"          |           "                   |           "                   | ESP32 performs as MCU controller And/Or Wifi Module|    1   |  requires 3.3v logic if used as MCU|
 |"          |           "                   | Arduino Nano 33 IoT| Local Raspberry Pi |    4    | will require 8 port switch to accomidate extra RasPi in ISO Container | 
 |"          |           "                   |    "             | Remote Raspberry Pi  |    3    | Will Require external WiFi Antenna to ensure robust Connection|
 |           |                               |                               |                                            |           |        |
@@ -51,8 +52,8 @@ that are more suitable_
 |"          |     "                         | Voltage sense IC            | | 2 | Cant find suitable option, open for reccomendations, could be used for both 12v and 5v bus|
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Circuit Design Optioneering
-_Exploration of circuit elements that might be used to meet design objectives_
+### Circuit Design & Hardware Optioneering [Hardware]
+_Exploration of circuit elements & Hardware that might be used to meet design objectives_
 
 
 #### Overvoltage Protection of 5v USB Bus ***[HL.13]***
@@ -117,7 +118,7 @@ Resistor Values Estimated:
 > 3 * [MC74HC02ADG SMD Quad Input NOR Gate](https://uk.farnell.com/on-semiconductor/mc74hc02adg/ic-74hc-cmos-smd-74hc02-soic14/dp/9666893)
 
 
-
+---
 
 #### Power Bus Visual Fault Indications ***[HL.14]***
 _The aim of this requirement is to provide additional information to engineers testing, maintaining and debugging the system. For this
@@ -154,160 +155,27 @@ reason it should be independent of all other systems, and simplified as much as 
 > which would provide under and over voltage indication for each voltage bus.
 > Voltage divider would be required for detection of 24v bus.
 
+---
+
+#### MCU Selection
+
+The best options for MCU seem to be either;
+[AtMega328p](https://uk.farnell.com/microchip/atmega328p-an/mcu-8bit-atmega-20mhz-tqfp-32/dp/2443178?st=ATmega328P) combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a peripheral device, or <br>
+[ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. This has a number of advantages and disadvantages. 
+
+The major disadvantage is the ESP's requirement for 3.3v logic, this will likely require additional drivers for actuation of the MOSFET switches,
+as well as voltage dividers and additional scaling on ADC inputs from the [ACS712 Hall Effect Linear Current Sensor](https://www.sparkfun.com/datasheets/BreakoutBoards/0712.pdf)
+For this reason, using the AtMega328p as the main MCU seems like it will cause less issues with the rest of the circuit design.
+
+However the selection of the peripheral WiFi adaptor throws up an ironic aside, it seems much cheaper to use ESP32
+as a WiFi device than sourcing dedicated WiFi transceiver modules like the ublox nina.
+The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
+in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
 
 ****************************************************************************************************************************
-## [2.2] System Specification Description
 
-_System Specifications for Hardware & Software are derived from and traceable back to the High level Requirements. At this stage optioneering should be
-complete, and the design direction finalised._
-
-<!-- NOTE: Origionally I had this document specified as "Low Level Requirements" given past training I had on embedded systems development in aviation, however I 
-think this approach was far in excess of what is required for this kind of project, so I have merged "low level requirements" and "system specification" into a single step -->
-
-
-## [2.3]Example System Specification - [ISOpower]
-
-### [2.3.1]Hardware Specification
-_Hardware specification should outline specific hardware devices, circuit design and hardware archetectures chosen to meet high level requirements._
-
-<!-- NOTE: Spreadsheet would be better for comparason of features of components but I see value in documenting major components here too? -->
-
-_Hardware Specification may contain the following subsections:_
-- Hardware Architecture
-- Major Components - Can be specific or requirements set out for comparason of specific components
-- Circuit Design
-- Other
-
-### Hardware Architecture & Description
-
-**[HL.1, HL.2, HL.3]**
-> The hardware will comprise of a single PCB to home the 2 DC/DC converter modules. 
-> These require local fan cooling for which +12v power and mounting holes will be provided.
-
-**[HL.7]**
-> 24v Power input will be via XT60 Connector mounted directly on PCB. 
-
-**[HL.5]**
-> MCU will be integrated to PCB with uBlox Wifi adaptor. MCU will take ADC readings from 2 Allegro ACS712 current sensing modules,
-> one between the DC/DC module and the 12v bus, the other between the 2nd DC/DC module and the 5v bus. 
-
-**[HL.5, HL.6]** 
-> A voltage divider will be used with an additional ADC input to monitor the voltage of the 12v bus. <br>
-> - R1: 100k <br>
-> - R2: 56k <br>
-> This will allow measurements from 0v to ~14v to be measured by the microcontroller ADC, while limiting current draw to a few microamps.
-> Input to the MCU will be protected by a 5.1v Zener diode, incase of voltage spikes greater than can be mitigated by the voltage divider.
-
-**[HL.9, HL.4, HL.13]**
-> The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel,
-> these will be connected source to 5v bus, drain to USB output, and gate to the logic circuit which distributes 
-> signals from the digital drive pins from the MCU for each channel, and the Voltage Detection IC.
->
-> Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
-
-**[HL.7, HL.8]**
-> 12v bus power will be distributed to 5 XT30 connectors, mounted directly on the PCB. 
-
- **[HL.10]**
-> Reverse voltage protection will be acheived via a P channel MOSFET[^RevVolt] at +Vcc in.
-
-**[HL.11]**
-> The system will be protected from overcurrent conditions by a 20A fuse between Vcc in+ and 24v bus. 
-
-**[HL.12]**
-> PCB dimensions will be 100x120mm. 
-
-**[HL.14]**
-> LM3916 Dot graph drive IC will be used on each voltage bus, 5v, 12v and 24v. Some experimentation may be required to select the correct
-> circuit layout & resistor selection for each application. 24v bus will require additional voltage divider,<br>
-> R1: 100k <br>
-> R2: 56k <br>
-> to scale voltage to correct input for LED driver. 24Vin =~ 8.6Vout
-
-> _Optional:_
-> The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without. [Dependent on overall size & space left after all other requirements have been met]
-
------------------------------------------------------------------------------------------------------
-### Major Components
-
-#### DC/DC Converters
-##### Option 1: <br>
-**Non-Isolated DC-DC Converter, 3.3 → 15V dc Output, 20A**
-| Attribute          	|  Value 	                            |  Notes
-|---	                |---	                                |---
-| **Part Number:**   	| I6A4W020A033V-001-R               	| 
-| **Supplier:**     	| RS Components                      	|   
-| **Vin:**          	| 9 - 40v                            	|   	
-| **Vout:**           |  3.3 - 24v                          |   
-|**Power:**            |    250W                            |     
-| **Price:**           |  £44.66                            |   
-| **URL:**              | https://uk.rs-online.com/web/p/non-isolated-dc-dc-converters/1813289    |     
-| **Notes:**           | -     |    
-|**Requirements Met:**  |  (HL.1, HL.2, HL.3)        |
-
-
-
-
-#### P-Channel MOSFET 
-_Use: High side power switch_
-1. Switching of 5v USB power from bus to individual outputs
-2. Switching of 12v power from bus to individual outputs (optional feature)
-3. MOSFET is ON when gate is @ 0v, OFF when gate is driven to VDD
-
-_Component Requirements:_
-| Attribute | Value        | Notes |
-|---        |---           |---    |
-| Vds        | > (-)21V      | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
-|Id         | > (-)6A        | Max Continuous Drain Current > Stall Current of Motor |
-| Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
-| Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
-
-_In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a [spreadsheet](https://github.com/PanGalacticTech/project_template/blob/main/%5B2A%5Dcomponent_compare.xlsx) to weigh up alternative options._
-
-##### Option 1: <br>
-**IRF5305PBF P Channel MOSFET**
-|Attribute        | Value                                            |Suitable  | Notes |
-|---              |---                                               |---       |---    |
-|Part Number:     |  IRF5305PBF                                      |          |       |
-|Supplier:        | Farnell                                          | [x]      |       |                 
-|Vds              |  -55V                                            | [x]      |       |     
-|Id               |  -31A                                            | [x]      |       |  
-|Rds(on) @ -10v   |  0.06                                            | [x]      |       |      
-|Price:           |  £2.088                                          | [x]      |       |      
-|                 |                                                  |          |       |
-|URL:             |  [IRF5305PBF - Farnell](https://uk.farnell.com/infineon/irf5305pbf/mosfet-p-55v-31a-to-220/dp/8648255) |         |        |
-|Availability     |   In Stock                                       | [x]       |       |
-|Notes:           |                                                  |         |       |                                                                            
-|Meets Requirements: |                                               | [x]     |       |
-    
-
-
-#### AtMega328P MCU
-
-#### Allego ACS712
-
-#### 
------------------------------------------------------------------------------------------------------
-
-### Circuit Design & Schematic
-_Final Circuit Design, Schematics & Justifications for design_
-
-
-
-
-_____________________________________________________________________________________________________
- 
-#### [2.3.2]Software Specification
-
-_Specify the software requirements, functions, frameworks and tools required to meet the high level requirements_
-
-#### Tools:
-| Tool | Purpose | Justification |
-|---   |---      |---            |
-|Arduino IDE| Software Development | Speed & ease of development for Arduino IoT functions |
-|C++ | Programming Language | Native to Arduino environment |
-|InfluxDB | Remote storage of power consumption data | Ease of setup & ease of posting data from remote devices |
-|Grafana  | Graphic display of power consumption via web interface | off the shelf solution that can integrate control methods for sending HTTP requests back to controller |
+### Software Design & Optioneering [Software]
+_Exploration of software, firmware and development tools that might be used to meet design objectives and test system performance_
 
 
 ### Software Structure Optioneering
@@ -327,19 +195,9 @@ _Specify the software requirements, functions, frameworks and tools required to 
 - Raspberry pi requires script to place data received over COM port into web accessable format. 
 
 
-### Software Specification
-
-- ADC Samples of current sensor will be taken every 250mS  <!-- Let me know if these timings are suitable  -->
-- ADC samples of 12v bus voltage will be taken every 250mS <!-- Let me know if these timings are suitable  -->
-- Power Channel MOSFETS are "Active Low" Therefore channels will be turned off driven by a HIGH pulse from microcontroller.
-- Seperate API for each power channel "on", "off" and "restart",
 
 
 
-
-
-When to review? 
-*System Specification should undertake a review process, to ensure the design meets the clients needs before moving to ***Fabrication*** <br>*
 
 
 _______________________________________________________________________________________________________________________________________________________
@@ -354,10 +212,12 @@ ________________________________________________________________________________
 - [Rugged Circuits: 10 Ways to Destroy an Arduino](https://www.rugged-circuits.com/10-ways-to-destroy-an-arduino)
 - [High Side vs Low Side Switch](https://www.baldengineer.com/low-side-vs-high-side-transistor-switch.html)
 - [Important Stuff: MOSFET Specs You Need to Know](https://www.embeddedrelated.com/showarticle/809.php)
+- [Using the Atmel ATmega328P Analog to Digital Conversion Module](https://ece-classes.usc.edu/ee459/library/documents/ADC.pdf)
 
 *******************************************************************************************************************************************************
 
 #### Notes
+
 **VGS & Rds Explanation**
 
 _Assuming That_
@@ -395,7 +255,7 @@ _Assuming That_
       - I=V/R
       - I = (17k / 5) = [2.9\*10^-4] A -->
       
-[1v1]: [Arduino: Analog Reference](https://www.arduino.cc/reference/en/language/functions/analog-io/analogreference/)
+[^1v1]: [Arduino: Analog Reference](https://www.arduino.cc/reference/en/language/functions/analog-io/analogreference/)
 
 [^RevVolt]: [Infineon Reverse Voltage Protection Methods](https://www.infineon.com/dgdl/Reverse-Batery-Protection-Rev2.pdf?fileId=db3a304412b407950112b41887722615) <br>
              ![image](https://user-images.githubusercontent.com/53580358/149346402-d48d8c97-2ba4-4139-989e-2c378938aefb.png)
