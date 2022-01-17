@@ -161,11 +161,15 @@ reason it should be independent of all other systems, and simplified as much as 
 
 The best options for MCU seem to be either;
 [AtMega328p](https://uk.farnell.com/microchip/atmega328p-an/mcu-8bit-atmega-20mhz-tqfp-32/dp/2443178?st=ATmega328P) combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a peripheral device, or <br>
-[ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. The ESP has a number of disadvantages for use 
-as the MCU in this use case, as precise ADC is required for current and voltage monitoring.
+[ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. This has a number of advantages and disadvantages. 
+
+The major disadvantage is the ESP's requirement for 3.3v logic, this will likely require additional drivers for actuation of the MOSFET switches,
+as well as voltage dividers and additional scaling on ADC inputs from the [ACS712 Hall Effect Linear Current Sensor](https://www.sparkfun.com/datasheets/BreakoutBoards/0712.pdf)
+For this reason, using the AtMega328p as the main MCU seems like it will cause less issues with the rest of the circuit design.
 
 However the selection of the peripheral WiFi adaptor throws up an ironic aside, it seems much cheaper to use ESP32
-as a WiFi device than sourcing dedicated wifi transceiver modules like the ublox nina, or. The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
+as a WiFi device than sourcing dedicated WiFi transceiver modules like the ublox nina.
+The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
 in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
 
 ****************************************************************************************************************************
