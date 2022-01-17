@@ -121,7 +121,7 @@ Resistor Values Estimated:
 
 #### Power Bus Visual Fault Indications ***[HL.14]***
 _The aim of this requirement is to provide additional information to engineers testing, maintaining and debugging the system. For this
-reason it should be independent of all other systems, and simplified as much as possible.
+reason it should be independent of all other systems, and simplified as much as possible._
 
 >   I much prefer the idea of independent indication for each bus, rather than a traffic light with 
 >   "All Nominal" "Something Off Nominal" "Everything Off Nominal" indication, as I believe this is; <br>
