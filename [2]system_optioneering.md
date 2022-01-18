@@ -155,8 +155,12 @@ reason it should be independent of all other systems, and simplified as much as 
 > which would provide under and over voltage indication for each voltage bus.
 > Voltage divider would be required for detection of 24v bus.
 
+***Assessment***
+This option did not work well, as the window for the "okay" LED was far too wide, I managed to get it to indicate high voltage at 5.5v, however getting it to register
+low voltage at anything >4v seemed to fail. It also did not perform well with off nominal supply voltage.
+
 #### Option 3
-Use the features of the DC/Dc supplies[^dcdc]
+Use the features of the DC/DC supplies[^dcdc]
 
 ---
 
