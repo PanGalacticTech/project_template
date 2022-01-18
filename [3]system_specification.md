@@ -99,7 +99,7 @@ _Optional:_
 
 
 
-#### P-Channel MOSFET 
+#### P-Channel MOSFET for Channel Switching
 _Use: High side power switch_
 1. Switching of 5v USB power from bus to individual outputs
 2. Switching of 12v power from bus to individual outputs (optional feature)
@@ -128,10 +128,39 @@ _In the case the requirements for a component are known, however the specific pa
 |                 |                                                  |          |       |
 |URL:             |  [IRF5305PBF - Farnell](https://uk.farnell.com/infineon/irf5305pbf/mosfet-p-55v-31a-to-220/dp/8648255) |         |        |
 |Availability     |   In Stock                                       | [x]       |       |
-|Notes:           |                                                  |         |       |                                                                            
+|Notes:           |  |         |       |                                                                            
 |Meets Requirements: |                                               | [x]     |       |
     
 
+#### P-Channel MOSFET for Reverse Volatage Protection
+_Use: Reverse voltage protection_
+1. MOSFET is ON when gate is @ 0v, OFF when gate is driven to VDD
+
+_Component Requirements:_
+| Attribute | Value        | Notes |
+|---        |---           |---    |
+| Vds        | > (-)21V      | Drain/Source Breakdown Voltage = Operating Voltage + 70% |
+|Id         | > (-)6A        | Max Continuous Drain Current > Stall Current of Motor |
+| Vgs       | ~ -4.5       | Gate - Source Threshold Voltage[^Vgs] |
+| Rds(on)   | <2 ohm       | Static Drain-to-Source-ON-Resistance[^Rds] @ Vgs |
+
+_In the case the requirements for a component are known, however the specific part is unknown, it would be best to use a [spreadsheet](https://github.com/PanGalacticTech/project_template/blob/main/%5B2A%5Dcomponent_compare.xlsx) to weigh up alternative options._
+
+##### Option 1: <br>
+**IRF5305PBF P Channel MOSFET**
+|Attribute        | Value                                            |Suitable  | Notes |
+|---              |---                                               |---       |---    |
+|Part Number:     |  IRF5305PBF                                      |          |       |
+|Supplier:        | Farnell                                          | [x]      |       |                 
+|Vds              |  -55V                                            | [x]      |       |     
+|Id               |  -31A                                            | [x]      |       |  
+|Rds(on) @ -10v   |  0.06                                            | [x]      |       |      
+|Price:           |  £2.088                                          | [x]      |       |      
+|                 |                                                  |          |       |
+|URL:             |  [IRF5305PBF - Farnell](https://uk.farnell.com/infineon/irf5305pbf/mosfet-p-55v-31a-to-220/dp/8648255) |         |        |
+|Availability     |   In Stock                                       | [x]       |       |
+|Notes:           |   DO NOT USE FOR REVERSE POWER PROTECTION ON 24V BUS. Vgs Max is 20v|         |       |                                                                            
+|Meets Requirements: |                                               | [x]     |       |
 
 #### AtMega328P MCU
 
