@@ -74,7 +74,8 @@ _Hardware Specification may contain the following subsections:_
 > R2: 56k <br>
 > to scale voltage to correct input for LED driver. 24Vin =~ 8.6Vout
 
-> _Optional:_
+
+_Optional:_
 > The PCB will contain footprints to allow 12v outputs to be switched via additional MOSFETs, as well as solder bridges to enable the PCB to be used without. [Dependent on overall size & space left after all other requirements have been met]
 
 -----------------------------------------------------------------------------------------------------
