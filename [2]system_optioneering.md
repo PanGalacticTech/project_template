@@ -155,6 +155,9 @@ reason it should be independent of all other systems, and simplified as much as 
 > which would provide under and over voltage indication for each voltage bus.
 > Voltage divider would be required for detection of 24v bus.
 
+#### Option 3
+Use the features of the DC/Dc supplies[^dcdc]
+
 ---
 
 #### MCU Selection
@@ -276,3 +279,5 @@ _Assuming That_
 [^tl431]: Voltage Window Calculations: <br>
           - Vh=(1+(R2/R)1)*Vref   <br>
           - Vl=(1+(R4/R3))*Vref
+
+[^dcdc]: [i6a4w_spec](https://product.tdk.com/en/system/files?file=dam/doc/product/power/switching-power/dc-dc-converter/specification/i6a4w_spec.pdf)
