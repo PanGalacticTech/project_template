@@ -92,10 +92,8 @@ and causing damage. Several possible approaches will be discussed below_
 >  
 > **Use Case**
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
-> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] NOTE: Output from LT431 is INVERTED. NOT gate required on
-> output for correction.
-
-Resistor Values Estimated:
+> In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] 
+> Resistor Values Estimated:
 > R1: 470k      <br>
 > R2: 560k      <br>
 > Vhigh ~ 5.5v   <br>
@@ -108,12 +106,11 @@ Resistor Values Estimated:
 ***Implementing This Solution***
 > Requires: <br>
 > 5 * OR Gates <br>
-> 1 * NOT Gate <br>
-> <br>
+> > <br>
 > To make these gates from common gates, it would require: <br>
-> 16 * NAND Gates. (3 req for OR gate, 1 for NOT gate) <br>
+> 15 * NAND Gates. (3 req for OR gate) <br>
 > OR <br>
-> 11 * NOR Gates. (2 req for OR gate, 1 for NOT gate) <br>
+> 10 * NOR Gates. (2 req for OR gate) <br>
 > Suggest: <br> 
 > 3 * [MC74HC02ADG SMD Quad Input NOR Gate](https://uk.farnell.com/on-semiconductor/mc74hc02adg/ic-74hc-cmos-smd-74hc02-soic14/dp/9666893)
 
