@@ -50,10 +50,26 @@ _Hardware Specification may contain the following subsections:_
 
 **[HL.9, HL.4, HL.13]**
 > The 5v Bus will be distributed to 5 USB outputs via individual high side MOSFET switches for each channel,
-> these will be connected source to 5v bus, drain to USB output, and gate to the logic circuit which distributes 
-> signals from the digital drive pins from the MCU for each channel, and the Voltage Detection IC.
->
+> these will be connected source to 5v bus, drain to USB output, and gate to the logic circuit used to 
+> trigger a power shutoff condition.
+> 
 > Solder bridges will be provided on the PCB to bypass these MOSFETs, in the case they are not required.
+
+
+**[HL.4, HL.13]**
+> Logic circuit to control power to each 5v USB output will follow the following logic, if:
+> A = microcontroller digital pin (1 per channel, logic level HIGH = channel deactivated)
+> B = Voltage Monitoring circuit (1 per +5v Bus, logic level HIGH = off nominal voltage detected)
+> C = Output to MOSFET gate (1 per channel, logic level HIGH = MOSFET OFF state)
+
+> IF A OR B == HIGH: C = HIGH.
+
+
+
+**[HL.13]**
+> The voltage protection circuit will comprise of 2 TL431 Voltage reference ICs set as a window comparator. This circuit will
+> output logic level LOW in the case +5V_BUS is pulled off nominal. (4.6v - 5.5v).
+> 
 
 **[HL.7, HL.8]**
 > 12v bus power will be distributed to 5 XT30 connectors, mounted directly on the PCB. 
