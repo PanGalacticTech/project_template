@@ -57,10 +57,10 @@ _Hardware Specification may contain the following subsections:_
 
 
 **[HL.4, HL.13]**
-> Logic circuit to control power to each 5v USB output will follow the following logic, if:
-> A = microcontroller digital pin (1 per channel, logic level HIGH = channel deactivated)
-> B = Voltage Monitoring circuit (1 per +5v Bus, logic level HIGH = off nominal voltage detected)
-> C = Output to MOSFET gate (1 per channel, logic level HIGH = MOSFET OFF state)
+> Logic circuit to control power to each 5v USB output will follow the following logic, if: <br>
+> A = microcontroller digital pin (1 per channel, logic level HIGH = channel deactivated) <br>
+> B = Voltage Monitoring circuit (1 per +5v Bus, logic level HIGH = off nominal voltage detected)  <br>
+> C = Output to MOSFET gate (1 per channel, logic level HIGH = MOSFET OFF state) <br>
 
 > IF A OR B == HIGH: C = HIGH.
 
