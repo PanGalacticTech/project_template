@@ -93,14 +93,23 @@ and causing damage. Several possible approaches will be discussed below_
 > **Use Case**
 > [TI TL431 for Under & Overvoltage Detection]( https://www.ti.com/lit/an/slva987a/slva987a.pdf?ts=1642107195143&ref_url=https%253A%252F%252Fwww.google.com%252F)[^uvov]
 > In this case, the V(high) and V(low) thresholds are set via 4 resistors. Calculations outlined below[^tl431] 
+
+> TL431 has a minimum cathode current of 1mA, so resistor selection must be checked to meet this requirement.
+
 > Resistor Values Estimated:
-> R1: 470k      <br>
-> R2: 560k      <br>
-> Vhigh ~ 5.5v   <br>
+> R1: 470r      <br>
+> R2: 560r     <br>
+> Vhigh ~ 5.47v   <br>
 > <br>
-> R3: 560k   <br>
-> R4: 470k   <br>
-> Vlow ~ 4.6v
+> R3: 560r   <br>
+> R4: 470r   <br>
+> Vlow ~ 4.8v
+>
+> R5 = 220r <br>
+> <br>
+> Using these values & <br> I = (Vcc - Vref)/R3 (High edge) & I = (Vcc - Vref)/R5 (Low edge) [No sure if correct best guess given forum posts & datasheet] <br>ere
+> Ika ~ 4mA for high edge & 11mA for low edge
+
 
 
 ***Implementing This Solution***
