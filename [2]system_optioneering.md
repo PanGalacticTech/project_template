@@ -151,15 +151,6 @@ reason it should be independent of all other systems, and simplified as much as 
 > analog voltage level and lights up to 10 LEDs sequentially
 > Supply Voltage from 3v to 25v - Suggest it runs from 12v rail for each use case. Input can handle from 0 to 35v 
 
- 
-> "The LM3916 is extremely easy to apply. A 1.2V fullscale meter requires only one resistor in addition to
-> the ten LEDs. One more resistor programs the fullscale anywhere from 1.2V to 12V independent of
-> supply voltage. LED brightness is easily controlled
-> with a single pot."
-
-> This IC could be set such that a single mid range output lights a green LED, the bottom half of the range lights a yellow LED, and the top half of the range lights a RED led, 
-> which would provide under and over voltage indication for each voltage bus.
-> Voltage divider would be required for detection of 24v bus.
 
 ***Assessment***
 This option did not work well, as the window for the "okay" LED was far too wide, I managed to get it to indicate high voltage at 5.5v, however getting it to register
@@ -174,6 +165,7 @@ Use the features of the DC/DC supplies[^dcdc]
 
 The best options for MCU seem to be either;
 [AtMega328p](https://uk.farnell.com/microchip/atmega328p-an/mcu-8bit-atmega-20mhz-tqfp-32/dp/2443178?st=ATmega328P) combined with CH340 for USB comms & programming, ISP header for programming bootloaders, and an WiFi transcever as a peripheral device, or <br>
+
 [ESP32-WROOM-32U](https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32UM113DH3200UH3Q0?qs=W%2FMpXkg%252BdQ4Fqx%2FReRQpFQ==&mgh=1&vip=1&gclid=CjwKCAiAxJSPBhAoEiwAeO_fPwE6kImUAnBTI5SyodKJNS7nNKTfdQ13Md3OplGP5AphD8abym4PYBoCbGkQAvD_BwE), with the same USB interface and ISP header, but without the need for an additional WiFi transcever. This has a number of advantages and disadvantages. 
 
 The major disadvantage is the ESP's requirement for 3.3v logic, this will likely require additional drivers for actuation of the MOSFET switches,
@@ -184,6 +176,8 @@ However the selection of the peripheral WiFi adaptor throws up an ironic aside, 
 as a WiFi device than sourcing dedicated WiFi transceiver modules like the ublox nina.
 The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
 in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
+
+
 
 ****************************************************************************************************************************
 
