@@ -59,6 +59,8 @@ JSON commands/interaction with microcontroller -> actuating commands & reporting
 reporting of status 1 per second.  Minimum include current for 5v bus & 12v bus, time since last reset - as integer Not float. (keep track of number of times millis() rollsover)
 value good for 10 years. 
 
+443 TCP
+
 
 
 
