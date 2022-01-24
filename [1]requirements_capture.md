@@ -52,6 +52,13 @@ _Space for discussion and weighing up of features that may or may not be require
 #### Quality Assurance 
 _What quality assurances or requirements, if any, need to be established?_
 
+#### Notes
+_Any Extra Notes?_
+Software Reqirements: 
+JSON commands/interaction with microcontroller -> reporting back
+
+
+
 ### Existing Products & COTS (Consumer Off The Shelf)
 _The project brief may also contain information on currently available similar products and a brief description of the features they lack and a 
 quick review of whether they can fullfill the aims of the project._
