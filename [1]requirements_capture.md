@@ -55,7 +55,11 @@ _What quality assurances or requirements, if any, need to be established?_
 #### Notes
 _Any Extra Notes?_
 Software Reqirements: 
-JSON commands/interaction with microcontroller -> reporting back
+JSON commands/interaction with microcontroller -> actuating commands & reporting Status.
+reporting of status 1 per second.  Minimum include current for 5v bus & 12v bus, time since last reset - as integer Not float. (keep track of number of times millis() rollsover)
+value good for 10 years. 
+
+
 
 
 
