@@ -177,6 +177,12 @@ as a WiFi device than sourcing dedicated WiFi transceiver modules like the ublox
 The ESP32 is available with the option to connect an external antenna, which makes the system more adaptable for use
 in areas that may not have adiquate WiFi signal with the antenna obscured inside a metal box.
 
+***Conclusion***
+
+The board will use both AtMega328p to act as the hardware controller, and ESP32 to act as wifi & higher level control. This will also act as a proving ground for using 
+mixed controller boards, interfacing ESP32 with other MCUs, and potentually offering up the ability to expand the scope of the power supply module later with more advanced 
+software run on the ESP32, with the AtMega handling the lower level hardware monitoring.
+
 
 
 ****************************************************************************************************************************
