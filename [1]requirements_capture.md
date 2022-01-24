@@ -59,7 +59,20 @@ JSON commands/interaction with microcontroller -> actuating commands & reporting
 reporting of status 1 per second.  Minimum include current for 5v bus & 12v bus, time since last reset - as integer Not float. (keep track of number of times millis() rollsover)
 value good for 10 years. 
 
-443 TCP
+443 TCP 
+
+Whenever voltage out of spec log on controller, send message via json, LIMIT MESSAGE RATE. query data remotly, how many time tripped, last time tripped. way to reset count?
+
+
+Break in auto detect line to or gates so can be easily disabled.
+
+
+DC power Supplies fault output. use for visual indication lEDs & report via JSON.
+
+
+
+
+
 
 
 
