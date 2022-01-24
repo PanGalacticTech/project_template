@@ -69,7 +69,7 @@ Break in auto detect line to or gates so can be easily disabled.
 
 DC power Supplies fault output. use for visual indication lEDs & report via JSON.
 
-
+https://github.com/dpreid/pidui/issues/5
 
 
 
