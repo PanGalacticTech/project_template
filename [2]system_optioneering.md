@@ -157,10 +157,10 @@ This option did not work well, as the window for the "okay" LED was far too wide
 low voltage at anything >4v seemed to fail. It also did not perform well with off nominal supply voltage.
 
 #### Option 3
-Use the features of the DC/DC supplies[^dcdc]
+> Use the features of the DC/DC supplies[^dcdc]
 
-DC/DC supply can indicate an off nominal voltage rail by pulling a logic HIGH to ground. This can be monitored by the MCU and set error LEDs. This will also enable easy 
-reporting & monitoring of power status.
+> DC/DC supply can indicate an off nominal voltage rail by pulling a logic HIGH to ground. This can be monitored by the MCU and set error LEDs. This will also enable easy 
+> reporting & monitoring of power status.
 
 ---
 
