@@ -186,6 +186,8 @@ The board will use both AtMega328p to act as the hardware controller, and ESP32 
 mixed controller boards, interfacing ESP32 with other MCUs, and potentually offering up the ability to expand the scope of the power supply module later with more advanced 
 software run on the ESP32, with the AtMega handling the lower level hardware monitoring.
 
+[Info on using ESP32 as WiFi adaptor for AtMega328p](https://icircuit.net/arduino-interfacing-arduino-uno-esp32/2134)
+
 
 
 ****************************************************************************************************************************
