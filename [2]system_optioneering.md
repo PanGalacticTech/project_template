@@ -297,6 +297,5 @@ _Assuming That_
 
 [^dcdc]: [i6a4w_spec](https://product.tdk.com/en/system/files?file=dam/doc/product/power/switching-power/dc-dc-converter/specification/i6a4w_spec.pdf)
 
-[^esp32]: <br>
-          ![image](https://user-images.githubusercontent.com/53580358/150812828-c129d159-ef26-4909-93cf-39b9f3dced7a.png)
+[^esp32]: <br> ![image](https://user-images.githubusercontent.com/53580358/150812828-c129d159-ef26-4909-93cf-39b9f3dced7a.png)
 
