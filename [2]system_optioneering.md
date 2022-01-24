@@ -186,7 +186,7 @@ The board will use both AtMega328p to act as the hardware controller, and ESP32 
 mixed controller boards, interfacing ESP32 with other MCUs, and potentually offering up the ability to expand the scope of the power supply module later with more advanced 
 software run on the ESP32, with the AtMega handling the lower level hardware monitoring.
 
-[Info on using ESP32 as WiFi adaptor for AtMega328p](https://icircuit.net/arduino-interfacing-arduino-uno-esp32/2134)
+[Info on using ESP32 as WiFi adaptor for AtMega328p](https://icircuit.net/arduino-interfacing-arduino-uno-esp32/2134)[^esp32]
 
 
 
@@ -296,3 +296,7 @@ _Assuming That_
           - Vl=(1+(R4/R3))*Vref
 
 [^dcdc]: [i6a4w_spec](https://product.tdk.com/en/system/files?file=dam/doc/product/power/switching-power/dc-dc-converter/specification/i6a4w_spec.pdf)
+
+[^esp32]: <br>
+          ![image](https://user-images.githubusercontent.com/53580358/150812828-c129d159-ef26-4909-93cf-39b9f3dced7a.png)
+
